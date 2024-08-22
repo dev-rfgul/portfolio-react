@@ -61,7 +61,7 @@ const projectData = [
         <div className="p-4">
             <div className="text-center mb-12">
                 <h2 className="text-lg text-gray-600 mb-2">Get To Know More</h2>
-                <h1 className="text-3xl md:text-4xl font-extrabold text-gray-800">About Me</h1>
+                <h1 className="text-3xl md:text-4xl font-extrabold text-gray-800">My Projects</h1>
             </div>
 
             <div className="flex flex-wrap justify-center mb-8">

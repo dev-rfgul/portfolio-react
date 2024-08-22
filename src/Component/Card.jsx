@@ -1,31 +1,3 @@
-// import React from 'react';
-
-// const Card = ({ image, title, tags, githubLink, liveDemoLink }) => {
-//     return (
-//         <div className="max-w-sm  overflow-hidden shadow-lg m-4 border-2 rounded-2xl border-black border-opacity-50 ">
-//             <div className='flex justify-center m-11 '>
-
-//                 <img className="w-full border-2 rounded-2xl border-black " src={image} alt={title} />
-//             </div>
-//             <div className="px-6 py-4">
-//                 <div className="font-bold text-xl mb-2">{title}</div>
-//                 <p className="text-gray-700 text-base">
-//                     {tags.map(tag => (
-//                         <span key={tag} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{tag}</span>
-//                     ))}
-//                 </p>
-//             </div>
-//             <div className="px-6 pt-4 pb-2 flex justify-between">
-//                 <a href={githubLink} className="text-blue-500 hover:text-blue-700">Github</a>
-//                 <a href={liveDemoLink} className="text-blue-500 hover:text-blue-700">Live Demo</a>
-//             </div>
-//         </div>
-//     );
-// };
-
-// export default Card;
-
-
 
 import React from 'react';
 

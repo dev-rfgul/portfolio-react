@@ -3,6 +3,7 @@ import Navbar from './Component/Navbar'
 import Banner from './Component/Banner'
 import AboutMe from './Component/About'
 import Projects from './Component/Projects'
+import Certificates from './Component/Certificates'
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
         <Banner />
         <AboutMe />
         <Projects/>
+        <Certificates/>
       </div>
     </div>
   )
