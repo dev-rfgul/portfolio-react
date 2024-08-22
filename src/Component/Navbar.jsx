@@ -18,11 +18,11 @@ const Page = () => {
                 <div className="hidden md:flex items-center space-x-6">
                     <ul className="flex space-x-6 text-lg">
                         <li><a className="hover:text-blue-600 transition-colors" href="#">Home</a></li>
-                        <li><a className="hover:text-blue-600 transition-colors" href="#">About Us</a></li>
-                        <li><a className="hover:text-blue-600 transition-colors" href="#">Experience</a></li>
+                        <li><a className="hover:text-blue-600 transition-colors" href="#">About </a></li>
                         <li><a className="hover:text-blue-600 transition-colors" href="#">Projects</a></li>
                         <li><a className="hover:text-blue-600 transition-colors" href="#">Certificates</a></li>
-                        <li><a className="hover:text-blue-600 transition-colors" href="#">Contact Me</a></li>
+                        <li><a className="hover:text-blue-600 transition-colors" href="#">Book Reviews</a></li>
+                        <li><a className="hover:text-blue-600 transition-colors" href="#">Contact </a></li>
                     </ul>
                 </div>
 
@@ -34,25 +34,24 @@ const Page = () => {
             </div>
 
             <div
-                className={`md:hidden bg-white text-black px-4 py-6 shadow-lg overflow-hidden transition-all duration-500 ease-in-out ${
-                    menuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
-                }`}
+                className={`md:hidden bg-white text-black px-4 py-6 shadow-lg overflow-hidden transition-all duration-500 ease-in-out ${menuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+                    }`}
             >
                 <ul className="space-y-4">
                     <li>
                         <a className="block text-lg hover:text-blue-600 transition-colors" href="#">Home</a>
                     </li>
                     <li>
-                        <a className="block text-lg hover:text-blue-600 transition-colors" href="#">About Us</a>
-                    </li>
-                    <li>
-                        <a className="block text-lg hover:text-blue-600 transition-colors" href="#">Experience</a>
+                        <a className="block text-lg hover:text-blue-600 transition-colors" href="#">About</a>
                     </li>
                     <li>
                         <a className="block text-lg hover:text-blue-600 transition-colors" href="#">Projects</a>
                     </li>
                     <li>
                         <a className="block text-lg hover:text-blue-600 transition-colors" href="#">Certificates</a>
+                    </li>
+                    <li>
+                        <a className="block text-lg hover:text-blue-600 transition-colors" href="#">Book Reviews</a>
                     </li>
                     <li>
                         <a className="block text-lg hover:text-blue-600 transition-colors" href="#">Contact Me</a>
