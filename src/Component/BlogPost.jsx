@@ -25,7 +25,7 @@ const BlogPost = () => {
     ]
 
     return (
-        <div>
+        <div >
             {postData.map((post, index) => (
                 <div key={index} className="max-w-4xl mx-auto p-8 bg-white shadow-lg rounded-lg border border-gray-200">
                     <h1 className="text-4xl font-extrabold text-gray-900 mb-6">{post.title}</h1>

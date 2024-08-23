@@ -4,7 +4,7 @@ import React from 'react';
 
 const AboutMe = () => {
     return (
-        <section className="py-12 px-6 md:px-8 lg:px-16 bg-gray-50">
+        <section id='about' className="py-12 px-6 md:px-8 lg:px-16 bg-gray-50">
             <div className="text-center mb-12">
                 <h2 className="text-lg text-gray-600 mb-2">Get To Know More</h2>
                 <h1 className="text-3xl md:text-4xl font-extrabold text-gray-800">About Me</h1>

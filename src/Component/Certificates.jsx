@@ -324,7 +324,7 @@ const Certificates = () => {
         : certificateData.filter(certificate => certificate.category.includes(filter));
 
     return (
-        <div className="p-6">
+        <div id='certificates' className="p-6">
             <div className="text-center mb-12">
                 <h2 className="text-lg text-gray-600 mb-2">Get To Know More</h2>
                 <h1 className="text-3xl md:text-4xl font-extrabold text-gray-800">Certifications</h1>
