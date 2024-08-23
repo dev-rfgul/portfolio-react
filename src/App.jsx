@@ -6,6 +6,8 @@ import Projects from './Component/Projects';
 import Certificates from './Component/Certificates';
 import Blog from './Component/Blog';
 import Contact from './Component/Contact';
+ import Skills  from "./Component/Skills";
+
 
 const App = () => {
   return (
@@ -13,6 +15,7 @@ const App = () => {
       <Navbar />
       <Banner />
       <AboutMe />
+      <Skills />
       <Projects />
       <Certificates />
       <Blog />

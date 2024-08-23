@@ -1,38 +1,36 @@
-
-
 import React, { useState } from 'react';
 import Card from './Card';
 
 const Blog = () => {
-    
+
     const booksData = [
         {
             key: '1',
-            image: 'https:m.media-amazon.com/images/I/41p6yRHyKjL._SY445_SX342_.jpg',
+            image: 'images/books/mybrother.jpg',
             title: 'My Brother',
             tags: ['Fatima Jinnah', '22 Aug 2023']
         },
         {
             key: '1',
-            image: 'https:m.media-amazon.com/images/I/41p6yRHyKjL._SY445_SX342_.jpg',
+            image: 'images/books/mybrother.jpg',
             title: 'My Brother',
             tags: ['Fatima Jinnah', '22 Aug 2023']
         },
         {
             key: '1',
-            image: 'https:m.media-amazon.com/images/I/41p6yRHyKjL._SY445_SX342_.jpg',
+            image: 'images/books/mybrother.jpg',
             title: 'My Brother',
             tags: ['Fatima Jinnah', '22 Aug 2023']
         },
         {
             key: '1',
-            image: 'https:m.media-amazon.com/images/I/41p6yRHyKjL._SY445_SX342_.jpg',
+            image: 'images/books/mybrother.jpg',
             title: 'My Brother',
             tags: ['Fatima Jinnah', '22 Aug 2023']
         },
         {
             key: '1',
-            image: 'https:m.media-amazon.com/images/I/41p6yRHyKjL._SY445_SX342_.jpg',
+            image: 'images/books/mybrother.jpg',
             title: 'My Brother',
             tags: ['Fatima Jinnah', '22 Aug 2023']
         },
