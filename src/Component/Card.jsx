@@ -6,7 +6,6 @@ const Card = ({ image, title, tags, btn1Url, btn2Url, btnText, btn2Text }) => {
         <>
 
             <div className="max-w-sm overflow-hidden shadow-lg m-4  rounded-2xl border border-black border-opacity-60 bg-white transition-transform transform hover:scale-105">
-
                 <div className='flex justify-center p-4'>
                     <img
                         className="w-full h-48 object-cover rounded-t-2xl transition-transform transform hover:scale-105"
@@ -20,7 +19,7 @@ const Card = ({ image, title, tags, btn1Url, btn2Url, btnText, btn2Text }) => {
                         {tags.map(tag => (
                             <span
                                 key={tag}
-                                className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-800 mr-2 mb-2 transition-colors hover:bg-gray-300 hover:text-gray-900"
+                                className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-800 mr-2 mb-transition-colors hover:bg-gray-300 hover:text-gray-900"
                             >
                                 {tag}
                             </span>
@@ -29,14 +28,13 @@ const Card = ({ image, title, tags, btn1Url, btn2Url, btnText, btn2Text }) => {
                 </div>
                 <div className="px-6 pt-4 pb-2 flex flex-wrap justify-center items-center gap-4">
                     <a
-                        href={btn2Url}
+                        href={btn1Url}
                         className="py-2 px-6 focus:outline-none focus:ring-2 focus:ring-black border border-black rounded-lg text-black bg-white hover:bg-gray-900 hover:text-white transition duration-300 ease-in-out transform hover:scale-105 "
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         <span>{btnText}</span>
                     </a>
-
                     {
                         btn2Text === false ? null : (<a
                             href={btn2Url}
@@ -47,9 +45,7 @@ const Card = ({ image, title, tags, btn1Url, btn2Url, btnText, btn2Text }) => {
                             <span>{btn2Text}</span>
                         </a>)
                     }
-
                 </div>
-
             </div>
         </>
     );

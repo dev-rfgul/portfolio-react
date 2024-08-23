@@ -117,7 +117,7 @@ const Page = () => {
                                     </ScrollLink>
                                 </li>
                                 <li>
-                                    <ScrollLink to="book-reviews" smooth={true} duration={500} className="hover:text-blue-600 transition-colors cursor-pointer">
+                                    <ScrollLink to="bookReviews" smooth={true} duration={500} className="hover:text-blue-600 transition-colors cursor-pointer">
                                         Book Reviews
                                     </ScrollLink>
                                 </li>

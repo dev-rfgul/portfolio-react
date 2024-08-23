@@ -98,8 +98,8 @@ const Projects = () => {
                         tags={project.tags}
                         btnText='GitHub'
                         btn2Text='Live Demo'
-                        githubLink={project.githubLink}
-                        liveDemoLink={project.liveDemoLink}
+                        btn1Url={project.githubLink}
+                        btn2Url={project.liveDemoLink}
                     />
                 ))}
             </div>
