@@ -1,11 +1,11 @@
 
 import React from 'react';
 
-const Card = ({ image, title, tags, githubLink, liveDemoLink }) => {
+const Card = ({ image, title, tags, btn1Url, btn2Url, btnText, btn2Text }) => {
     return (
         <>
 
-            <div className="max-w-sm overflow-hidden shadow-lg m-4 border-2  rounded-2xl border-gray-700 bg-white transition-transform transform hover:scale-105">
+            <div className="max-w-sm overflow-hidden shadow-lg m-4  rounded-2xl border border-black border-opacity-60 bg-white transition-transform transform hover:scale-105">
 
                 <div className='flex justify-center p-4'>
                     <img
@@ -20,38 +20,36 @@ const Card = ({ image, title, tags, githubLink, liveDemoLink }) => {
                         {tags.map(tag => (
                             <span
                                 key={tag}
-                                className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-800 mr-2 mb-2 transition-colors hover:bg-gray-300"
+                                className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-800 mr-2 mb-2 transition-colors hover:bg-gray-300 hover:text-gray-900"
                             >
                                 {tag}
                             </span>
                         ))}
                     </p>
                 </div>
-                <div className="px-6 pt-4 pb-2 flex justify-between items-center">
+                <div className="px-6 pt-4 pb-2 flex flex-wrap justify-center items-center gap-4">
                     <a
-                        href={githubLink}
-                        className="text-blue-500 hover:text-blue-700 flex items-center space-x-1"
+                        href={btn2Url}
+                        className="py-2 px-6 focus:outline-none focus:ring-2 focus:ring-black border border-black rounded-lg text-black bg-white hover:bg-gray-900 hover:text-white transition duration-300 ease-in-out transform hover:scale-105 "
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 3v9l5 5M12 3l-5 5 5 5"></path>
-                        </svg>
-                        <span>Github</span>
-                    </a>
-                    <a
-                        href={liveDemoLink}
-                        className="text-blue-500 hover:text-blue-700 flex items-center space-x-1"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 3v9l5 5M12 3l-5 5 5 5"></path>
-                        </svg>
-                        <span>Live Demo</span>
+                        <span>{btnText}</span>
                     </a>
 
+                    {
+                        btn2Text === false ? null : (<a
+                            href={btn2Url}
+                            className="py-2 px-6 focus:outline-none focus:ring-2 focus:ring-black border border-black rounded-lg text-black bg-white  hover:text-white hover:bg-gray-900 transition duration-300 ease-in-out transform hover:scale-105"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <span>{btn2Text}</span>
+                        </a>)
+                    }
+
                 </div>
+
             </div>
         </>
     );

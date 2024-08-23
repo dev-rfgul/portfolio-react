@@ -44,7 +44,6 @@ const ShinyButton = ({ text = "shiny-button", className }) => {
       )}
     >
       <span
-        onclick={handleDownload}
         className="relative block h-full w-full text-sm uppercase tracking-wide text-black dark:font-light dark:text-[rgb(255,255,255,90%)]"
         style={{
           maskImage:

@@ -4,7 +4,7 @@ import React from 'react';
 
 const AboutMe = () => {
     return (
-        <section id='about' className="py-12 px-6 md:px-8 lg:px-16 bg-gray-50">
+        <section id='a' className="py-12 px-6 md:px-8 lg:px-16 bg-gray-50">
             <div className="text-center mb-12">
                 <h2 className="text-lg text-gray-600 mb-2">Get To Know More</h2>
                 <h1 className="text-3xl md:text-4xl font-extrabold text-gray-800">About Me</h1>
@@ -14,7 +14,7 @@ const AboutMe = () => {
                     <img
                         src="/images/banner-img.png"
                         alt="Profile Picture"
-                        className="w-full max-w-xs rounded-lg border-4 border-black shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-105"
+                        className="w-full max-w-xs rounded-lg border-2 border-black shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-105"
                     />
                 </div>
                 <div className="w-full md:w-7/10 lg:w-2/4 flex flex-col gap-6 md:gap-8 lg:gap-12 relative md:-ml-6 lg:-ml-12">

@@ -1,168 +1,4 @@
 
-
-
-// import React, { useState } from 'react';
-// import Card from './Card';
-
-// const Certificates = () => {
-//     const [filter, setFilter] = useState('All');
-
-//     const certificateData = [
-//         {
-//             image: 'images/certificates/freecodecamp.png',
-//             title: 'Responsive Web Design',
-//             tags: ['HTML', 'CSS', 'Responsive Design'],
-//             category: 'featured',
-//             githubLink: '#',
-//             liveDemoLink: '#',
-//         },
-//         {
-//             image: 'images/certificates/react.png',
-//             title: 'React Basics',
-//             tags: ['React', 'JavaScript', 'JSX'],
-//             category: 'featured',
-//             githubLink: '#',
-//             liveDemoLink: '#',
-//         },
-//         {
-//             image: 'images/certificates/github.png',
-//             title: 'Git & Github',
-//             tags: ['Git', 'Version Control', 'GitHub'],
-//             category: 'featured',
-//             githubLink: '#',
-//             liveDemoLink: '#',
-//         },
-//         {
-//             image: 'images/certificates/linux1.png',
-//             title: 'Intro to Linux',
-//             tags: ['Linux', 'Operating Systems', 'Shell'],
-//             category: 'OS',
-//             githubLink: '#',
-//             liveDemoLink: '#',
-//         },
-//         {
-//             image: 'images/certificates/linux2.png',
-//             title: 'Command Line Basics',
-//             tags: ['Command Line', 'Bash', 'Shell Scripting'],
-//             category: 'OS',
-//             githubLink: '#',
-//             liveDemoLink: '#',
-//         },
-//         {
-//             image: 'images/certificates/sql-1.png',
-//             title: 'Intro to SQL',
-//             tags: ['SQL', 'Databases', 'Queries'],
-//             category: 'sql',
-//             githubLink: '#',
-//             liveDemoLink: '#',
-//         },
-//         {
-//             image: 'images/certificates/sql-2.png',
-//             title: 'Intermediate SQL',
-//             tags: ['SQL', 'Joins', 'Subqueries'],
-//             category: 'sql',
-//             githubLink: '#',
-//             liveDemoLink: '#',
-//         },
-//         {
-//             image: 'images/certificates/sql-3.png',
-//             title: 'Joining in SQL',
-//             tags: ['SQL', 'Joins', 'Data Analysis'],
-//             category: 'sql',
-//             githubLink: '#',
-//             liveDemoLink: '#',
-//         },
-//         {
-//             image: 'images/certificates/wordpress.png',
-//             title: 'WordPress Development',
-//             tags: ['WordPress', 'CMS', 'Web Development'],
-//             category: 'all',
-//             githubLink: '#',
-//             liveDemoLink: '#',
-//         },
-//         {
-//             image: 'images/certificates/freelancing.png',
-//             title: 'Freelancing',
-//             tags: ['Freelancing', 'Business', 'Client Management'],
-//             category: 'all',
-//             githubLink: '#',
-//             liveDemoLink: '#',
-//         },
-//     ];
-
-//     const filterCertificates = (category) => {
-//         setFilter(category);
-//     };
-
-//     const filteredCertificates = filter === 'All'
-//         ? certificateData
-//         : certificateData.filter(certificate => certificate.category === filter || filter === 'All');
-
-//     return (
-//         <div className="p-6">
-//             <div className="text-center mb-12">
-//                 <h2 className="text-lg text-gray-600 mb-2">Get To Know More</h2>
-//                 <h1 className="text-3xl md:text-4xl font-extrabold text-gray-800">Certifications</h1>
-//             </div>
-
-//             <div className="flex flex-wrap justify-center gap-4 mb-8">
-//                 <button
-//                     className={`py-2 px-6 text-white rounded-lg focus:outline-none ${filter === 'featured' ? 'bg-blue-600' : 'bg-blue-500 hover:bg-blue-600'} focus:ring-2 focus:ring-blue-300`}
-//                     onClick={() => filterCertificates('featured')}
-//                 >
-//                     Featured
-//                 </button>
-//                 <button
-//                     className={`py-2 px-6 text-white rounded-lg focus:outline-none ${filter === 'OS' ? 'bg-blue-600' : 'bg-blue-500 hover:bg-blue-600'} focus:ring-2 focus:ring-blue-300`}
-//                     onClick={() => filterCertificates('web')}
-//                 >
-//                     Web
-//                 </button>
-//                 <button
-//                     className={`py-2 px-6 text-white rounded-lg focus:outline-none ${filter === 'OS' ? 'bg-blue-600' : 'bg-blue-500 hover:bg-blue-600'} focus:ring-2 focus:ring-blue-300`}
-//                     onClick={() => filterCertificates('OS')}
-//                 >
-//                     OS
-//                 </button>
-//                 <button
-//                     className={`py-2 px-6 text-white rounded-lg focus:outline-none ${filter === 'sql' ? 'bg-blue-600' : 'bg-blue-500 hover:bg-blue-600'} focus:ring-2 focus:ring-blue-300`}
-//                     onClick={() => filterCertificates('sql')}
-//                 >
-//                     SQL
-//                 </button>
-//                 <button
-//                     className={`py-2 px-6 text-white rounded-lg focus:outline-none ${filter === 'sql' ? 'bg-blue-600' : 'bg-blue-500 hover:bg-blue-600'} focus:ring-2 focus:ring-blue-300`}
-//                     onClick={() => filterCertificates('sql')}
-//                 >
-//                     Other
-//                 </button>
-//                 <button
-//                     className={`py-2 px-6 text-white rounded-lg focus:outline-none ${filter === 'All' ? 'bg-gray-600' : 'bg-gray-500 hover:bg-gray-600'} focus:ring-2 focus:ring-gray-300`}
-//                     onClick={() => filterCertificates('All')}
-//                 >
-//                     Extra Cirricular
-//                 </button>
-//             </div>
-
-//             <div className="flex flex-wrap justify-center gap-6">
-//                 {filteredCertificates.map((certificate, index) => (
-//                     <Card
-//                         key={index}
-//                         image={certificate.image}
-//                         title={certificate.title}
-//                         tags={certificate.tags}
-//                         githubLink={certificate.githubLink}
-//                         liveDemoLink={certificate.liveDemoLink}
-//                     />
-//                 ))}
-//             </div>
-//         </div>
-//     );
-// };
-
-// export default Certificates;
-
-
 import React, { useState } from 'react';
 import Card from './Card';
 
@@ -307,13 +143,22 @@ const Certificates = () => {
             githubLink: '#',
             liveDemoLink: '#',
         },
-        
-        
-        
-        
-        
+
+
+
+
+
 
     ];
+    const btns = [
+        { label: 'Featured', value: 'featured' },
+        { label: 'Web', value: 'web' },
+        { label: 'SQL', value: 'sql' },
+        { label: 'OS', value: 'OS' },
+        { label: 'Other', value: 'other' },
+        { label: 'All', value: 'All' },
+        { label: 'Extra Cirricular', value: 'extracirricular' },
+    ]
 
     const filterCertificates = (category) => {
         setFilter(category);
@@ -326,64 +171,36 @@ const Certificates = () => {
     return (
         <div id='certificates' className="p-6">
             <div className="text-center mb-12">
-                <h2 className="text-lg text-gray-600 mb-2">Get To Know More</h2>
+                <h2 className="text-lg text-gray-600 mb-2">My Certifications </h2>
                 <h1 className="text-3xl md:text-4xl font-extrabold text-gray-800">Certifications</h1>
             </div>
 
             <div className="flex flex-wrap justify-center gap-4 mb-8">
-                <button
-                    className={`py-2 px-6 text-white rounded-lg focus:outline-none ${filter === 'featured' ? 'bg-blue-600' : 'bg-blue-500 hover:bg-blue-600'} focus:ring-2 focus:ring-blue-300`}
-                    onClick={() => filterCertificates('featured')}
-                >
-                    Featured
-                </button>
-                <button
-                    className={`py-2 px-6 text-white rounded-lg focus:outline-none ${filter === 'web' ? 'bg-blue-600' : 'bg-blue-500 hover:bg-blue-600'} focus:ring-2 focus:ring-blue-300`}
-                    onClick={() => filterCertificates('web')}
-                >
-                    Web
-                </button>
-                <button
-                    className={`py-2 px-6 text-white rounded-lg focus:outline-none ${filter === 'sql' ? 'bg-blue-600' : 'bg-blue-500 hover:bg-blue-600'} focus:ring-2 focus:ring-blue-300`}
-                    onClick={() => filterCertificates('sql')}
-                >
-                    SQL
-                </button>
-                <button
-                    className={`py-2 px-6 text-white rounded-lg focus:outline-none ${filter === 'OS' ? 'bg-blue-600' : 'bg-blue-500 hover:bg-blue-600'} focus:ring-2 focus:ring-blue-300`}
-                    onClick={() => filterCertificates('OS')}
-                >
-                    OS
-                </button>
-                <button
-                    className={`py-2 px-6 text-white rounded-lg focus:outline-none ${filter === 'other' ? 'bg-blue-600' : 'bg-blue-500 hover:bg-blue-600'} focus:ring-2 focus:ring-blue-300`}
-                    onClick={() => filterCertificates('other')}
-                >
-                    Other
-                </button>
-                <button
-                    className={`py-2 px-6 text-white rounded-lg focus:outline-none ${filter === 'other' ? 'bg-blue-600' : 'bg-blue-500 hover:bg-blue-600'} focus:ring-2 focus:ring-blue-300`}
-                    onClick={() => filterCertificates('extracirricular')}
-                >
-                    Extra Cirricular
-                </button>
-                <button
-                    className={`py-2 px-6 text-white rounded-lg focus:outline-none ${filter === 'All' ? 'bg-gray-600' : 'bg-gray-500 hover:bg-gray-600'} focus:ring-2 focus:ring-gray-300`}
-                    onClick={() => filterCertificates('All')}
-                >
-                    Show All
-                </button>
+                {btns.map((btn) => (
+                    <button
+                        key={btn.value}
+                        className={`m-2 py-2 px-4 focus:outline-none focus:ring-2 border border-black border-opacity-60 rounded h-11 w-50 text-black ${filter === btn.value
+                            ? 'bg-blue-500 text-white'  // Active button styles
+                            : 'hover:bg-gray-800 hover:text-white'  // Inactive button styles
+                            }`}
+                        onClick={() => filterCertificates(btn.value)}
+                    >
+                        {btn.label}
+                    </button>
+                ))}
             </div>
 
-            <div className="flex flex-wrap justify-center gap-6">
+            <div className="flex flex-wrap  justify-center">
                 {filteredCertificates.map((certificate, index) => (
                     <Card
                         key={index}
                         image={certificate.image}
                         title={certificate.title}
                         tags={certificate.tags}
-                        githubLink={certificate.githubLink}
-                        liveDemoLink={certificate.liveDemoLink}
+                        btnText={'View Certificate'}
+                        btn2Text={false}
+                        btn1Url={certificate.githubLink}
+                        btn2Url={certificate.liveDemoLink}
                     />
                 ))}
             </div>

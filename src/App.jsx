@@ -6,6 +6,8 @@ import Projects from './Component/Projects'
 import Certificates from './Component/Certificates'
 import Blog from './Component/Blog'
 import Contact from './Component/Contact'
+import Marquee from './components/magicui/marquee'
+import ReviewCard from './components/magicui/ReviewCard'
 
 
 const App = () => {
@@ -19,6 +21,8 @@ const App = () => {
       <Certificates />
       <Blog />
       <Contact />
+      {/* <ReviewCard /> */}
+
 
     </div>
 
