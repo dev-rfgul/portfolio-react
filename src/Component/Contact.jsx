@@ -39,12 +39,16 @@ const ContactPage = () => {
                             required
                         ></textarea>
                     </div>
+                    <div className='flex justify-center '>
+
+
                     <button
                         type="submit"
-                        className="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition duration-300"
+                        className="m-2 py-2 px-4 focus:outline-none focus:ring-2 border border-black border-opacity-60 rounded h-11 w-50 text-black hover:bg-gray-800 hover:text-white"
                     >
                         Send Message
                     </button>
+                    </div>
                 </form>
             </div>
         </div>
