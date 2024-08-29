@@ -9,6 +9,22 @@ const Projects = () => {
 
     const projectData = [
         {
+            image: 'images/projects/course/oop.png',
+            title: 'Inventory Management System ',
+            tags: ['Java', 'OOP', 'CLI', 'File Handling'],
+            category: 'Course',
+            githubLink: '#',
+            liveDemoLink: '#',
+        },
+        {
+            image: 'images/projects/course/se.jpeg',
+            title: 'University Bus Management System ',
+            tags: ['Software Engineering', 'Documentation'],
+            category: 'Course',
+            githubLink: '#',
+            liveDemoLink: '#',
+        },
+        {
             image: 'images/projects/js/crypto.jpeg',
             title: 'Crypto Price Ckecker',
             tags: ['JS', 'API', 'JSON', 'Live Tracking'],
@@ -28,7 +44,7 @@ const Projects = () => {
             image: 'images/projects/js/qr.jpeg',
             title: 'QR Code Generator',
             tags: ['API', 'JS', 'Text to QR', 'Responsive'],
-            category: 'Javascript',
+            category: ['Javascript', 'Featured'],
             githubLink: 'https://github.com/dev-rfgul/qr-code-generater',
             liveDemoLink: 'https://qrcode785.netlify.app/',
         },
@@ -43,26 +59,105 @@ const Projects = () => {
         {
             image: 'images/projects/js/tts.jpeg',
             title: 'Text to Speech',
-            tags: ['HTML','CSS','Vanilla JS', 'Text', ],
-            category: 'Javascript',
+            tags: ['HTML', 'CSS', 'Vanilla JS', 'Text',],
+            category: ['Javascript', 'Featured'],
             githubLink: 'https://github.com/dev-rfgul/text-to-speech',
             liveDemoLink: 'https://tts785.netlify.app/',
         },
         {
             image: 'images/projects/js/weather1.jpeg',
             title: 'Weather APP',
-            tags: ['HTML','CSS','JS', 'API','JSON' ],
+            tags: ['HTML', 'CSS', 'JS', 'API', 'JSON'],
             category: 'Javascript',
-            githubLink: 'https://github.com/dev-rfgul/text-to-speech',
-            liveDemoLink: 'https://tts785.netlify.app/',
+            githubLink: 'https://github.com/dev-rfgul/weather-app',
+            liveDemoLink: 'https://weather785.netlify.app/',
         },
+        {
+            // image:'images/projects/react/password.jpeg',
+            image: 'https://images.pexels.com/photos/2882630/pexels-photo-2882630.jpeg?auto=compress&cs=tinysrgb&w=600',
+            title: 'Password Generator',
+            tags: ['Vite', 'React ', 'Select ', 'Copy'],
+            category: 'React',
+            githubLink: 'https://github.com/dev-rfgul/6-password-generator',
+            liveDemoLink: 'https://6-password-generator.vercel.app/',
+        },
+        {
+            image: 'images/projects/react/currencytesting.png',
+            title: 'Currency Converter',
+            tags: ['Vite', 'React ', 'API ', 'Live Conversion',],
+            category: 'React',
+            githubLink: 'https://github.com/dev-rfgul/7-currency-converter',
+            liveDemoLink: 'https://7-currency-converter-ten.vercel.app/',
+        },
+        {
+            image: 'images/projects/react/todo.jpg',
+            title: 'Todo List',
+            tags: ['React ', 'Context API ', 'state management',],
+            category: 'React',
+            githubLink: 'https://github.com/dev-rfgul/todolist-context-api-',
+            liveDemoLink: 'https://todolist-fawn-xi.vercel.app/',
+        },
+        {
+            image: 'images/projects/react/invoice.jpg',
+            title: 'Invoice Generator ',
+            tags: ['Vite', 'React', , 'Download', 'Print'],
+            category: 'React',
+            githubLink: 'https://github.com/dev-rfgul/invoice-generaator',
+            liveDemoLink: 'https://invoice-generaator.vercel.app/',
+        },
+        {
+            image: 'images/projects/react/dice.jpg',
+            title: 'Dice Game',
+            tags: ['React ', 'Random Number', 'Guess'],
+            category: ['React', 'Featured'],
+            githubLink: 'https://github.com/dev-rfgul/dice-game',
+            liveDemoLink: 'https://dice-game-lime-five.vercel.app/',
+        },
+
+        {
+            image: 'images/projects/react/img.jpg',
+            title: 'AI Vs Human Game',
+            tags: ['Vite', 'React ', 'Number Guessing'],
+            category: ['React', 'Featured'],
+            githubLink: 'https://github.com/dev-rfgul/ai-vs-human-vite-',
+            liveDemoLink: 'https://ai-vs-human-game.vercel.app/',
+        },
+        {
+            image: 'images/projects/react/binmukhtar.png',
+            title: 'Bin Mukhtar Tax Consultants',
+            tags: ['Next', 'React ', 'Company website'],
+            category: ['React', 'Featured'],
+            githubLink: 'https://github.com/dev-rfgul/bin-mukhtar',
+            liveDemoLink: 'https://binmukhtar.vercel.app/',
+        },
+        {
+            image: 'images/projects/react/bitxcoin.png',
+            title: 'Bit x Coin ',
+            tags: ['Vite', 'React ', 'Crytpo Mining'],
+            category: ['React', 'Featured'],
+            githubLink: 'https://github.com/dev-rfgul/bitxcoin',
+            liveDemoLink: 'https://bitxcoin.vercel.app/',
+        },
+
+
+        {
+            image: 'images/projects/backend/backend.jpeg',
+            title: 'Currently Learning',
+            tags: ['Node JS', 'Express ', 'Mongo DB ', 'API'],
+            category: ['Backend', ''],
+            githubLink: '',
+            liveDemoLink: '',
+        },
+
+
     ];
 
     const btns = [
         { label: 'Featured', value: 'Featured' },
+        { label: 'Course', value: 'Course' },
         { label: 'Javascript', value: 'Javascript' },
         { label: 'React JS', value: 'React' },
-        { label: 'Backend Projects', value: 'Backend' },
+        { label: 'Backend ', value: 'Backend' },
         { label: 'Show All', value: 'All' },
     ];
 
@@ -72,7 +167,7 @@ const Projects = () => {
 
     const filteredProjects = filter === 'All'
         ? projectData
-        : projectData.filter(project => project.category === filter);
+        : projectData.filter(project => project.category.includes(filter));
 
     return (
         <div id='projects' className="p-4">
@@ -84,11 +179,10 @@ const Projects = () => {
                 {btns.map((btn) => (
                     <button
                         key={btn.value}
-                        className={`m-2 py-2 px-4 focus:outline-none focus:ring-2 border border-black border-opacity-60 rounded h-11 w-50 text-black ${
-                            filter === btn.value
-                                ? 'bg-blue-500 text-white'  // Active button styles
-                                : 'hover:bg-gray-800 hover:text-white'  // Inactive button styles
-                        }`}
+                        className={`m-2 py-2 px-4 focus:outline-none focus:ring-2 border border-black border-opacity-60 rounded h-11 w-50 text-black ${filter === btn.value
+                            ? 'bg-blue-500 text-white'  // Active button styles
+                            : 'hover:bg-gray-800 hover:text-white'  // Inactive button styles
+                            }`}
                         onClick={() => filterProjects(btn.value)}
                     >
                         {btn.label}
