@@ -11,7 +11,7 @@ import Skills  from "./Component/Skills";
 
 const App = () => {
   return (
-    <div className="font-poppins">
+    <div className="font-poppins mx-10">
       <Navbar />
       <Banner />
       <AboutMe />

@@ -26,21 +26,13 @@ const Banner = () => {
 
                     {/* Icons Section */}
                     <div className="flex justify-center md:justify-start space-x-6">
-                        <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer" className="text-black hover:text-black hover:scale-110 transition-colors duration-300">
+                        <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer" className="text-black hover:text-gray-800 hover:scale-110 transition-colors duration-300">
                             <FaGithub size={35} />
                         </a>
                         <a href="https://www.linkedin.com/in/your-username" target="_blank" rel="noopener noreferrer" className="text-black hover:scale-110 hover:text-blue-600 transition-colors duration-300">
                             <FaLinkedin size={35} />
                         </a>
-                        <a href="https://www.instagram.com/your-username" target="_blank" rel="noopener noreferrer" className="text-black hover:text-pink-500 hover:scale-110 transition-colors duration-300">
-                            <FaInstagram size={35} />
-                        </a>
-                        <a href="https://twitter.com/your-username" target="_blank" rel="noopener noreferrer" className="text-black hover:text-blue-500 hover:scale-110 transition-colors duration-300">
-                            <FaTwitter size={35} />
-                        </a>
-                        <a href="https://www.tiktok.com/@your-username" target="_blank" rel="noopener noreferrer" className="text-black hover:scale-110 hover:shadow-lg transition-transform duration-300">
-                            <FaTiktok size={35} />
-                        </a>
+
                     </div>
                 </div>
 
