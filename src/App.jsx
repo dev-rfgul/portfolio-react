@@ -11,16 +11,15 @@ import Reviews from './Component/Reviews';
 
 const App = () => {
   return (
-    <div className="font-poppins mx-10">
+    <div className="font-poppins ">
 
       <Navbar />
       <Banner />
-      <Reviews />
       <AboutMe />
+      <Reviews />
       <Skills />
       <Projects />
       <Certificates />
-      {/* <Blog /> */}
       <Contact />
     </div>
   );

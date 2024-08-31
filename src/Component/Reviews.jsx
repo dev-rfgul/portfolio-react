@@ -81,7 +81,7 @@ import React from 'react'
 
 const Reviews = () => {
     return (
-        <div>
+        <div id="testimonials">
             <Heading heading='Testimonials' subHeading={"What People Think about me"} />
             <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl">
                 <Marquee pauseOnHover className="[--duration:20s]">
