@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Card from './Card';
+import Heading from './Heading'
 
 const Blog = () => {
 
@@ -38,10 +39,7 @@ const Blog = () => {
 
     return (
         <div id='bookReviews' className="p-4">
-            <div className="text-center mb-12">
-                <h2 className="text-lg text-gray-600 mb-2">Books I Read</h2>
-                <h1 className="text-3xl md:text-4xl font-extrabold text-gray-800">Book Reviews</h1>
-            </div>
+          <Heading heading={"Book Reviews"}  subHeading="Books i had read"/>
             <div className="flex flex-wrap  justify-center">
                 {booksData.map((blog, index) => (
                     <Card

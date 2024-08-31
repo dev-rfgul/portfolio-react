@@ -3,6 +3,7 @@
 
 import React, { useState } from 'react';
 import Card from './Card';
+import Heading from './Heading'
 
 const Projects = () => {
     const [filter, setFilter] = useState('Featured');
@@ -171,10 +172,7 @@ const Projects = () => {
 
     return (
         <div id='projects' className="p-4">
-            <div className="text-center mb-12">
-                <h2 className="text-lg text-gray-600 mb-2">Projects I Made</h2>
-                <h1 className="text-3xl md:text-4xl font-extrabold text-gray-800">My Projects</h1>
-            </div>
+            <Heading heading={"Projects"} subHeading={"projects I made "} />
             <div className="flex flex-wrap justify-center mb-8">
                 {btns.map((btn) => (
                     <button
@@ -190,7 +188,7 @@ const Projects = () => {
                 ))}
             </div>
 
-            <div className="flex flex-wrap justify-center">
+            <div className="flex flex-wrap justify-center gap-6">
                 {filteredProjects.map((project, index) => (
                     <Card
                         className="border border-black border-opacity-60"

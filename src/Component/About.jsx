@@ -1,14 +1,12 @@
 
 
 import React from 'react';
+import Heading from './Heading'
 
 const AboutMe = () => {
     return (
         <section id='about' className="py-12 px-6 md:px-8 lg:px-16 bg-gray-50">
-            <div className="text-center mb-12">
-                <h2 className="text-lg text-gray-600 mb-2">Get To Know More</h2>
-                <h1 className="text-3xl md:text-4xl font-extrabold text-gray-800">About Me</h1>
-            </div>
+         <Heading heading={"About Me"} subHeading={"get to know more about me"} />
             <div className="flex  flex-col md:flex-row items-center justify-md:justify-between space-y-8 md:space-y-0 md:space-x-6 lg:space-x-12">
                 <div className=" w-full md:w-3/10 lg:w-1/3 flex justify-center items-center">
                     <img

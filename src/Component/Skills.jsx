@@ -2,6 +2,7 @@ import IconCloud from '@/components/magicui/IconCloud';
 
 
 import React from 'react'
+import Heading from './Heading'
 
 const slugs = [
     "linux",
@@ -32,10 +33,7 @@ const slugs = [
 const Skills = () => {
     return (
         <div id="skills" className="py-16 bg-white">
-            <div className="text-center mb-12">
-                <h2 className="text-xl md:text-2xl text-gray-600 mb-2">Skills I Have</h2>
-                <h1 className="text-3xl md:text-5xl font-extrabold text-gray-800">Skills</h1>
-            </div>
+            <Heading heading={"Skills"} subHeading={"skills i have"} />
             <div className="flex flex-col md:flex-row w-full min-h-screen p-6 md:p-10">
                 {/* Left Side: Skills Image */}
                 <div className="w-full md:w-1/2 flex justify-center items-center mb-10 md:mb-0 animate-fade-in">

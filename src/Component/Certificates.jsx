@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import Card from './Card';
+import Heading from './Heading'
 
 const Certificates = () => {
     const [filter, setFilter] = useState('featured');
@@ -170,11 +171,7 @@ const Certificates = () => {
 
     return (
         <div id='certificates' className="p-6">
-            <div className="text-center mb-12">
-                <h2 className="text-lg text-gray-600 mb-2">My Certifications </h2>
-                <h1 className="text-3xl md:text-4xl font-extrabold text-gray-800">Certifications</h1>
-            </div>
-
+        <Heading heading={"Certifications"} subHeading={"certifications I Had"}/>
             <div className="flex flex-wrap justify-center gap-4 mb-8">
                 {btns.map((btn) => (
                     <button
@@ -190,7 +187,7 @@ const Certificates = () => {
                 ))}
             </div>
 
-            <div className="flex flex-wrap  justify-center">
+            <div className="flex flex-wrap  justify-center gap-6">
                 {filteredCertificates.map((certificate, index) => (
                     <Card
                         key={index}
