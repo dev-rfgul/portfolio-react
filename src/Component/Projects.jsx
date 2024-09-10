@@ -50,7 +50,7 @@ const Projects = () => {
             liveDemoLink: 'https://qrcode785.netlify.app/',
         },
         {
-            image: 'images/projects/js/tictactoe.jpeg',
+            image: 'images/projects/js/tic-tac-toe.png',
             title: 'Tic Tac Toe Game',
             tags: ['HTML', 'CSS', 'JS ', 'Game logic'], 
             category: 'Javascript',
@@ -66,7 +66,7 @@ const Projects = () => {
             liveDemoLink: 'https://tts785.netlify.app/',
         },
         {
-            image: 'images/projects/js/weather1.jpeg',
+            image: 'images/projects/js/weather.png',
             title: 'Weather APP',
             tags: ['HTML', 'CSS', 'JS', 'API', 'JSON'],
             category: 'Javascript',
