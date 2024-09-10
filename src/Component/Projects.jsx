@@ -26,7 +26,7 @@ const Projects = () => {
             liveDemoLink: '#',
         },
         {
-            image: 'images/projects/js/crypto.jpeg',
+            image: 'images/projects/js/crypto-price-cheker.png',
             title: 'Crypto Price Ckecker',
             tags: ['JS', 'API', 'JSON', 'Live Tracking'],
             category: 'Javascript',
@@ -34,7 +34,7 @@ const Projects = () => {
             liveDemoLink: 'https://cryptoprices785.netlify.app/',
         },
         {
-            image: 'images/projects/js/music.jpeg',
+            image: 'images/projects/js/music-player.png',
             title: 'Music Player',
             tags: ['JS', 'Responsive', 'Spotify', 'HTML'],
             category: 'Javascript',
@@ -42,7 +42,7 @@ const Projects = () => {
             liveDemoLink: 'https://spotify785.netlify.app/',
         },
         {
-            image: 'images/projects/js/qr.jpeg',
+            image: 'images/projects/js/qr-code-generator.png',
             title: 'QR Code Generator',
             tags: ['API', 'JS', 'Text to QR', 'Responsive'],
             category: ['Javascript', 'Featured'],
@@ -52,13 +52,13 @@ const Projects = () => {
         {
             image: 'images/projects/js/tictactoe.jpeg',
             title: 'Tic Tac Toe Game',
-            tags: ['HTML', 'CSS', 'JS ', 'Game logic'],
+            tags: ['HTML', 'CSS', 'JS ', 'Game logic'], 
             category: 'Javascript',
             githubLink: 'https://github.com/dev-rfgul/ticTacToe',
             liveDemoLink: 'https://tictactoe785.netlify.app/',
         },
         {
-            image: 'images/projects/js/tts.jpeg',
+            image: 'images/projects/js/text-to-speech.png',
             title: 'Text to Speech',
             tags: ['HTML', 'CSS', 'Vanilla JS', 'Text',],
             category: ['Javascript', 'Featured'],
