@@ -155,7 +155,7 @@ const Projects = () => {
 
     const btns = [
         { label: 'Featured', value: 'Featured' },
-        { label: 'Course', value: 'Course' },
+        { label: 'Semester', value: 'Course' },
         { label: 'Javascript', value: 'Javascript' },
         { label: 'React JS', value: 'React' },
         { label: 'Backend ', value: 'Backend' },
