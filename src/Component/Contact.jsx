@@ -132,28 +132,25 @@ const Contact = () => {
                 Feel free to reach out to me on any of the following platforms. I look forward to connecting with you!
             </p>
             <div className="flex flex-wrap justify-center gap-6">
-                <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/rf-gul" target="_blank" rel="noopener noreferrer">
                     <FaLinkedin className="text-3xl sm:text-4xl md:text-5xl" style={{ color: iconColor.linkedin }} />
                 </a>
-                <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/dev-rfgul" target="_blank" rel="noopener noreferrer">
                     <FaGithub className="text-3xl sm:text-4xl md:text-5xl" style={{ color: iconColor.github }} />
                 </a>
-                <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer">
+                <a href="https://twitter.com/rfgul" target="_blank" rel="noopener noreferrer">
                     <FaTwitter className="text-3xl sm:text-4xl md:text-5xl" style={{ color: iconColor.twitter }} />
                 </a>
-                <a href="https://facebook.com/yourprofile" target="_blank" rel="noopener noreferrer">
-                    <FaFacebook className="text-3xl sm:text-4xl md:text-5xl" style={{ color: iconColor.facebook }} />
-                </a>
-                <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.instagram.com/dev_rfgul" target="_blank" rel="noopener noreferrer">
                     <FaInstagram className="text-3xl sm:text-4xl md:text-5xl" style={{ color: iconColor.instagram }} />
                 </a>
-                <a href="https://youtube.com/yourprofile" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.youtube.com/@dev-rfgul" target="_blank" rel="noopener noreferrer">
                     <FaYoutube className="text-3xl sm:text-4xl md:text-5xl" style={{ color: iconColor.youtube }} />
                 </a>
-                <a href="https://wa.me/yourprofile" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/+923329296026" target="_blank" rel="noopener noreferrer">
                     <FaWhatsapp className="text-3xl sm:text-4xl md:text-5xl" style={{ color: iconColor.whatsapp }} />
                 </a>
-                <a href="tel:+923000000000">
+                <a href="tel:+923329296026">
                     <FaPhone className="text-3xl sm:text-4xl md:text-5xl" style={{ color: iconColor.phone }} />
                 </a>
             </div>
