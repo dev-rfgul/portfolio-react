@@ -11,19 +11,19 @@ const Projects = () => {
     const projectData = [
         {
             image: 'images/projects/course/oop.png',
-            title: 'Inventory Management System ',
+            title: 'Shopping Cart',
             tags: ['Java', 'OOP', 'CLI', 'File Handling'],
             category: 'Course',
-            githubLink: '#',
-            liveDemoLink: '#',
+            githubLink: 'https://github.com/dev-rfgul/shopping-cart-OOP',
+            liveDemoLink: 'https://github.com/dev-rfgul/shopping-cart-OOP',
         },
         {
             image: 'images/projects/course/se.jpeg',
-            title: 'University Bus Management System ',
+            title: 'Bus Management System',
             tags: ['Software Engineering', 'Documentation'],
             category: 'Course',
-            githubLink: '#',
-            liveDemoLink: '#',
+            githubLink: 'https://github.com/dev-rfgul/bus-management-system',
+            liveDemoLink: 'https://github.com/dev-rfgul/bus-management-system',
         },
         {
             image: 'images/projects/js/crypto-price-cheker.png',
