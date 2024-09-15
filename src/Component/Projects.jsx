@@ -18,7 +18,7 @@ const Projects = () => {
             liveDemoLink: 'https://github.com/dev-rfgul/shopping-cart-OOP',
         },
         {
-            image: 'images/projects/course/se.jpeg',
+            image: 'images/projects/course/se.png',
             title: 'Bus Management System',
             tags: ['Software Engineering', 'Documentation'],
             category: 'Course',
