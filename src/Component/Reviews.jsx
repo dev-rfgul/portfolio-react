@@ -5,51 +5,32 @@ import Heading from "../Component/Heading"
 
 const reviews = [
     {
-        name: "Fahad",
-        username: "@jack",
-        body: "I've never seen anything like this before. It's amazing. I love it. and i want to work with himm again and agaiin  it feels so much amazing to work with him ",
-        img: "/images/banner-img.png"
+        img: "https://rfgul-nine.vercel.app/images/banner-img.png",
+        name: "John Doe",
+        title: "@johndoe",
+        body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
-        name: "Fahad 2",
-        username: "@jill",
-        body: "I don't know what to say. I'm speechless. This is amazing.",
-        img: "https://avatar.vercel.sh/jill"
+        img: "https://dribrar.netlify.app/images/ibrar's%20img.png",
+        title: "Animal Nutrituionist",
+        title: "@johndoe",
+        body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
-        name: "John",
-        username: "@john",
-        body: "I'm at a loss for words. This is amazing. I love it.",
-        img: "https://avatar.vercel.sh/john"
+        img: "https://avatar.vercel.sh/jill",
+        title: "Animal Nutrituionist",
+        title: "@johndoe",
+        body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
-    {
-        name: "Jane",
-        username: "@jane",
-        body: "I'm at a loss for words. This is amazing. I love it.",
-        img: "https://avatar.vercel.sh/jane"
-    },
-    {
-        name: "Jenny",
-        username: "@jenny",
-        body: "I'm at a loss for words. This is amazing. I love it.",
-        img: "https://avatar.vercel.sh/jenny"
-    },
-    {
-        name: "James",
-        username: "@james",
-        body: "I'm at a loss for words. This is amazing. I love it.",
-        img: "https://avatar.vercel.sh/james"
-    }
+
 ]
 
 const firstRow = reviews.slice(0, reviews.length / 2)
 const secondRow = reviews.slice(reviews.length / 2)
 
-const ReviewCard = ({ img, name, username, body }) => {
+const ReviewCard = ({ img, name, title, body }) => {
     return (
-
         <>
-
             <figure
                 className={cn(
                     "relative w-64 cursor-pointer overflow-hidden rounded-xl border p-4",
@@ -60,24 +41,33 @@ const ReviewCard = ({ img, name, username, body }) => {
                 )}
             >
                 <div className="flex flex-row items-center gap-2">
-                    <img className="rounded-full" width="32" height="32" alt="" src={img} />
+                    <img
+                        className="rounded-full  object-cover  object-top"
+                        style={{ width: '60px', height: '60px' }}
+                        alt=""
+                        src={img}
+                    />
+
                     <div className="flex flex-col">
                         <figcaption className="text-sm font-medium dark:text-white">
                             {name}
                         </figcaption>
-                        <p className="text-xs font-medium dark:text-white/40">{username}</p>
+                        <p className="text-xs font-medium dark:text-white/40">{title}</p>
                     </div>
                 </div>
                 <blockquote className="mt-2 text-sm">{body}</blockquote>
+
             </figure>
         </>
-    )
+    );
+
 }
 
 
 
 
 import React from 'react'
+import { Button } from "react-scroll"
 
 const Reviews = () => {
     return (
