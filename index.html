@@ -2,18 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- google site verification -->
-    <meta name="google-site-verification" content="C8kKgsRj-l28DTsB_qBwUssyaJ_u3WmowxkbYZnww_0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="google-site-verification"
+      content="C8kKgsRj-l28DTsB_qBwUssyaJ_u3WmowxkbYZnww_0"
+    />
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
     <meta
       name="description"
-      content="Welcome to DEV RF-GUL, the portfolio of Muhammad Fahad, a full stack developer with expertise in React, Tailwind CSS, Node JS, Mongodb, express  JS and web development. Explore projects by RF GUL and connect with Muhammad Fahad on LinkedIn."
+      content="Welcome to DEV RF-GUL, the portfolio of Muhammad Fahad, a full stack developer with expertise in React, Tailwind CSS, Node JS, Mongodb, express JS and web development. Explore projects by RF GUL and connect with Muhammad Fahad on LinkedIn."
     />
     <meta
       name="keywords"
-      content="rfgul, RF GUL, dev rfgul, dev-rfgul, Muhammad Fahad, frontend developer, fahad gul, react developer, muhammadfahad, raofahadgul, rfgul linkedin, developer RF GUL, muhammad fahad linkedin "
+      content="rfgul, RF GUL, dev rfgul, dev-rfgul, Muhammad Fahad, frontend developer, fahad gul, react developer, muhammadfahad, raofahadgul, rfgul linkedin, developer RF GUL, muhammad fahad linkedin"
     />
-    <!-- Open Graph (social media preview) -->
     <meta
       property="og:title"
       content="DEV RF-GUL | Muhammad Fahad | Frontend Developer"
@@ -29,12 +31,80 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
       rel="stylesheet"
     />
+    <style>
+      /* Loader Styles */
+      #loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #0d0d0d;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        opacity: 1;
+        transition: opacity 0.5s ease, visibility 0.5s ease;
+      }
+
+      #loader.hidden {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      /* Welcome Text Styles */
+      #welcome-msg {
+        font-family: 'Poppins', sans-serif;
+        font-size: 2.5rem;
+        color: #ffffff;
+        text-align: center;
+        opacity: 0;
+        animation: fadeInOut 3s ease-in-out forwards;
+        margin-top: 1rem;
+      }
+
+      /* Logo Styles */
+      #logo {
+        width: 300px; /* Increased size */
+        height: 300px; /* Increased size */
+        opacity: 0;
+        animation: fadeInOut 3s ease-in-out forwards;
+      }
+
+      @keyframes fadeInOut {
+        0% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+    </style>
   </head>
   <body>
+    <h1 style="display: none;">DEV RF-GUL | Muhammad Fahad Portfolio | RF GUL</h1>
+    <h2 style="display: none;">Full Stack Developer | MERN Developer</h2>
+    <div id="loader">
+      <img id="logo" src="/logo.svg" alt="DEV RF-GUL Logo" />
+      <div id="welcome-msg">RF GUL's Portfolio</div>
+    </div>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+      window.addEventListener("load", () => {
+        const loader = document.getElementById("loader");
+        setTimeout(() => {
+          loader.classList.add("hidden");
+        }, 2000); // Adjust the duration as needed for both the logo and message
+      });
+    </script>
   </body>
 </html>

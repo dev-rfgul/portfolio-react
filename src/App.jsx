@@ -8,12 +8,14 @@ import Blog from './Component/Blog';
 import Contact from './Component/Contact';
 import Skills from "./Component/Skills";
 import Reviews from './Component/Reviews';
+import VisitorCounter from './Component/Visitor';
 
 const App = () => {
   return (
     <div className="font-poppins ">
 
       <Navbar />
+      {/* <VisitorCounter/> */}
       <Banner />
       <AboutMe />
       <Reviews />

@@ -12,14 +12,14 @@ const reviews = [
     },
     {
         img: "https://dribrar.netlify.app/images/ibrar's%20img.png",
+        name: "Dr Ibrar",
         title: "Animal Nutrituionist",
-        title: "@johndoe",
         body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
         img: "https://avatar.vercel.sh/jill",
+        name: "@johndoe",
         title: "Animal Nutrituionist",
-        title: "@johndoe",
         body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
 
