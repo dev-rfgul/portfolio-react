@@ -53,7 +53,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: #0d0d0d;
+        background-color: #000000; /* Initial black background */
         z-index: 9999;
         display: flex;
         align-items: center;
@@ -63,16 +63,37 @@
         transition: opacity 0.5s ease, visibility 0.5s ease;
       }
 
-      #loader.hidden {
-        opacity: 0;
-        visibility: hidden;
+      /* Progress Bar and Number Colors */
+      #progress-bar {
+        width: 0;
+        height: 100%;
+        background-color: #ffffff; /* White progress bar */
+        border-radius: 10px;
+        transition: width 2s ease;
+      }
+
+      #progress-number {
+        font-family: "Poppins", sans-serif;
+        font-size: 1.5rem;
+        color: #ffffff; /* White progress number */
+        margin-top: 10px;
+      }
+
+      /* Container for the progress bar */
+      #progress-container {
+        width: 80%;
+        height: 20px;
+        background-color: #333333; /* Dark background for the container */
+        border-radius: 10px;
+        overflow: hidden;
+        margin-top: 2rem;
       }
 
       /* Welcome Text Styles */
       #welcome-msg {
         font-family: "Poppins", sans-serif;
         font-size: 2.5rem;
-        color: #ffffff;
+        color: #ffffff; /* White text for the welcome message */
         text-align: center;
         opacity: 0;
         animation: fadeInOut 3s ease-in-out forwards;
@@ -81,8 +102,8 @@
 
       /* Logo Styles */
       #logo {
-        width: 300px; /* Increased size */
-        height: 300px; /* Increased size */
+        width: 300px;
+        height: 300px;
         opacity: 0;
         animation: fadeInOut 3s ease-in-out forwards;
       }
@@ -98,6 +119,12 @@
           opacity: 0;
         }
       }
+
+      /* Hide the loader after it finishes loading */
+      #loader.hidden {
+        opacity: 0;
+        visibility: hidden;
+      }
     </style>
   </head>
   <body>
@@ -105,18 +132,38 @@
       RF-GUL's Portfolio | Muhammad Fahad - Full Stack Developer
     </h1>
     <h2 style="display: none">Explore MERN Stack Projects by Muhammad Fahad</h2>
+
     <div id="loader">
       <img id="logo" src="/logo.svg" alt="DEV RF-GUL Logo" />
       <div id="welcome-msg">RF GUL's Portfolio</div>
+      <div id="progress-container">
+        <div id="progress-bar"></div>
+      </div>
+      <div id="progress-number">0%</div> <!-- Progress Number -->
     </div>
+
     <div id="root"></div>
+
     <script type="module" src="/src/main.jsx"></script>
     <script>
       window.addEventListener("load", () => {
         const loader = document.getElementById("loader");
-        setTimeout(() => {
-          loader.classList.add("hidden");
-        }, 2000); // Adjust the duration as needed for both the logo and message
+        const progressBar = document.getElementById("progress-bar");
+        const progressNumber = document.getElementById("progress-number");
+
+        let progress = 0;
+        const interval = setInterval(() => {
+          progress += 1;
+          progressBar.style.width = progress + "%";
+          progressNumber.textContent = progress + "%"; // Update the progress number
+
+          if (progress === 100) {
+            clearInterval(interval);
+            setTimeout(() => {
+              loader.classList.add("hidden");
+            }, 500); // Delay before hiding loader
+          }
+        }, 20); // Speed of progress increase
       });
     </script>
   </body>
