@@ -3,10 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Google Verification -->
     <meta
       name="google-site-verification"
       content="C8kKgsRj-l28DTsB_qBwUssyaJ_u3WmowxkbYZnww_0"
     />
+    
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
 
     <!-- Updated Meta Description -->
@@ -32,100 +35,23 @@
       property="og:description"
       content="Explore the portfolio of Muhammad Fahad (RF-GUL), a skilled full-stack developer specialized in React, Node.js, and web development."
     />
-    
+
     <meta property="og:image" content="/logo.svg" />
     <meta property="og:url" content="https://rfgul.live" />
 
     <!-- Updated Title -->
     <title>Welcome to RF-GUL's Portfolio | Muhammad Fahad</title>
 
+    <!-- Fonts Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
       rel="stylesheet"
     />
-    <style>
-      /* Loader Styles */
-      #loader {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: #000000; /* Initial black background */
-        z-index: 9999;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        opacity: 1;
-        transition: opacity 0.5s ease, visibility 0.5s ease;
-      }
 
-      /* Progress Bar and Number Colors */
-      #progress-bar {
-        width: 0;
-        height: 100%;
-        background-color: #ffffff; /* White progress bar */
-        border-radius: 10px;
-        transition: width 2s ease;
-      }
-
-      #progress-number {
-        font-family: "Poppins", sans-serif;
-        font-size: 1.5rem;
-        color: #ffffff; /* White progress number */
-        margin-top: 10px;
-      }
-
-      /* Container for the progress bar */
-      #progress-container {
-        width: 80%;
-        height: 20px;
-        background-color: #333333; /* Dark background for the container */
-        border-radius: 10px;
-        overflow: hidden;
-        margin-top: 2rem;
-      }
-
-      /* Welcome Text Styles */
-      #welcome-msg {
-        font-family: "Poppins", sans-serif;
-        font-size: 2.5rem;
-        color: #ffffff; /* White text for the welcome message */
-        text-align: center;
-        opacity: 0;
-        animation: fadeInOut 3s ease-in-out forwards;
-        margin-top: 1rem;
-      }
-
-      /* Logo Styles */
-      #logo {
-        width: 300px;
-        height: 300px;
-        opacity: 0;
-        animation: fadeInOut 3s ease-in-out forwards;
-      }
-
-      @keyframes fadeInOut {
-        0% {
-          opacity: 0;
-        }
-        50% {
-          opacity: 1;
-        }
-        100% {
-          opacity: 0;
-        }
-      }
-
-      /* Hide the loader after it finishes loading */
-      #loader.hidden {
-        opacity: 0;
-        visibility: hidden;
-      }
-    </style>
+    <!-- Link to Tailwind CSS -->
+    <link href="/dist/output.css" rel="stylesheet" />
   </head>
   <body>
     <h1 style="display: none">
@@ -133,38 +59,10 @@
     </h1>
     <h2 style="display: none">Explore MERN Stack Projects by Muhammad Fahad</h2>
 
-    <div id="loader">
-      <img id="logo" src="/logo.svg" alt="DEV RF-GUL Logo" />
-      <div id="welcome-msg">RF GUL's Portfolio</div>
-      <div id="progress-container">
-        <div id="progress-bar"></div>
-      </div>
-      <div id="progress-number">0%</div> <!-- Progress Number -->
-    </div>
-
+    <!-- Root div for React application -->
     <div id="root"></div>
 
+    <!-- React Script -->
     <script type="module" src="/src/main.jsx"></script>
-    <script>
-      window.addEventListener("load", () => {
-        const loader = document.getElementById("loader");
-        const progressBar = document.getElementById("progress-bar");
-        const progressNumber = document.getElementById("progress-number");
-
-        let progress = 0;
-        const interval = setInterval(() => {
-          progress += 1;
-          progressBar.style.width = progress + "%";
-          progressNumber.textContent = progress + "%"; // Update the progress number
-
-          if (progress === 100) {
-            clearInterval(interval);
-            setTimeout(() => {
-              loader.classList.add("hidden");
-            }, 500); // Delay before hiding loader
-          }
-        }, 20); // Speed of progress increase
-      });
-    </script>
   </body>
 </html>

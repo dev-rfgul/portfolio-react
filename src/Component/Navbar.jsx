@@ -14,7 +14,7 @@ const Page = () => {
         <Router>
             <div className="bg-gray-100 " id="navbar">
                 {/* Navbar */}
-                <div className="fixed z-50 top-0 left-0 right-0 bg-white shadow-md">
+                <div className="fixed z-50 top-0 left-0 right-0     bg-white shadow-md">
                     <div className="flex items-center justify-between px-4 py-2 md:px-6 md:py-2.5">
                         <div>
                             <img className="w-20 md:w-28" src="/images/logo.png" alt="logo" />
@@ -106,7 +106,7 @@ const Page = () => {
                                     Contact
                                 </ScrollLink>
                             </li>
-                           
+
                         </ul>
                     </div>
                 </div>
