@@ -27,13 +27,17 @@ const slugs = [
     "gitlab",
     "githubcopilot",
     "visualstudiocode",
+    "node",
+    "npm",
+    "mongodb",
+    "express"
 ];
 
 
 const Skills = () => {
     return (
         <div id="skills" className="py-16 bg-white">
-            <Heading heading={"Skills"} subHeading={"skills i have"} />
+            <Heading heading={"Skills"} subHeading={"Skills i have"} />
             <div className="flex flex-col md:flex-row w-full min-h-screen p-6 md:p-10">
                 {/* Left Side: Skills Image */}
                 <div className="w-full md:w-1/2 flex justify-center items-center mb-10 md:mb-0 animate-fade-in">

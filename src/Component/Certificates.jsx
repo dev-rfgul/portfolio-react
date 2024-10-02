@@ -171,7 +171,7 @@ const Certificates = () => {
 
     return (
         <div id='certificates' className="p-6">
-        <Heading heading={"Certifications"} subHeading={"certifications I Had"}/>
+        <Heading heading={"Certifications"} subHeading={"Certifications I Had"}/>
             <div className="flex flex-wrap justify-center gap-4 mb-8">
                 {btns.map((btn) => (
                     <button

@@ -6,7 +6,7 @@ import Heading from './Heading'
 const AboutMe = () => {
     return (
         <section id='about' className="py-12 px-6 md:px-8 lg:px-16 bg-gray-50">
-         <Heading heading={"About Me"} subHeading={"get to know more about me"} />
+         <Heading heading={"About Me"} subHeading={"Get to know more about me"} />
             <div className="flex  flex-col md:flex-row items-center justify-md:justify-between space-y-8 md:space-y-0 md:space-x-6 lg:space-x-12">
                 <div className=" w-full md:w-3/10 lg:w-1/3 flex justify-center items-center">
                     <img
