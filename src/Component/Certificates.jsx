@@ -12,7 +12,7 @@ const Certificates = () => {
             title: 'React Basics',
             tags: ['React', 'JavaScript', 'JSX'],
             category: ['featured', 'web'],
-            githubLink: '#',
+            githubLink: 'https://coursera.org/share/ca00c1a7e4ad806b02599c8452b508d3',
             liveDemoLink: '#',
         },
         {
@@ -20,7 +20,7 @@ const Certificates = () => {
             title: 'Git & Github',
             tags: ['Git', 'Version Control', 'GitHub'],
             category: ['featured', 'web'],
-            githubLink: '#',
+            githubLink: 'https://coursera.org/share/af886bcafcf5b066b0391cf4f4e19672',
             liveDemoLink: '#',
         },
         {
@@ -28,7 +28,7 @@ const Certificates = () => {
             title: 'Responsive Web Design',
             tags: ['HTML', 'CSS', 'Responsive Design'],
             category: ['featured', 'web'],
-            githubLink: '#',
+            githubLink: 'https://www.freecodecamp.org/certification/Fahad785/responsive-web-design',
             liveDemoLink: '#',
         },
 
@@ -37,7 +37,7 @@ const Certificates = () => {
             title: 'Intro to Linux',
             tags: ['Linux', 'Operating Systems', 'Shell'],
             category: ['OS'],
-            githubLink: '#',
+            githubLink: 'https://www.coursera.org/account/accomplishments/verify/ZRYVDT6YJU6D',
             liveDemoLink: '#',
         },
         {
@@ -45,7 +45,7 @@ const Certificates = () => {
             title: 'Command Line Basics',
             tags: ['Command Line', 'Bash', 'Shell Scripting'],
             category: ['OS'],
-            githubLink: '#',
+            githubLink: 'https://www.coursera.org/account/accomplishments/verify/N5QLPPSVZQV6',
             liveDemoLink: '#',
         },
         {
@@ -53,7 +53,7 @@ const Certificates = () => {
             title: 'Intro to SQL',
             tags: ['SQL', 'Databases', 'Queries'],
             category: ['sql'],
-            githubLink: '#',
+            githubLink: 'https://www.datacamp.com/completed/statement-of-accomplishment/course/888118d23ea2cd1a288f0a62ac219d50ad1a1667',
             liveDemoLink: '#',
         },
         {
@@ -61,7 +61,7 @@ const Certificates = () => {
             title: 'Intermediate SQL',
             tags: ['SQL', 'Joins', 'Subqueries'],
             category: ['sql'],
-            githubLink: '#',
+            githubLink: 'https://www.datacamp.com/completed/statement-of-accomplishment/course/a96813db410ec0927ac9b9108e0bc4cd0d3a0154',
             liveDemoLink: '#',
         },
         {
@@ -69,7 +69,7 @@ const Certificates = () => {
             title: 'Joining in SQL',
             tags: ['SQL', 'Joins', 'Data Analysis'],
             category: ['sql'],
-            githubLink: '#',
+            githubLink: 'https://www.datacamp.com/completed/statement-of-accomplishment/course/6056563c8c96ed27399b8e325327821eb04b96f7',
             liveDemoLink: '#',
         },
         {
@@ -197,7 +197,6 @@ const Certificates = () => {
                         btnText={'View Certificate'}
                         btn2Text={false}
                         btn1Url={certificate.githubLink}
-                        btn2Url={certificate.liveDemoLink}
                     />
                 ))}
             </div>
