@@ -66,6 +66,14 @@ const Projects = () => {
             liveDemoLink: 'https://tts785.netlify.app/',
         },
         {
+            image: 'images/projects/js/hashtag-gen.png',
+            title: 'Hashtags & KeyWords Generator',
+            tags: ['HTML', 'CSS', 'Vanilla JS', 'API',],
+            category: ['Javascript', 'Featured'],
+            githubLink: 'https://github.com/dev-rfgul/hashtag-generator',
+            liveDemoLink: 'https://hashtags785.netlify.app/',
+        },
+        {
             image: 'images/projects/js/weather.png',
             title: 'Weather APP',
             tags: ['HTML', 'CSS', 'JS', 'API', 'JSON'],
