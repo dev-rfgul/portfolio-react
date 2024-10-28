@@ -77,7 +77,7 @@ const Certificates = () => {
             title: 'WordPress Development',
             tags: ['WordPress', 'CMS', 'Web Development'],
             category: ['web'],
-            githubLink: '#',
+            githubLink: 'https://www.rfgul.live/images/certificates/wordpress.png',
             liveDemoLink: '#',
         },
         {
@@ -85,7 +85,7 @@ const Certificates = () => {
             title: 'Freelancing',
             tags: ['Freelancing', 'Business', 'Client Management'],
             category: ['other'],
-            githubLink: '#',
+            githubLink: 'https://www.rfgul.live/images/certificates/freelancing.png',
             liveDemoLink: '#',
         },
         {
