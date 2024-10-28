@@ -6,15 +6,16 @@ import Heading from './Heading'
 const AboutMe = () => {
     return (
         <section id='about' className="py-12 px-6 md:px-8 lg:px-16 bg-gray-50">
-         <Heading heading={"About Me"} subHeading={"Get to know more about me"} />
+            <Heading heading={"About Me"} subHeading={"Get to know more about me"} />
             <div className="flex  flex-col md:flex-row items-center justify-md:justify-between space-y-8 md:space-y-0 md:space-x-6 lg:space-x-12">
-                <div className=" w-full md:w-3/10 lg:w-1/3 flex justify-center items-center">
+                <div className="w-full md:w-3/10 lg:w-1/3 flex justify-center items-center">
                     <img
-                        src="/images/banner-img.png"
+                        src="/images/banner3-img.jpeg"
                         alt="Profile Picture"
-                        className="w-full max-w-xs rounded-lg border-2 border-black shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-105"
+                        className="w-full max-w-lg rounded-lg border-2 border-black object-cover object-center shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-105"
                     />
                 </div>
+
                 <div className="w-full md:w-7/10 lg:w-2/4 flex flex-col gap-6 md:gap-8 lg:gap-12 relative md:-ml-6 lg:-ml-12">
                     <div className="flex flex-col md:flex-row gap-6 md:gap-8 lg:gap-12">
 
