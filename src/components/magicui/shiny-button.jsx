@@ -25,12 +25,12 @@ const animationProps = {
 
 const ShinyButton = ({ text = "shiny-button", className }) => {
 
-  const cvUrl = 'images/cv.pdf'; // Replace with the actual URL of your CV
+  const cvUrl = 'images/CV-Fahad.pdf'; // Replace with the actual URL of your CV
   const handleDownload = () => {
     // alert('Download started');
       const link = document.createElement('a');
       link.href = cvUrl;
-      link.download = 'cv.pdf'; // You can specify the file name here
+      link.download = 'CV-Fahad.pdf'; // You can specify the file name here
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
