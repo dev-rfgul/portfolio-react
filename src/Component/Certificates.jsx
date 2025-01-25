@@ -31,6 +31,30 @@ const Certificates = () => {
             githubLink: 'https://www.freecodecamp.org/certification/Fahad785/responsive-web-design',
             liveDemoLink: '#',
         },
+        {
+            image:'images/certificates/intro-to-python.png',
+            title:'Intro to Python',
+            tags:['Python','Problem Solving','Programming Language'],
+            category:['data science'],
+            githubLink:'https://www.datacamp.com/completed/statement-of-accomplishment/course/e4540d6a5b2e9ca52e0016c3413aebb752c1ebbd',
+            liveDemoLink:'#',
+        },
+        {
+            image:'images/certificates/EDA.png',
+            title:'Exploratary Data Analysis In Python',
+            tags:['Python','Data Visualization','Data Analysis'],
+            category:['featured','data science'],
+            githubLink:'https://www.datacamp.com/completed/statement-of-accomplishment/course/8196a10f16e23c773fae6d00088d25beb51c8104',
+            liveDemoLink:'#',
+        },
+        {
+            image:'images/certificates/efficient-code-in-python.png',
+            title:'Writing Efficient Code In Python',
+            tags:['Python','Code Efficiency','Clean & Readable code '],
+            category:['data science'],
+            githubLink:'https://www.datacamp.com/completed/statement-of-accomplishment/course/ae42b40c211f763da228c1d3b1c9829462c78ea0',
+            liveDemoLink:'#',
+        },
 
         {
             image: 'images/certificates/linux1.png',
@@ -109,8 +133,8 @@ const Certificates = () => {
             title: 'Calligraphy Norway',
             tags: ['Freelancing', 'Business', 'Client Management'],
             category: ['extracirricular'],
-            githubLink: '#',
-            liveDemoLink: '#',
+            githubLink: 'images/certificates/calligraphy.jpg',
+            liveDemoLink: '',
         },
         {
             image: 'images/certificates/NLFP.jpg',
@@ -154,6 +178,7 @@ const Certificates = () => {
     const btns = [
         { label: 'Featured', value: 'featured' },
         { label: 'Web', value: 'web' },
+        { label: 'Data Science', value: 'data science' },
         { label: 'SQL', value: 'sql' },
         { label: 'OS', value: 'OS' },
         { label: 'Other', value: 'other' },
@@ -171,7 +196,7 @@ const Certificates = () => {
 
     return (
         <div id='certificates' className="p-6">
-        <Heading heading={"Certifications"} subHeading={"Certifications I Had"}/>
+        <Heading heading={"Certifications"} subHeading={`Certifications I Have ${certificateData.length}`}/>
             <div className="flex flex-wrap justify-center gap-4 mb-8">
                 {btns.map((btn) => (
                     <button

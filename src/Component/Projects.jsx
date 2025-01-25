@@ -180,7 +180,7 @@ const Projects = () => {
 
     return (
         <div id='projects' className="p-4">
-            <Heading heading={"Projects"} subHeading={"Projects I made "} />
+            <Heading heading={"Projects"} subHeading={`Total Projects I made: ${projectData.length} `} />
             <div className="flex flex-wrap justify-center mb-8">
                 {btns.map((btn) => (
                     <button
