@@ -113,21 +113,14 @@ const Certificates = () => {
             liveDemoLink: '#',
         },
         {
-            image: 'images/certificates/acting.jpg',
+            image: 'images/certificates/acting.png',
             title: 'Best Actor Award',
             tags: ['Freelancing', 'Business', 'Client Management'],
             category: ['extracirricular'],
-            githubLink: '#',
+            githubLink: 'images/certificates/acting.png',
             liveDemoLink: '#',
         },
-        {
-            image: 'images/certificates/APS.jpg',
-            title: 'APS Certificate',
-            tags: ['Freelancing', 'Business', 'Client Management'],
-            category: ['extracirricular'],
-            githubLink: '#',
-            liveDemoLink: '#',
-        },
+        
         {
             image: 'images/certificates/calligraphy.jpg',
             title: 'Calligraphy Norway',
@@ -141,15 +134,15 @@ const Certificates = () => {
             title: 'NLFP',
             tags: ['Freelancing', 'Business', 'Client Management'],
             category: ['extracirricular'],
-            githubLink: '#',
+            githubLink: 'images/certificates/NLFP.jpg',
             liveDemoLink: '#',
         },
         {
-            image: 'images/certificates/IKSC.jpg',
+            image: 'images/certificates/IKSC.png',
             title: 'IKSC',
             tags: ['Freelancing', 'Business', 'Client Management'],
             category: ['extracirricular'],
-            githubLink: '#',
+            githubLink: 'images/certificates/IKSC.png',
             liveDemoLink: '#',
         },
         {
@@ -157,7 +150,7 @@ const Certificates = () => {
             title: 'Essay Writing',
             tags: ['Freelancing', 'Business', 'Client Management'],
             category: ['extracirricular'],
-            githubLink: '#',
+            githubLink: 'images/certificates/essay.jpg',
             liveDemoLink: '#',
         },
         {
@@ -165,7 +158,7 @@ const Certificates = () => {
             title: 'Painting',
             tags: ['Freelancing', 'Business', 'Client Management'],
             category: ['extracirricular'],
-            githubLink: '#',
+            githubLink: 'images/certificates/painting.jpg',
             liveDemoLink: '#',
         },
 
