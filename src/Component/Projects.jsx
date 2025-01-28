@@ -33,6 +33,7 @@ const Projects = () => {
             tags: [, 'React JS', 'Node JS', 'MongoDB','Express', 'Tailwind CSS'],
             category: 'semester',
             githubLink: 'https://github.com/dev-rfgul/study-group-finder',
+            
         },
         {
             image: 'images/projects/js/crypto-price-cheker.png',
