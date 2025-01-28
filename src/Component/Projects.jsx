@@ -1,6 +1,3 @@
-
-
-
 import React, { useState } from 'react';
 import Card from './Card';
 import Heading from './Heading'
@@ -11,19 +8,24 @@ const Projects = () => {
     const projectData = [
         {
             image: 'images/projects/course/oop.png',
-            title: 'Shopping Cart',
+            title: 'OOP (Shopping Cart)',
             tags: ['Java', 'OOP', 'CLI', 'File Handling'],
-            category: 'Course',
+            category: 'semester',
             githubLink: 'https://github.com/dev-rfgul/shopping-cart-OOP',
-            liveDemoLink: 'https://github.com/dev-rfgul/shopping-cart-OOP',
         },
         {
             image: 'images/projects/course/se.png',
-            title: 'Bus Management System',
+            title: 'Software Engineering (Bus Management System)',
             tags: ['Software Engineering', 'Documentation'],
-            category: 'Course',
+            category: 'semester',
             githubLink: 'https://github.com/dev-rfgul/bus-management-system',
-            liveDemoLink: 'https://github.com/dev-rfgul/bus-management-system',
+        },
+        {
+            image: 'images/projects/course/eda.jpeg',
+            title: 'EDA on Telecom Data',
+            tags: [, 'EDA', 'Python', 'Pandas','Numpy'],
+            category: 'semester',
+            githubLink: 'https://github.com/dev-rfgul/EDA-churn-analysis',
         },
         {
             image: 'images/projects/js/crypto-price-cheker.png',
@@ -163,7 +165,7 @@ const Projects = () => {
 
     const btns = [
         { label: 'Featured', value: 'Featured' },
-        { label: 'Semester', value: 'Course' },
+        { label: 'Semester', value: 'semester' },
         { label: 'Javascript', value: 'Javascript' },
         { label: 'React JS', value: 'React' },
         { label: 'Backend ', value: 'Backend' },
