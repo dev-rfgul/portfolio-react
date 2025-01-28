@@ -27,7 +27,6 @@ const slugs = [
     "gitlab",
     "githubcopilot",
     "visualstudiocode",
-    "node",
     "npm",
     "mongodb",
     "express"
