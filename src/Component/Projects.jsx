@@ -8,20 +8,20 @@ const Projects = () => {
     const projectData = [
         {
             image: 'images/projects/course/oop.png',
-            title: 'OOP (Shopping Cart)',
+            title: 'Shopping Cart',
             tags: ['Java', 'OOP', 'CLI', 'File Handling'],
             category: 'semester',
             githubLink: 'https://github.com/dev-rfgul/shopping-cart-OOP',
         },
         {
             image: 'images/projects/course/se.png',
-            title: 'Software Engineering (Bus Management System)',
+            title: 'Bus Management System',
             tags: ['Software Engineering', 'Documentation'],
             category: 'semester',
             githubLink: 'https://github.com/dev-rfgul/bus-management-system',
         },
         {
-            image: 'images/projects/course/eda.jpeg',
+            image: 'images/projects/course/eda.jpg',
             title: 'EDA on Telecom Data',
             tags: [, 'EDA', 'Python', 'Pandas','Numpy'],
             category: 'semester',
