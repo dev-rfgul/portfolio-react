@@ -28,6 +28,13 @@ const Projects = () => {
             githubLink: 'https://github.com/dev-rfgul/EDA-churn-analysis',
         },
         {
+            image: 'images/projects/course/web.png',
+            title: 'Study Group Finder',
+            tags: [, 'EDA', 'Python', 'Pandas','Numpy'],
+            category: 'semester',
+            githubLink: 'https://github.com/dev-rfgul/EDA-churn-analysis',
+        },
+        {
             image: 'images/projects/js/crypto-price-cheker.png',
             title: 'Crypto Price Ckecker',
             tags: ['JS', 'API', 'JSON', 'Live Tracking'],
