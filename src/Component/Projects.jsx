@@ -38,7 +38,7 @@ const Projects = () => {
         {
             image: 'images/projects/js/crypto-price-cheker.png',
             title: 'Crypto Price Ckecker',
-            tags: ['JS', 'API', 'JSON', 'Live Tracking'],
+            tags: ['HTML', 'CSS', 'JS', 'API'],
             category: 'Javascript',
             githubLink: 'https://github.com/dev-rfgul/crypto-price-checker',
             liveDemoLink: 'https://cryptoprices785.netlify.app/',
@@ -46,7 +46,7 @@ const Projects = () => {
         {
             image: 'images/projects/js/music-player.png',
             title: 'Music Player',
-            tags: ['JS', 'Responsive', 'Spotify', 'HTML'],
+            tags: ['HTML', 'CSS', 'JS'],
             category: 'Javascript',
             githubLink: 'https://github.com/dev-rfgul/spotify',
             liveDemoLink: 'https://spotify785.netlify.app/',
@@ -54,7 +54,7 @@ const Projects = () => {
         {
             image: 'images/projects/js/qr-code-generator.png',
             title: 'QR Code Generator',
-            tags: ['API', 'JS', 'Text to QR', 'Responsive'],
+            tags: ['HTML', 'CSS', 'JS', 'API'],
             category: ['Javascript', 'Featured'],
             githubLink: 'https://github.com/dev-rfgul/qr-code-generater',
             liveDemoLink: 'https://qrcode785.netlify.app/',
@@ -62,7 +62,7 @@ const Projects = () => {
         {
             image: 'images/projects/js/tic-tac-toe.png',
             title: 'Tic Tac Toe Game',
-            tags: ['HTML', 'CSS', 'JS ', 'Game logic'], 
+            tags: ['HTML', 'CSS', 'JS', 'Game Logic'], 
             category: 'Javascript',
             githubLink: 'https://github.com/dev-rfgul/ticTacToe',
             liveDemoLink: 'https://tictactoe785.netlify.app/',
@@ -70,7 +70,7 @@ const Projects = () => {
         {
             image: 'images/projects/js/text-to-speech.png',
             title: 'Text to Speech',
-            tags: ['HTML', 'CSS', 'Vanilla JS', 'Text',],
+            tags: ['HTML', 'CSS', 'JS', ],
             category: ['Javascript', 'Featured'],
             githubLink: 'https://github.com/dev-rfgul/text-to-speech',
             liveDemoLink: 'https://tts785.netlify.app/',
@@ -78,7 +78,7 @@ const Projects = () => {
         {
             image: 'images/projects/js/hashtag-gen.png',
             title: 'Hashtags & KeyWords Generator',
-            tags: ['HTML', 'CSS', 'Vanilla JS', 'API',],
+            tags: ['HTML', 'CSS', 'JS', 'API'],
             category: ['Javascript', 'Featured'],
             githubLink: 'https://github.com/dev-rfgul/hashtag-generator',
             liveDemoLink: 'https://hashtags785.netlify.app/',
@@ -86,7 +86,7 @@ const Projects = () => {
         {
             image: 'images/projects/js/weather.png',
             title: 'Weather APP',
-            tags: ['HTML', 'CSS', 'JS', 'API', 'JSON'],
+            tags: ['HTML', 'CSS', 'JS', 'API'],
             category: 'Javascript',
             githubLink: 'https://github.com/dev-rfgul/weather-app',
             liveDemoLink: 'https://weather785.netlify.app/',
@@ -95,7 +95,7 @@ const Projects = () => {
             // image:'images/projects/react/password.jpeg',
             image: 'https://images.pexels.com/photos/2882630/pexels-photo-2882630.jpeg?auto=compress&cs=tinysrgb&w=600',
             title: 'Password Generator',
-            tags: ['Vite', 'React ', 'Select ', 'Copy'],
+            tags: ['Vite', 'React JS', 'Tailwind CSS ', ],
             category: 'React',
             githubLink: 'https://github.com/dev-rfgul/6-password-generator',
             liveDemoLink: 'https://6-password-generator.vercel.app/',
@@ -119,7 +119,7 @@ const Projects = () => {
         {
             image: 'images/projects/react/invoice.jpg',
             title: 'Invoice Generator ',
-            tags: ['Vite', 'React', , 'Download', 'Print'],
+            tags: ['Vite', 'React JS' , 'Download', 'Print'],
             category: 'React',
             githubLink: 'https://github.com/dev-rfgul/invoice-generaator',
             liveDemoLink: 'https://invoice-generaator.vercel.app/',
@@ -127,7 +127,7 @@ const Projects = () => {
         {
             image: 'images/projects/react/dice.jpg',
             title: 'Dice Game',
-            tags: ['React ', 'Random Number', 'Guess'],
+            tags: ['React JS', 'Tailwind CSS','Game Logic'],
             category: ['React', 'Featured'],
             githubLink: 'https://github.com/dev-rfgul/dice-game',
             liveDemoLink: 'https://dice-game-lime-five.vercel.app/',
@@ -136,7 +136,7 @@ const Projects = () => {
         {
             image: 'images/projects/react/img.jpg',
             title: 'AI Vs Human Game',
-            tags: ['Vite', 'React ', 'Number Guessing'],
+            tags: ['Vite', 'React ', 'Tailwind CSS','Number Guessing'],
             category: ['React', 'Featured'],
             githubLink: 'https://github.com/dev-rfgul/ai-vs-human-vite-',
             liveDemoLink: 'https://ai-vs-human-game.vercel.app/',
@@ -144,7 +144,7 @@ const Projects = () => {
         {
             image: 'images/projects/react/binmukhtar.png',
             title: 'Bin Mukhtar Tax Consultants',
-            tags: ['Next', 'React ', 'Company website'],
+            tags: ['Next', 'React ', 'Company website', 'Tax Consultant website'],
             category: ['React', 'Featured'],
             githubLink: 'https://github.com/dev-rfgul/bin-mukhtar',
             liveDemoLink: 'https://binmukhtar.vercel.app/',
@@ -152,7 +152,7 @@ const Projects = () => {
         {
             image: 'images/projects/react/bitxcoin.png',
             title: 'Bit x Coin ',
-            tags: ['Vite', 'React ', 'Crytpo Mining'],
+            tags: ['Vite', 'React ', 'Tailwind CSS'],
             category: ['React', 'Featured'],
             githubLink: 'https://github.com/dev-rfgul/bitxcoin',
             liveDemoLink: 'https://bitxcoin.vercel.app/',
