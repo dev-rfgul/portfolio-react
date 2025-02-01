@@ -23,22 +23,21 @@ const Projects = () => {
         {
             image: 'images/projects/course/eda.jpg',
             title: 'EDA on Telecom Data',
-            tags: [, 'EDA', 'Python', 'Pandas','Numpy'],
+            tags: ['EDA', 'Python', 'Pandas', 'Numpy'],
             category: 'semester',
             githubLink: 'https://github.com/dev-rfgul/EDA-churn-analysis',
         },
         {
             image: 'images/projects/course/web.png',
             title: 'Study Group Finder',
-            tags: [, 'React JS', 'Node JS', 'MongoDB','Express', 'Tailwind CSS'],
+            tags: ['React JS', 'Node JS', 'MongoDB', 'Express', 'Tailwind CSS'],
             category: 'semester',
             githubLink: 'https://github.com/dev-rfgul/study-group-finder',
-            
         },
         {
             image: 'images/projects/js/crypto-price-cheker.png',
-            title: 'Crypto Price Ckecker',
-            tags: ['HTML', 'CSS', 'JS', 'API'],
+            title: 'Crypto Price Checker',
+            tags: ['HTML', 'CSS', 'JavaScript', 'API'],
             category: 'Javascript',
             githubLink: 'https://github.com/dev-rfgul/crypto-price-checker',
             liveDemoLink: 'https://cryptoprices785.netlify.app/',
@@ -46,7 +45,7 @@ const Projects = () => {
         {
             image: 'images/projects/js/music-player.png',
             title: 'Music Player',
-            tags: ['HTML', 'CSS', 'JS'],
+            tags: ['HTML', 'CSS', 'JavaScript'],
             category: 'Javascript',
             githubLink: 'https://github.com/dev-rfgul/spotify',
             liveDemoLink: 'https://spotify785.netlify.app/',
@@ -54,7 +53,7 @@ const Projects = () => {
         {
             image: 'images/projects/js/qr-code-generator.png',
             title: 'QR Code Generator',
-            tags: ['HTML', 'CSS', 'JS', 'API'],
+            tags: ['HTML', 'CSS', 'JavaScript', 'API'],
             category: ['Javascript', 'Featured'],
             githubLink: 'https://github.com/dev-rfgul/qr-code-generater',
             liveDemoLink: 'https://qrcode785.netlify.app/',
@@ -62,7 +61,7 @@ const Projects = () => {
         {
             image: 'images/projects/js/tic-tac-toe.png',
             title: 'Tic Tac Toe Game',
-            tags: ['HTML', 'CSS', 'JS', 'Game Logic'], 
+            tags: ['HTML', 'CSS', 'JavaScript', 'Game Logic'],
             category: 'Javascript',
             githubLink: 'https://github.com/dev-rfgul/ticTacToe',
             liveDemoLink: 'https://tictactoe785.netlify.app/',
@@ -70,32 +69,31 @@ const Projects = () => {
         {
             image: 'images/projects/js/text-to-speech.png',
             title: 'Text to Speech',
-            tags: ['HTML', 'CSS', 'JS', ],
+            tags: ['HTML', 'CSS', 'JavaScript'],
             category: ['Javascript', 'Featured'],
             githubLink: 'https://github.com/dev-rfgul/text-to-speech',
             liveDemoLink: 'https://tts785.netlify.app/',
         },
         {
             image: 'images/projects/js/hashtag-gen.png',
-            title: 'Hashtags & KeyWords Generator',
-            tags: ['HTML', 'CSS', 'JS', 'API'],
+            title: 'Hashtags & Keywords Generator',
+            tags: ['HTML', 'CSS', 'JavaScript', 'API'],
             category: ['Javascript', 'Featured'],
             githubLink: 'https://github.com/dev-rfgul/hashtag-generator',
             liveDemoLink: 'https://hashtags785.netlify.app/',
         },
         {
             image: 'images/projects/js/weather.png',
-            title: 'Weather APP',
-            tags: ['HTML', 'CSS', 'JS', 'API'],
+            title: 'Weather App',
+            tags: ['HTML', 'CSS', 'JavaScript', 'API'],
             category: 'Javascript',
             githubLink: 'https://github.com/dev-rfgul/weather-app',
             liveDemoLink: 'https://weather785.netlify.app/',
         },
         {
-            // image:'images/projects/react/password.jpeg',
             image: 'https://images.pexels.com/photos/2882630/pexels-photo-2882630.jpeg?auto=compress&cs=tinysrgb&w=600',
             title: 'Password Generator',
-            tags: ['Vite', 'React JS', 'Tailwind CSS ', ],
+            tags: ['Vite', 'React JS', 'Tailwind CSS'],
             category: 'React',
             githubLink: 'https://github.com/dev-rfgul/6-password-generator',
             liveDemoLink: 'https://6-password-generator.vercel.app/',
@@ -103,7 +101,7 @@ const Projects = () => {
         {
             image: 'images/projects/react/currencytesting.png',
             title: 'Currency Converter',
-            tags: ['Vite', 'React ', 'API ', 'Live Conversion',],
+            tags: ['Vite', 'React', 'API', 'Live Conversion'],
             category: 'React',
             githubLink: 'https://github.com/dev-rfgul/7-currency-converter',
             liveDemoLink: 'https://7-currency-converter-ten.vercel.app/',
@@ -111,15 +109,15 @@ const Projects = () => {
         {
             image: 'images/projects/react/todo.jpg',
             title: 'Todo List',
-            tags: ['React ', 'Context API ', 'state management',],
+            tags: ['React', 'Context API', 'State Management'],
             category: 'React',
             githubLink: 'https://github.com/dev-rfgul/todolist-context-api-',
             liveDemoLink: 'https://todolist-fawn-xi.vercel.app/',
         },
         {
             image: 'images/projects/react/invoice.jpg',
-            title: 'Invoice Generator ',
-            tags: ['Vite', 'React JS' , 'Download', 'Print'],
+            title: 'Invoice Generator',
+            tags: ['Vite', 'React JS', 'Download', 'Print'],
             category: 'React',
             githubLink: 'https://github.com/dev-rfgul/invoice-generaator',
             liveDemoLink: 'https://invoice-generaator.vercel.app/',
@@ -127,16 +125,15 @@ const Projects = () => {
         {
             image: 'images/projects/react/dice.jpg',
             title: 'Dice Game',
-            tags: ['React JS', 'Tailwind CSS','Game Logic'],
+            tags: ['React JS', 'Tailwind CSS', 'Game Logic'],
             category: ['React', 'Featured'],
             githubLink: 'https://github.com/dev-rfgul/dice-game',
             liveDemoLink: 'https://dice-game-lime-five.vercel.app/',
         },
-
         {
             image: 'images/projects/react/img.jpg',
             title: 'AI Vs Human Game',
-            tags: ['Vite', 'React ', 'Tailwind CSS','Number Guessing'],
+            tags: ['Vite', 'React', 'Tailwind CSS', 'Number Guessing'],
             category: ['React', 'Featured'],
             githubLink: 'https://github.com/dev-rfgul/ai-vs-human-vite-',
             liveDemoLink: 'https://ai-vs-human-game.vercel.app/',
@@ -144,32 +141,29 @@ const Projects = () => {
         {
             image: 'images/projects/react/binmukhtar.png',
             title: 'Bin Mukhtar Tax Consultants',
-            tags: ['Next', 'React ', 'Company website', 'Tax Consultant website'],
+            tags: ['Next.js', 'React', 'Company Website', 'Tax Consultant'],
             category: ['React', 'Featured'],
             githubLink: 'https://github.com/dev-rfgul/bin-mukhtar',
             liveDemoLink: 'https://binmukhtar.vercel.app/',
         },
         {
             image: 'images/projects/react/bitxcoin.png',
-            title: 'Bit x Coin ',
-            tags: ['Vite', 'React ', 'Tailwind CSS'],
+            title: 'Bit x Coin',
+            tags: ['Vite', 'React', 'Tailwind CSS'],
             category: ['React', 'Featured'],
             githubLink: 'https://github.com/dev-rfgul/bitxcoin',
             liveDemoLink: 'https://bitxcoin.vercel.app/',
         },
-
-
         {
             image: 'images/projects/backend/backend.jpeg',
             title: 'Currently Learning',
-            tags: ['Node JS', 'Express ', 'Mongo DB ', 'API'],
-            category: ['Backend', ''],
+            tags: ['Node.js', 'Express', 'MongoDB', 'API'],
+            category: 'Backend',
             githubLink: '',
             liveDemoLink: '',
         },
-
-
     ];
+    
 
     const btns = [
         { label: 'Featured', value: 'Featured' },

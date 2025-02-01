@@ -10,7 +10,7 @@ const Certificates = () => {
         {
             image: 'images/certificates/react.png',
             title: 'React Basics',
-            tags: ['React', 'JavaScript', 'JSX'],
+            tags: ['React', 'JavaScript', 'Frontend'],
             category: ['featured', 'web'],
             githubLink: 'https://coursera.org/share/ca00c1a7e4ad806b02599c8452b508d3',
             liveDemoLink: '#',
@@ -18,7 +18,7 @@ const Certificates = () => {
         {
             image: 'images/certificates/github.png',
             title: 'Git & Github',
-            tags: ['Git', 'Version Control', 'GitHub'],
+            tags: ['Git', 'Version Control', 'Repository Management'],
             category: ['featured', 'web'],
             githubLink: 'https://coursera.org/share/af886bcafcf5b066b0391cf4f4e19672',
             liveDemoLink: '#',
@@ -26,40 +26,39 @@ const Certificates = () => {
         {
             image: 'images/certificates/freecodecamp.png',
             title: 'Responsive Web Design',
-            tags: ['HTML', 'CSS', 'Responsive Design'],
+            tags: ['HTML', 'CSS', 'Mobile-Friendly'],
             category: ['featured', 'web'],
             githubLink: 'https://www.freecodecamp.org/certification/Fahad785/responsive-web-design',
             liveDemoLink: '#',
         },
         {
-            image:'images/certificates/intro-to-python.png',
-            title:'Intro to Python',
-            tags:['Python','Problem Solving','Programming Language'],
-            category:['data science'],
-            githubLink:'https://www.datacamp.com/completed/statement-of-accomplishment/course/e4540d6a5b2e9ca52e0016c3413aebb752c1ebbd',
-            liveDemoLink:'#',
+            image: 'images/certificates/intro-to-python.png',
+            title: 'Intro to Python',
+            tags: ['Python', 'Programming Basics', 'Data Structures'],
+            category: ['data science'],
+            githubLink: 'https://www.datacamp.com/completed/statement-of-accomplishment/course/e4540d6a5b2e9ca52e0016c3413aebb752c1ebbd',
+            liveDemoLink: '#',
         },
         {
-            image:'images/certificates/EDA.png',
-            title:'Exploratary Data Analysis In Python',
-            tags:['Python','Data Visualization','Data Analysis'],
-            category:['featured','data science'],
-            githubLink:'https://www.datacamp.com/completed/statement-of-accomplishment/course/8196a10f16e23c773fae6d00088d25beb51c8104',
-            liveDemoLink:'#',
+            image: 'images/certificates/EDA.png',
+            title: 'Exploratory Data Analysis In Python',
+            tags: ['Python', 'Data Science', 'EDA'],
+            category: ['featured', 'data science'],
+            githubLink: 'https://www.datacamp.com/completed/statement-of-accomplishment/course/8196a10f16e23c773fae6d00088d25beb51c8104',
+            liveDemoLink: '#',
         },
         {
-            image:'images/certificates/efficient-code-in-python.png',
-            title:'Writing Efficient Code In Python',
-            tags:['Python','Code Efficiency','Clean & Readable code '],
-            category:['data science'],
-            githubLink:'https://www.datacamp.com/completed/statement-of-accomplishment/course/ae42b40c211f763da228c1d3b1c9829462c78ea0',
-            liveDemoLink:'#',
+            image: 'images/certificates/efficient-code-in-python.png',
+            title: 'Writing Efficient Code In Python',
+            tags: ['Python', 'Optimization', 'Performance Tuning'],
+            category: ['data science'],
+            githubLink: 'https://www.datacamp.com/completed/statement-of-accomplishment/course/ae42b40c211f763da228c1d3b1c9829462c78ea0',
+            liveDemoLink: '#',
         },
-
         {
             image: 'images/certificates/linux1.png',
             title: 'Intro to Linux',
-            tags: ['Linux', 'Operating Systems', 'Shell'],
+            tags: ['Linux', 'Command Line', 'File System'],
             category: ['OS'],
             githubLink: 'https://www.coursera.org/account/accomplishments/verify/ZRYVDT6YJU6D',
             liveDemoLink: '#',
@@ -67,7 +66,7 @@ const Certificates = () => {
         {
             image: 'images/certificates/linux2.png',
             title: 'Command Line Basics',
-            tags: ['Command Line', 'Bash', 'Shell Scripting'],
+            tags: ['Bash', 'CLI', 'Scripting'],
             category: ['OS'],
             githubLink: 'https://www.coursera.org/account/accomplishments/verify/N5QLPPSVZQV6',
             liveDemoLink: '#',
@@ -75,7 +74,7 @@ const Certificates = () => {
         {
             image: 'images/certificates/sql-1.png',
             title: 'Intro to SQL',
-            tags: ['SQL', 'Databases', 'Queries'],
+            tags: ['SQL', 'Databases', 'Querying'],
             category: ['sql'],
             githubLink: 'https://www.datacamp.com/completed/statement-of-accomplishment/course/888118d23ea2cd1a288f0a62ac219d50ad1a1667',
             liveDemoLink: '#',
@@ -83,7 +82,7 @@ const Certificates = () => {
         {
             image: 'images/certificates/sql-2.png',
             title: 'Intermediate SQL',
-            tags: ['SQL', 'Joins', 'Subqueries'],
+            tags: ['SQL', 'Joins', 'Aggregation'],
             category: ['sql'],
             githubLink: 'https://www.datacamp.com/completed/statement-of-accomplishment/course/a96813db410ec0927ac9b9108e0bc4cd0d3a0154',
             liveDemoLink: '#',
@@ -91,7 +90,7 @@ const Certificates = () => {
         {
             image: 'images/certificates/sql-3.png',
             title: 'Joining in SQL',
-            tags: ['SQL', 'Joins', 'Data Analysis'],
+            tags: ['SQL', 'Joins', 'Relational Databases'],
             category: ['sql'],
             githubLink: 'https://www.datacamp.com/completed/statement-of-accomplishment/course/6056563c8c96ed27399b8e325327821eb04b96f7',
             liveDemoLink: '#',
@@ -99,7 +98,7 @@ const Certificates = () => {
         {
             image: 'images/certificates/wordpress.png',
             title: 'WordPress Development',
-            tags: ['WordPress', 'CMS', 'Web Development'],
+            tags: ['WordPress', 'CMS', 'Website Building'],
             category: ['web'],
             githubLink: 'https://www.rfgul.live/images/certificates/wordpress.png',
             liveDemoLink: '#',
@@ -107,7 +106,7 @@ const Certificates = () => {
         {
             image: 'images/certificates/freelancing.png',
             title: 'Freelancing',
-            tags: ['Freelancing', 'Business', 'Client Management'],
+            tags: ['Freelancing', 'Business Strategy', 'Client Acquisition'],
             category: ['other'],
             githubLink: 'https://www.rfgul.live/images/certificates/freelancing.png',
             liveDemoLink: '#',
@@ -115,16 +114,15 @@ const Certificates = () => {
         {
             image: 'images/certificates/acting.png',
             title: 'Best Actor Award',
-            tags: ['Freelancing', 'Business', 'Client Management'],
+            tags: ['Acting', 'Performance', 'Theater'],
             category: ['extracirricular'],
             githubLink: 'images/certificates/acting.png',
             liveDemoLink: '#',
         },
-        
         {
             image: 'images/certificates/calligraphy.jpg',
             title: 'Calligraphy Norway',
-            tags: ['Freelancing', 'Business', 'Client Management'],
+            tags: ['Calligraphy', 'Typography', 'Art'],
             category: ['extracirricular'],
             githubLink: 'images/certificates/calligraphy.jpg',
             liveDemoLink: '',
@@ -132,7 +130,7 @@ const Certificates = () => {
         {
             image: 'images/certificates/NLFP.jpg',
             title: 'NLFP',
-            tags: ['Freelancing', 'Business', 'Client Management'],
+            tags: ['Leadership', 'Public Speaking', 'Personal Development'],
             category: ['extracirricular'],
             githubLink: 'images/certificates/NLFP.jpg',
             liveDemoLink: '#',
@@ -140,7 +138,7 @@ const Certificates = () => {
         {
             image: 'images/certificates/IKSC.png',
             title: 'IKSC',
-            tags: ['Freelancing', 'Business', 'Client Management'],
+            tags: ['Knowledge Competition', 'Critical Thinking', 'Education'],
             category: ['extracirricular'],
             githubLink: 'images/certificates/IKSC.png',
             liveDemoLink: '#',
@@ -148,7 +146,7 @@ const Certificates = () => {
         {
             image: 'images/certificates/essay.jpg',
             title: 'Essay Writing',
-            tags: ['Freelancing', 'Business', 'Client Management'],
+            tags: ['Writing', 'Creative Thinking', 'Literature'],
             category: ['extracirricular'],
             githubLink: 'images/certificates/essay.jpg',
             liveDemoLink: '#',
@@ -156,18 +154,13 @@ const Certificates = () => {
         {
             image: 'images/certificates/painting.jpg',
             title: 'Painting',
-            tags: ['Freelancing', 'Business', 'Client Management'],
+            tags: ['Art', 'Creativity', 'Visual Design'],
             category: ['extracirricular'],
             githubLink: 'images/certificates/painting.jpg',
             liveDemoLink: '#',
         },
-
-
-
-
-
-
     ];
+    
     const btns = [
         { label: 'Featured', value: 'featured' },
         { label: 'Web', value: 'web' },
