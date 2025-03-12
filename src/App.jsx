@@ -35,7 +35,6 @@ const App = () => {
           <Projects />
           <Certificates />
           <Contact />
-          <VisitorCounter/>
         </div>// Show the page content when loading is done
       )}
 
