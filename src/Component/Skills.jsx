@@ -275,7 +275,7 @@ const Skills = () => {
                     {/* Left Side: Skills Icon Cloud */}
                     <div className="w-full lg:w-2/5 flex justify-center items-center">
                         <div className="relative">
-                            <div className="absolute -inset-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full opacity-30 blur-xl animate-pulse"></div>
+                            <div className="absolute -inset-4  rounded-full opacity-30 blur-xl animate-pulse"></div>
                             <div className={`relative p-6 rounded-full transition-all duration-1000 ${isVisible ? 'animate-spin-slow opacity-100' : 'opacity-0'}`}>
                                 <IconCloud iconSlugs={slugs} />
                             </div>
