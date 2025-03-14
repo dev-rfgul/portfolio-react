@@ -24,40 +24,37 @@ const Page = () => {
                         <div className="hidden md:flex items-center space-x-4">
                             <ul className="flex space-x-4 text-base md:text-lg">
                                 <li>
-                                    <ScrollLink to="home" smooth={true} duration={500} className="hover:text-blue-600 transition-colors cursor-pointer">
-                                        Home
-                                    </ScrollLink>
+                                    <a href="#home" className="hover:text-blue-600 transition-colors cursor-pointer">Home</a>
+
                                 </li>
                                 <li>
                                     {/* <ScrollLink to="about" smooth={true} duration={500} className="hover:text-blue-600 transition-colors cursor-pointer">
                                         About
                                     </ScrollLink> */}
-                                    <a href="#contact" className="hover:text-blue-600 transition-colors cursor-pointer">jlflajdsfl</a>
+                                    <a href="#about" className="hover:text-blue-600 transition-colors cursor-pointer">About</a>
                                 </li>
                                 <li>
-                                    <ScrollLink to="testimonials" smooth={true} duration={500} className="hover:text-blue-600 transition-colors cursor-pointer">
+                                    {/* <ScrollLink to="testimonials" smooth={true} duration={500} className="hover:text-blue-600 transition-colors cursor-pointer">
                                         Testimonials
-                                    </ScrollLink>
+                                    </ScrollLink> */}
+                                    <a href="#testimonials" className="hover:text-blue-600 transition-colors cursor-pointer">Testimonials</a>
+
                                 </li>
                                 <li>
-                                    <ScrollLink to="skills" smooth={true} duration={500} className="hover:text-blue-600 transition-colors cursor-pointer">
-                                        Skills
-                                    </ScrollLink>
+                                    <a href="#skills" className="hover:text-blue-600 transition-colors cursor-pointer">Skills</a>
+
                                 </li>
                                 <li>
-                                    <ScrollLink to="projects" smooth={true} duration={500} className="hover:text-blue-600 transition-colors cursor-pointer">
-                                        Projects
-                                    </ScrollLink>
+                                    <a href="#projects" className="hover:text-blue-600 transition-colors cursor-pointer">Projects</a>
+
                                 </li>
                                 <li>
-                                    <ScrollLink to="certificates" smooth={true} duration={500} className="hover:text-blue-600 transition-colors cursor-pointer">
-                                        Certificates
-                                    </ScrollLink>
+                                    <a href="#certificates" className="hover:text-blue-600 transition-colors cursor-pointer">Certificates</a>
+
                                 </li>
                                 <li>
-                                    <ScrollLink to="contact" smooth={true} duration={500} className="hover:text-blue-600 transition-colors cursor-pointer">
-                                        Contact
-                                    </ScrollLink>
+                                    <a href="#contact" className="hover:text-blue-600 transition-colors cursor-pointer">Contact</a>
+
                                 </li>
                             </ul>
                         </div>
@@ -106,6 +103,7 @@ const Page = () => {
                                 </ScrollLink>
                             </li>
                         </ul>
+                        
                     </div>
                 </div>
 
