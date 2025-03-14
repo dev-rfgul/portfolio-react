@@ -13,7 +13,6 @@ const skillsData = {
         { name: "CSS3", level: 5, slug: "css3", experience: "2+ years" },
         { name: "TypeScript", level: 3, slug: "typescript", experience: "1 year" },
         { name: "React JS", level: 4, slug: "react", experience: "1 year" },
-        { name: "Next.js", level: 3, slug: "nextdotjs", experience: "" },
         { name: "Tailwind CSS", level: 5, slug: "tailwindcss", experience: "" },
         { name: "Bootstrap", level: 4, slug: "bootstrap", experience: "" },
     ],
@@ -26,7 +25,7 @@ const skillsData = {
     languages: [
         { name: "JavaScript", level: 4, slug: "javascript", experience: "1+ years" },
         { name: "TypeScript", level: 3, slug: "typescript", experience: "1 year" },
-        { name: "Java", level: 3, slug: "java", experience: "" },
+        { name: "Java", level: 3, slug: "openjdk", experience: "" },
         { name: "C++", level: 3, slug: "cplusplus", experience: "" },
     ],
     tools: [
@@ -38,7 +37,7 @@ const skillsData = {
     ],
     platforms: [
         { name: "Vercel", level: 3, slug: "vercel", experience: "1+ years" },
-        { name: "Netlify", level: 3, slug: null, experience: "1+ years" },
+        { name: "Netlify", level: 3, slug: "netlify", experience: "1+ years" },
         { name: "Linux", level: 3, slug: "linux", experience: "2+ years" },
         { name: "Ubuntu", level: 3, slug: "ubuntu", experience: "2+ years" },
     ]
@@ -105,7 +104,7 @@ const SkillItem = ({ skill, showExperience = false }) => {
                 {skill.slug && (
                     <div className="w-8 h-8 flex items-center justify-center bg-gray-100 dark:bg-gray-700 rounded-md group-hover:bg-blue-50 dark:group-hover:bg-blue-900/30 transition-colors">
                         <img
-                            src={`https://cdn.simpleicons.org/${skill.slug}/444`}
+                            src={`https://cdn.simpleicons.org/${skill.slug}/111`}
                             alt={skill.name}
                             className="w-5 h-5 dark:invert"
                         />
@@ -227,7 +226,7 @@ const Skills = () => {
                                 <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-white">Top Skills</h3>
                                 <div className="space-y-4">
                                     {skillsData[activeTab]
-                                        .sort((a, b) => b.level - a.level)
+                                        .sort((a, b) =>  a.level-b.level)
                                         .slice(0, 3)
                                         .map((skill, index) => (
                                             <SkillProgress
