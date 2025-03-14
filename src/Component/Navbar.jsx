@@ -13,7 +13,7 @@ const Page = () => {
 
     return (
         <Router>
-            <div className="bg-gray-100" id="navbar">
+            <div className="bg-gray-100" id="navbar scroll-smooth" >
                 {/* Navbar */}
                 <div className="fixed z-50 top-0 left-0 right-0 bg-white shadow-md">
                     <div className="flex items-center justify-between px-4 py-2 md:px-6 md:py-1"> {/* Adjusted padding */}
@@ -29,9 +29,10 @@ const Page = () => {
                                     </ScrollLink>
                                 </li>
                                 <li>
-                                    <ScrollLink to="about" smooth={true} duration={500} className="hover:text-blue-600 transition-colors cursor-pointer">
+                                    {/* <ScrollLink to="about" smooth={true} duration={500} className="hover:text-blue-600 transition-colors cursor-pointer">
                                         About
-                                    </ScrollLink>
+                                    </ScrollLink> */}
+                                    <a href="#contact" className="hover:text-blue-600 transition-colors cursor-pointer">jlflajdsfl</a>
                                 </li>
                                 <li>
                                     <ScrollLink to="testimonials" smooth={true} duration={500} className="hover:text-blue-600 transition-colors cursor-pointer">

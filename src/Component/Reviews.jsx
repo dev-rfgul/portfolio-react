@@ -249,13 +249,13 @@ const StarRating = ({ rating }) => {
     return (
         <div className="flex items-center mt-1">
             {[...Array(5)].map((_, index) => (
-                <Star 
-                    key={index} 
-                    size={12} 
+                <Star
+                    key={index}
+                    size={14}
                     className={cn(
-                        "mr-0.5", 
-                        index < rating 
-                            ? "fill-yellow-400 text-yellow-400" 
+                        "mr-0.5",
+                        index < rating
+                            ? "fill-gray-600 text-gray-700"
                             : "fill-none text-gray-300 dark:text-gray-600"
                     )}
                 />
@@ -294,7 +294,7 @@ const ReviewCard = ({ img, name, title, body, rating }) => {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
-            <Quote className="absolute text-gray-200 dark:text-gray-700 opacity-20 right-4 top-4" size={24} />
+            <Quote className="absolute text-gray-200 dark:text-gray-700 opacity-20 right-4 top-4" size={14} />
             <div className="flex flex-row items-center gap-3">
                 <div className="relative">
                     <img
@@ -305,9 +305,9 @@ const ReviewCard = ({ img, name, title, body, rating }) => {
                         loading="lazy"
                     />
                     <div className="absolute -bottom-1 -right-1 bg-blue-500 rounded-full p-1">
-                        <ThumbsUp 
-                            size={12} 
-                            className="text-white" 
+                        <ThumbsUp
+                            size={12}
+                            className="text-white"
                         />
                     </div>
                 </div>
@@ -325,12 +325,12 @@ const ReviewCard = ({ img, name, title, body, rating }) => {
             />
             <div className="mt-3 flex justify-between items-center">
                 <span className="text-xs text-gray-500">Posted {Math.floor(Math.random() * 30) + 1} days ago</span>
-                <button 
+                <button
                     onClick={handleLike}
                     className={cn(
                         "flex items-center gap-1 text-xs px-2 py-1 rounded-md transition-colors",
-                        hasLiked 
-                            ? "text-blue-600 bg-blue-50 dark:bg-blue-900/30 dark:text-blue-400" 
+                        hasLiked
+                            ? "text-blue-600 bg-blue-50 dark:bg-blue-900/30 dark:text-blue-400"
                             : "text-gray-500 hover:text-blue-600 dark:text-gray-400"
                     )}
                 >
@@ -372,14 +372,14 @@ const Reviews = () => {
     // Split the reviews into two rows using useMemo to avoid recalculation on each render
     const { firstRow, secondRow, filteredCount } = useMemo(() => {
         let filtered;
-        
+
         if (activeFilter === 'all') {
             filtered = reviews;
         } else {
             const ratingFilter = parseInt(activeFilter);
             filtered = reviews.filter(review => review.rating === ratingFilter);
         }
-        
+
         const middleIndex = Math.ceil(filtered.length / 2);
         return {
             firstRow: filtered.slice(0, middleIndex),
@@ -407,62 +407,9 @@ const Reviews = () => {
     return (
         <section id="testimonials" className="py-12 px-4">
             <Heading heading='Testimonials' subHeading="What People Think About Me" />
-            
-            <div className="flex flex-col md:flex-row justify-between items-center mb-6">
-                <div className="flex items-center gap-3 mb-4 md:mb-0">
-                    <div className="bg-blue-50 dark:bg-blue-900/30 p-3 rounded-xl">
-                        <div className="text-blue-600 dark:text-blue-400 font-bold text-3xl">{averageRating}</div>
-                        <div className="flex mt-1">
-                            {[...Array(5)].map((_, index) => (
-                                <Star 
-                                    key={index} 
-                                    size={14} 
-                                    className={cn(
-                                        "mr-0.5", 
-                                        index < Math.round(parseFloat(averageRating)) 
-                                            ? "fill-yellow-400 text-yellow-400" 
-                                            : "fill-none text-gray-300 dark:text-gray-600"
-                                    )}
-                                />
-                            ))}
-                        </div>
-                        <div className="text-xs text-gray-500 mt-1">{reviews.length} reviews</div>
-                    </div>
-                    <div>
-                        <h3 className="font-medium">Client satisfaction</h3>
-                        <p className="text-sm text-gray-500 dark:text-gray-400">From verified clients</p>
-                    </div>
-                </div>
-                
-                <div className="flex space-x-2">
-                    <button 
-                        onClick={() => handleFilterChange('all')}
-                        className={cn(
-                            "px-3 py-1 text-sm rounded-md transition-colors",
-                            activeFilter === 'all' 
-                                ? "bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-400" 
-                                : "bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-300"
-                        )}
-                    >
-                        All
-                    </button>
-                    {[5, 4].map(rating => (
-                        <button
-                            key={rating}
-                            onClick={() => handleFilterChange(rating.toString())}
-                            className={cn(
-                                "px-3 py-1 text-sm rounded-md transition-colors flex items-center",
-                                activeFilter === rating.toString() 
-                                    ? "bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-400" 
-                                    : "bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-300"
-                            )}
-                        >
-                            {rating} <Star size={12} className="ml-1 fill-yellow-400 text-yellow-400" />
-                        </button>
-                    ))}
-                </div>
-            </div>
-            
+
+
+
             <div className="relative w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background shadow-sm md:shadow-xl">
                 {isLoading ? (
                     <div className="flex flex-col space-y-4 p-4">
@@ -500,15 +447,8 @@ const Reviews = () => {
                 <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white dark:from-background"></div>
                 <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white dark:from-background"></div>
             </div>
-            
-            <div className="mt-6 text-center">
-                <button className="inline-flex items-center gap-2 px-4 py-2 border border-blue-600 text-blue-600 rounded-md hover:bg-blue-50 transition-colors dark:border-blue-500 dark:text-blue-400 dark:hover:bg-blue-900/20">
-                    <span>View all testimonials</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M5 12h14M12 5l7 7-7 7" />
-                    </svg>
-                </button>
-            </div>
+
+
         </section>
     );
 };
