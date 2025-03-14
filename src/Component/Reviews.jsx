@@ -304,7 +304,7 @@ const ReviewCard = ({ img, name, title, body, rating }) => {
                         src={img}
                         loading="lazy"
                     />
-                    <div className="absolute -bottom-1 -right-1 bg-blue-500 rounded-full p-1">
+                    <div className="absolute -bottom-1 -right-1 bg-gray-900 rounded-full p-1">
                         <ThumbsUp
                             size={12}
                             className="text-white"
@@ -328,10 +328,10 @@ const ReviewCard = ({ img, name, title, body, rating }) => {
                 <button
                     onClick={handleLike}
                     className={cn(
-                        "flex items-center gap-1 text-xs px-2 py-1 rounded-md transition-colors",
+                        "flex items-center gap-1 text-xs  px-2 py-1 rounded-md transition-colors",
                         hasLiked
-                            ? "text-blue-600 bg-blue-50 dark:bg-blue-900/30 dark:text-blue-400"
-                            : "text-gray-500 hover:text-blue-600 dark:text-gray-400"
+                            ? "text-balck bg-blue-50 dark:bg-black dark:text-black"
+                            : "text-gray-500 hover:text-black dark:text-black   "
                     )}
                 >
                     <ThumbsUp size={18} />

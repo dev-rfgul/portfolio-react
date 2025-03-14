@@ -188,7 +188,7 @@ const Certificates = () => {
                     <button
                         key={btn.value}
                         className={`m-2 py-2 px-4 focus:outline-none focus:ring-2 border border-black border-opacity-60 rounded h-11 w-50 text-black ${filter === btn.value
-                            ? 'bg-blue-500 text-white'  // Active button styles
+                            ? 'bg-gray-500 text-white'  // Active button styles
                             : 'hover:bg-gray-800 hover:text-white'  // Inactive button styles
                             }`}
                         onClick={() => filterCertificates(btn.value)}
