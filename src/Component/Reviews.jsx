@@ -174,7 +174,7 @@ const reviews = [
     {
         img: "https://avatar.vercel.sh/jill",
         name: "Ayesha Shoaib",
-        title: "Web Dev at Codesfix",
+        title: "HR at Evionics",
         body: "Fahad demonstrates a deep understanding of modern web development frameworks and tools. His sites are responsive, user-friendly, and aesthetically pleasing. Whether custom-built or integrating third-party services, his versatility shines through. What stands out most is the smooth performance across devices, showcasing his attention to detail in both frontend and backend development.",
         rating: 5
     },
