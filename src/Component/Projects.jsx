@@ -9,7 +9,7 @@ const Projects = () => {
         {
             image: 'images/projects/course/oop.png',
             title: 'Shopping Cart',
-            tags: ['Java', 'OOP', 'CLI', 'File Handling'],
+            tags: ['Semester Project of OOP in 2nd Semester','Java', 'OOP', 'CLI', 'File Handling'],
             category: 'semester',
             githubLink: 'https://github.com/dev-rfgul/shopping-cart-OOP',
             liveDemoLink: 'https://github.com/dev-rfgul/shopping-cart-OOP',
@@ -17,7 +17,7 @@ const Projects = () => {
         {
             image: 'images/projects/course/se.png',
             title: 'Bus Management System',
-            tags: ['Software Engineering', 'Documentation'],
+            tags: ['Semester Project of Software Engineering in 3rd Semester','Software Engineering', 'Documentation'],
             category: 'semester',
             githubLink: 'https://github.com/dev-rfgul/bus-management-system',
             liveDemoLink: 'https://github.com/dev-rfgul/bus-management-system',
@@ -25,7 +25,7 @@ const Projects = () => {
         {
             image: 'images/projects/course/eda.jpg',
             title: 'EDA on Telecom Data',
-            tags: ['EDA', 'Python', 'Pandas', 'Numpy'],
+            tags: ['Semester Project of Data Science in 5th Semester','EDA', 'Python', 'Pandas', 'Numpy'],
             category: 'semester',
             githubLink: 'https://github.com/dev-rfgul/EDA-churn-analysis',
             liveDemoLink:'https://github.com/dev-rfgul/EDA-churn-analysis/blob/main/customer-churn-analysis.ipynb'
@@ -33,7 +33,7 @@ const Projects = () => {
         {
             image: 'images/projects/course/web.png',
             title: 'Study Group Finder',
-            tags: ['React JS', 'Node JS', 'MongoDB', 'Express', 'Tailwind CSS'],
+            tags: ['Semester project of Web Systems in 5th semester','React JS', 'Node JS', 'MongoDB', 'Express', 'Tailwind CSS'],
             category: 'semester',
             githubLink: 'https://github.com/dev-rfgul/study-group-finder',
             liveDemoLink: 'https://study-group-finder-cyan.vercel.app/',
