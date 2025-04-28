@@ -12,6 +12,7 @@ const Projects = () => {
             tags: ['Java', 'OOP', 'CLI', 'File Handling'],
             category: 'semester',
             githubLink: 'https://github.com/dev-rfgul/shopping-cart-OOP',
+            liveDemoLink: 'https://github.com/dev-rfgul/shopping-cart-OOP',
         },
         {
             image: 'images/projects/course/se.png',
@@ -19,6 +20,7 @@ const Projects = () => {
             tags: ['Software Engineering', 'Documentation'],
             category: 'semester',
             githubLink: 'https://github.com/dev-rfgul/bus-management-system',
+            liveDemoLink: 'https://github.com/dev-rfgul/bus-management-system',
         },
         {
             image: 'images/projects/course/eda.jpg',
@@ -26,6 +28,7 @@ const Projects = () => {
             tags: ['EDA', 'Python', 'Pandas', 'Numpy'],
             category: 'semester',
             githubLink: 'https://github.com/dev-rfgul/EDA-churn-analysis',
+            liveDemoLink:'https://github.com/dev-rfgul/EDA-churn-analysis/blob/main/customer-churn-analysis.ipynb'
         },
         {
             image: 'images/projects/course/web.png',
@@ -33,6 +36,7 @@ const Projects = () => {
             tags: ['React JS', 'Node JS', 'MongoDB', 'Express', 'Tailwind CSS'],
             category: 'semester',
             githubLink: 'https://github.com/dev-rfgul/study-group-finder',
+            liveDemoLink: 'https://study-group-finder-cyan.vercel.app/',
         },
         {
             image: 'images/projects/js/crypto-price-cheker.png',
