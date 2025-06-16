@@ -10,7 +10,7 @@ import Skills from "./Component/Skills";
 import Reviews from './Component/Reviews';
 import Loader from './Component/Loader'
 import VisitorCounter from './Component/Visitor';
-
+import Chatbot from './Component/Chatbot';
 const App = () => {
 
   const [loading, setLoading] = useState(true);
@@ -35,6 +35,7 @@ const App = () => {
           <Projects />
           <Certificates />
           <Contact />
+          <Chatbot/>
         </div>// Show the page content when loading is done
       )}
 
