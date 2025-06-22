@@ -1,109 +1,135 @@
 
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 
 // Enhanced Minimalist Card Component
-const Card = ({ title, description, features, tags, btn1Url, btn2Url, btnText, btn2Text }) => {
-    const [isHovered, setIsHovered] = useState(false);
+import { useState } from 'react';
 
-    return (
-        <div
-            className="group w-full max-w-sm bg-white rounded-2xl border border-gray-800 hover:border-gray-500 p-6 transition-all duration-700 hover:shadow-2xl hover:shadow-gray-100/50 cursor-pointer relative overflow-hidden"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-        >
-            {/* Subtle background gradient on hover */}
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 to-purple-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-2xl"></div>
+const Card = ({
+  title,
+  description,
+  features = [],
+  tags = [],
+  btn1Url,
+  btn2Url,
+  btnText,
+  btn2Text,
+}) => {
+  const [isHovered, setIsHovered] = useState(false);
 
-            {/* Header */}
-            <div className="relative mb-6">
-                <h3 className="font-bold text-2xl mb-2 text-gray-900">{title}</h3>
-                {description && (
-                    <p className="text-gray-600 text-md leading-relaxed line-clamp-2">{description}</p>
-                )}
-            </div>
+  return (
+    <div
+      className="group w-full max-w-sm bg-white rounded-2xl border border-gray-800 hover:border-gray-500 p-6 transition-all duration-700 hover:shadow-2xl hover:shadow-gray-100/50 cursor-pointer relative overflow-hidden flex flex-col"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      {/* Gradient Background on Hover */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 to-purple-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-2xl pointer-events-none" />
 
-            {/* Dynamic content area */}
-            <div className="relative min-h-24 mb-6">
-                <div className={`absolute inset-0 transition-all duration-500 ${!isHovered ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2'}`}>
-                    {/* Default state - Tags */}
-                    <div className="flex flex-wrap gap-2">
-                        {tags.map((tag, index) => (
-                            <span
-                                key={index}
-                                className="px-3 py-1.5 bg-gray-50 text-gray-700 text-xs rounded-full font-medium border border-gray-100 hover:bg-gray-100 transition-colors duration-200"
-                            >
-                                {tag}
-                            </span>
-                        ))}
-                    </div>
-                </div>
-
-                <div className={`absolute inset-0 transition-all duration-500 ${isHovered ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}>
-                    {/* Hover state - Features */}
-                    <div className="space-y-3">
-                        <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Features</h4>
-                        <div className="space-y-2">
-                            {features && features.slice(0, 3).map((feature, index) => (
-                                <div
-                                    key={index}
-                                    className="flex items-start gap-3 text-sm text-gray-700"
-                                    style={{
-                                        animation: isHovered ? `slideIn 0.5s ease-out ${index * 0.1}s both` : 'none'
-                                    }}
-                                >
-                                    <div className="w-1 h-1 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-                                    <span className="leading-relaxed">{feature}</span>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            {/* Action buttons */}
-            <div className="px-6 pt-4 pb-2 flex flex-wrap justify-center gap-4">
-                <a
-                    href={btn1Url}
-                    className="py-2 px-6 border border-black rounded-lg text-black bg-white hover:bg-gray-900 hover:text-white transition-transform transform hover:scale-105"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    {btnText}
-                </a>
-                {btn2Text && (
-                    <a
-                        href={btn2Url}
-                        className="py-2 px-6 border border-black rounded-lg text-black bg-white hover:bg-gray-900 hover:text-white transition-transform transform hover:scale-105"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        {btn2Text}
-                    </a>
-                )}
-            </div>
-
-            <style jsx>{`
-                    @keyframes slideIn {
-                        from {
-                            opacity: 0;
-                            transform: translateY(10px);
-                        }
-                        to {
-                            opacity: 1;
-                            transform: translateY(0);
-                        }
-                    }
-                    
-                    .line-clamp-2 {
-                        display: -webkit-box;
-                        -webkit-line-clamp: 2;
-                        -webkit-box-orient: vertical;
-                        overflow: hidden;
-                    }
-                `}</style>
+      {/* Content Wrapper */}
+      <div className="relative z-10 flex flex-col flex-grow">
+        {/* Title & Description */}
+        <div className="mb-4">
+          <h3 className="font-bold text-2xl mb-2 text-gray-900">{title}</h3>
+          {description && (
+            <p className="text-gray-600 text-md leading-relaxed line-clamp-2">
+              {description}
+            </p>
+          )}
         </div>
-    );
+
+        {/* Feature/Tag Section */}
+        <div className="relative flex-grow mb-4 overflow-hidden">
+          {/* Tags (shown when not hovered) */}
+          {!isHovered && (
+            <div className="flex flex-wrap gap-2 overflow-y-auto max-h-32 pr-1 transition-opacity duration-500">
+              {tags.map((tag, index) => (
+                <span
+                  key={index}
+                  className="px-3 py-1.5 bg-gray-50 text-gray-700 text-xs rounded-full font-medium border border-gray-100 hover:bg-gray-100 transition-colors duration-200"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
+
+          {/* Features (shown when hovered) */}
+          {isHovered && (
+            <div className="flex flex-col gap-2 overflow-y-auto max-h-32 pr-1 transition-opacity duration-500">
+              <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1">
+                Features
+              </h4>
+              {features.slice(0, 9).map((feature, index) => (
+                <div
+                  key={index}
+                  className="flex items-start gap-3 text-sm text-gray-700 animate-slideIn"
+                  style={{
+                    animationDelay: `${index * 0.05}s`,
+                    animationFillMode: 'both',
+                    animationDuration: '0.4s',
+                  }}
+                >
+                  <div className="w-1 h-1 bg-blue-500 rounded-full mt-2 flex-shrink-0" />
+                  <span className="leading-relaxed">{feature}</span>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+
+        {/* Action Buttons */}
+        <div className="mt-auto pt-4 flex flex-wrap justify-center gap-4 z-10">
+          <a
+            href={btn1Url}
+            className="py-2 px-6 border border-black rounded-lg text-black bg-white hover:bg-gray-900 hover:text-white transition-transform transform hover:scale-105"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {btnText}
+          </a>
+          {btn2Text && (
+            <a
+              href={btn2Url}
+              className="py-2 px-6 border border-black rounded-lg text-black bg-white hover:bg-gray-900 hover:text-white transition-transform transform hover:scale-105"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {btn2Text}
+            </a>
+          )}
+        </div>
+      </div>
+
+      {/* Animation Styles */}
+      <style jsx>{`
+        @keyframes slideIn {
+          from {
+            opacity: 0;
+            transform: translateY(10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .animate-slideIn {
+          animation-name: slideIn;
+        }
+
+        .line-clamp-2 {
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+      `}</style>
+    </div>
+  );
 };
+
+// export default Card;
+
 
 // Enhanced Heading Component
 const Heading = ({ heading, subHeading }) => (
@@ -144,15 +170,7 @@ const Projects = () => {
             githubLink: 'https://github.com/dev-rfgul/EDA-churn-analysis',
             liveDemoLink: 'https://github.com/dev-rfgul/EDA-churn-analysis/blob/main/customer-churn-analysis.ipynb'
         },
-        {
-            title: 'Study Group Finder',
-            description: 'Full-stack web app to connect students for collaborative learning',
-            features: ['User Authentication', 'Real-time Matching', 'Group Management', 'Responsive Design'],
-            tags: ['React', 'Node.js', 'MongoDB', 'Express', 'Tailwind'],
-            category: 'semester',
-            githubLink: 'https://github.com/dev-rfgul/study-group-finder',
-            liveDemoLink: 'https://study-group-finder-cyan.vercel.app/',
-        },
+    
         {
             title: 'Crypto Price Checker',
             description: 'Real-time cryptocurrency price tracking application',
@@ -176,7 +194,7 @@ const Projects = () => {
             description: 'Generate QR codes for any text or URL instantly',
             features: ['Instant Generation', 'Custom Sizes', 'Download Options', 'URL Validation'],
             tags: ['JavaScript', 'API', 'HTML', 'CSS'],
-            category: ['Javascript', 'Featured'],
+            category: ['Javascript', ],
             githubLink: 'https://github.com/dev-rfgul/qr-code-generater',
             liveDemoLink: 'https://qrcode785.netlify.app/',
         },
@@ -194,7 +212,7 @@ const Projects = () => {
             description: 'Convert any text to natural-sounding speech',
             features: ['Multiple Voices', 'Speed Control', 'Voice Selection', 'Browser Compatible'],
             tags: ['JavaScript', 'Web Speech API', 'HTML', 'CSS'],
-            category: ['Javascript', 'Featured'],
+            category: ['Javascript', ''],
             githubLink: 'https://github.com/dev-rfgul/text-to-speech',
             liveDemoLink: 'https://tts785.netlify.app/',
         },
@@ -203,7 +221,7 @@ const Projects = () => {
             description: 'AI-powered hashtag and keyword generation for social media',
             features: ['AI Generation', 'Social Media Optimization', 'Keyword Research', 'Copy to Clipboard'],
             tags: ['JavaScript', 'API', 'HTML', 'CSS'],
-            category: ['Javascript', 'Featured'],
+            category: ['Javascript', ],
             githubLink: 'https://github.com/dev-rfgul/hashtag-generator',
             liveDemoLink: 'https://hashtags785.netlify.app/',
         },
@@ -257,7 +275,7 @@ const Projects = () => {
             description: 'Interactive dice game with beautiful animations and scoring',
             features: ['Animated Dice', 'Score System', 'Multiple Players', 'Game Statistics'],
             tags: ['React', 'Tailwind CSS', 'Game Logic', 'Animations'],
-            category: ['React', 'Featured'],
+            category: ['React', ],
             githubLink: 'https://github.com/dev-rfgul/dice-game',
             liveDemoLink: 'https://dice-game-lime-five.vercel.app/',
         },
@@ -284,18 +302,46 @@ const Projects = () => {
             description: 'Modern cryptocurrency landing page with animations',
             features: ['Modern Design', 'Smooth Animations', 'Responsive Layout', 'Performance Optimized'],
             tags: ['React', 'Vite', 'Tailwind CSS', 'Crypto'],
-            category: ['React', 'Featured'],
+            category: ['React', ],
             githubLink: 'https://github.com/dev-rfgul/bitxcoin',
             liveDemoLink: 'https://bitxcoin.vercel.app/',
         },
         {
-            title: 'Currently Learning Backend',
-            description: 'Exploring server-side development and API creation',
-            features: ['RESTful APIs', 'Database Design', 'Authentication', 'Server Architecture'],
-            tags: ['Node.js', 'Express', 'MongoDB', 'API'],
-            category: 'Backend',
-            githubLink: '',
-            liveDemoLink: '',
+            title: 'Task Ai Studio',
+            description: 'A tool for peopel with short term memory loss to help them remember their tasks',
+            features: ['Productivity Tool','Designed for short term memory issues','AI Task Management', 'Task Reminders','Whatsapp Alert System', ],
+            tags: ["Fullstack",'React', 'Mongo', 'NodeJS', 'Express', 'Whatsapp Bot', 'Tailwind CSS', 'Gemeni API',],
+            category: ['Full Stack', 'Featured'],
+            githubLink: 'https://github.com/dev-rfgul/task-manager',
+            liveDemoLink: 'https://task-ai-tau.vercel.app/',
+        },
+        {
+            title: 'Smart University Transport System',
+            description: 'A web application to manage university transport system',
+            features: ['Smart transport Schedule', 'Dijkstra for Path finding', 'Live Location', 'Admin Dashboard', ],
+            tags: ["Fullstack",'Django','SQL','Google Auth','Dijkstra Algorithm'],
+            category: ['Full Stack', 'Featured'],
+            githubLink: 'https://github.com/dev-rfgul/univ-bus-management-system',
+            liveDemoLink: 'https://busconnect.pythonanywhere.com/',
+        },
+        {
+            title: 'Ecommerce Website',
+            description: 'A full-stack ecommerce website with admin panel',
+            features: ['78% performance Boost','Product Management', 'User Management', 'Order Processing', 'Analytics Dashboard'],
+            tags: ["Fullstack",'React', 'NodeJS', 'Express', 'MongoDB', 'Tailwind CSS'],
+            category: ['Full Stack', 'Featured'],
+            githubLink: 'https://github.com/dev-rfgul/glows-lifestyle',
+            liveDemoLink: 'https://glowzlifestyle.shop/',
+
+        },
+            {
+            title: 'Study Group Finder',
+            description: 'Full-stack web app to connect students for collaborative learning',
+            features: ['User Authentication', 'Real-time Matching', 'Group Management', 'Responsive Design'],
+            tags: ["Fullstack",'React', 'Node.js', 'MongoDB', 'Express', 'Tailwind'],
+            category: ['semester', 'Featured','Full Stack'],
+            githubLink: 'https://github.com/dev-rfgul/study-group-finder',
+            liveDemoLink: 'https://study-group-finder-cyan.vercel.app/',
         },
     ];
 
@@ -304,7 +350,7 @@ const Projects = () => {
         { label: 'Semester', value: 'semester' },
         { label: 'Javascript', value: 'Javascript' },
         { label: 'React JS', value: 'React' },
-        { label: 'Backend', value: 'Backend' },
+        { label: 'Fullstack', value: 'Full Stack' },
         { label: 'Show All', value: 'All' },
     ];
 
