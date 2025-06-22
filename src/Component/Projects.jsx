@@ -1,180 +1,646 @@
+
+// import React, { useState } from 'react';
+
+// // Minimalist Card Component
+// const Card = ({ title, description, features, tags, btn1Url, btn2Url, btnText, btn2Text }) => {
+//     const [isHovered, setIsHovered] = useState(false);
+
+//     return (
+//         <div
+//             className="w-full max-w-sm bg-white rounded-xl border border-gray-800 p-6 transition-all duration-500 hover:border-gray-300 hover:shadow-xl group cursor-pointer overflow-hidden"
+//             onMouseEnter={() => setIsHovered(true)}
+//             onMouseLeave={() => setIsHovered(false)}
+//         >
+//             {/* Header with animated background */}
+//             <div className="relative mb-4">
+//                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 opacity-0 group-hover:opacity-10 rounded-lg transition-opacity duration-500"></div>
+//                 <h3 className="relative text-xl font-bold text-gray-900 mb-2">{title}</h3>
+//                 {description && (
+//                     <p className="relative text-gray-600 text-sm leading-relaxed">{description}</p>
+//                 )}
+//             </div>
+
+//             {/* Content that changes on hover */}
+//             <div className="min-h-24 mb-6">
+//                 {!isHovered ? (
+//                     /* Default state - Tags */
+//                     <div className="flex flex-wrap gap-2">
+//                         {tags.map((tag, index) => (
+//                             <span
+//                                 key={index}
+//                                 className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full font-medium transition-colors duration-300"
+//                             >
+//                                 {tag}
+//                             </span>
+//                         ))}
+//                     </div>
+//                 ) : (
+//                     /* Hover state - Features */
+//                     <div className="space-y-2 animate-in fade-in duration-300">
+//                         <h4 className="text-sm font-semibold text-gray-800 mb-3">Tech Stack:</h4>
+//                         {features && features.map((feature, index) => (
+//                             <div
+//                                 key={index}
+//                                 className="flex items-center gap-2 text-sm text-gray-700"
+//                                 style={{ animationDelay: `${index * 100}ms` }}
+//                             >
+//                                 <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
+//                                 <span>{feature}</span>
+//                             </div>
+//                         ))}
+//                     </div>
+//                 )}
+//             </div>
+
+//             {/* Buttons */}
+//             <div className="px-6 pt-4 pb-2 flex flex-wrap justify-center gap-4">
+//                 <a
+//                     href={btn1Url}
+//                     className="py-2 px-6 border border-black rounded-lg text-black bg-white hover:bg-gray-900 hover:text-white transition-transform transform hover:scale-105"
+//                     target="_blank"
+//                     rel="noopener noreferrer"
+//                 >
+//                     {btnText}
+//                 </a>
+//                 {btn2Text && (
+//                     <a
+//                         href={btn2Url}
+//                         className="py-2 px-6 border border-black rounded-lg text-black bg-white hover:bg-gray-900 hover:text-white transition-transform transform hover:scale-105"
+//                         target="_blank"
+//                         rel="noopener noreferrer"
+//                     >
+//                         {btn2Text}
+//                     </a>
+//                 )}
+//             </div>
+//         </div>
+//     );
+// };
+
+// // Simple Heading Component
+// const Heading = ({ heading, subHeading }) => (
+//     <div className="text-center mb-8">
+//         <h2 className="text-3xl font-bold text-gray-900 mb-2">{heading}</h2>
+//         <p className="text-gray-600">{subHeading}</p>
+//     </div>
+// );
+
+// const Projects = () => {
+//     const [filter, setFilter] = useState('Featured');
+
+//     const projectData = [
+//         {
+//             title: 'Shopping Cart',
+//             description: 'OOP-based shopping cart system with file handling capabilities',
+//             features: ['Object-Oriented Design', 'File I/O Operations', 'CLI Interface', 'Data Persistence'],
+//             tags: ['Java', 'OOP', 'CLI', 'File Handling'],
+//             category: 'semester',
+//             githubLink: 'https://github.com/dev-rfgul/shopping-cart-OOP',
+//             liveDemoLink: 'https://github.com/dev-rfgul/shopping-cart-OOP',
+//         },
+//         {
+//             title: 'Bus Management System',
+//             description: 'Complete documentation and system design for bus operations',
+//             features: ['System Architecture', 'Requirements Analysis', 'UML Diagrams', 'Documentation'],
+//             tags: ['Software Engineering', 'Documentation', 'UML'],
+//             category: 'semester',
+//             githubLink: 'https://github.com/dev-rfgul/bus-management-system',
+//             liveDemoLink: 'https://github.com/dev-rfgul/bus-management-system',
+//         },
+//         {
+//             title: 'EDA on Telecom Data',
+//             description: 'Comprehensive exploratory data analysis on customer churn',
+//             features: ['Data Visualization', 'Statistical Analysis', 'Pattern Recognition', 'Insights Generation'],
+//             tags: ['Python', 'Pandas', 'Numpy', 'EDA'],
+//             category: 'semester',
+//             githubLink: 'https://github.com/dev-rfgul/EDA-churn-analysis',
+//             liveDemoLink: 'https://github.com/dev-rfgul/EDA-churn-analysis/blob/main/customer-churn-analysis.ipynb'
+//         },
+//         {
+//             title: 'Study Group Finder',
+//             description: 'Full-stack web app to connect students for collaborative learning',
+//             features: ['User Authentication', 'Real-time Matching', 'Group Management', 'Responsive Design'],
+//             tags: ['React', 'Node.js', 'MongoDB', 'Express', 'Tailwind'],
+//             category: 'semester',
+//             githubLink: 'https://github.com/dev-rfgul/study-group-finder',
+//             liveDemoLink: 'https://study-group-finder-cyan.vercel.app/',
+//         },
+//         {
+//             title: 'Crypto Price Checker',
+//             description: 'Real-time cryptocurrency price tracking application',
+//             features: ['Live Price Updates', 'Multiple Currencies', 'Price Charts', 'API Integration'],
+//             tags: ['JavaScript', 'API', 'HTML', 'CSS'],
+//             category: 'Javascript',
+//             githubLink: 'https://github.com/dev-rfgul/crypto-price-checker',
+//             liveDemoLink: 'https://cryptoprices785.netlify.app/',
+//         },
+//         {
+//             title: 'Music Player',
+//             description: 'Spotify-inspired music player with modern interface',
+//             features: ['Audio Controls', 'Playlist Management', 'Responsive UI', 'Track Progress'],
+//             tags: ['JavaScript', 'HTML', 'CSS', 'Audio API'],
+//             category: 'Javascript',
+//             githubLink: 'https://github.com/dev-rfgul/spotify',
+//             liveDemoLink: 'https://spotify785.netlify.app/',
+//         },
+//         {
+//             title: 'QR Code Generator',
+//             description: 'Generate QR codes for any text or URL instantly',
+//             features: ['Instant Generation', 'Custom Sizes', 'Download Options', 'URL Validation'],
+//             tags: ['JavaScript', 'API', 'HTML', 'CSS'],
+//             category: ['Javascript', 'Featured'],
+//             githubLink: 'https://github.com/dev-rfgul/qr-code-generater',
+//             liveDemoLink: 'https://qrcode785.netlify.app/',
+//         },
+//         {
+//             title: 'Tic Tac Toe Game',
+//             description: 'Classic game with smart AI opponent and score tracking',
+//             features: ['AI Opponent', 'Score Tracking', 'Game History', 'Responsive Design'],
+//             tags: ['JavaScript', 'Game Logic', 'HTML', 'CSS'],
+//             category: 'Javascript',
+//             githubLink: 'https://github.com/dev-rfgul/ticTacToe',
+//             liveDemoLink: 'https://tictactoe785.netlify.app/',
+//         },
+//         {
+//             title: 'Text to Speech',
+//             description: 'Convert any text to natural-sounding speech',
+//             features: ['Multiple Voices', 'Speed Control', 'Voice Selection', 'Browser Compatible'],
+//             tags: ['JavaScript', 'Web Speech API', 'HTML', 'CSS'],
+//             category: ['Javascript', 'Featured'],
+//             githubLink: 'https://github.com/dev-rfgul/text-to-speech',
+//             liveDemoLink: 'https://tts785.netlify.app/',
+//         },
+//         {
+//             title: 'Hashtags & Keywords Generator',
+//             description: 'AI-powered hashtag and keyword generation for social media',
+//             features: ['AI Generation', 'Social Media Optimization', 'Keyword Research', 'Copy to Clipboard'],
+//             tags: ['JavaScript', 'API', 'HTML', 'CSS'],
+//             category: ['Javascript', 'Featured'],
+//             githubLink: 'https://github.com/dev-rfgul/hashtag-generator',
+//             liveDemoLink: 'https://hashtags785.netlify.app/',
+//         },
+//         {
+//             title: 'Weather App',
+//             description: 'Get real-time weather updates for any location worldwide',
+//             features: ['Live Weather Data', 'Location Search', 'Weather Forecasts', 'Temperature Units'],
+//             tags: ['JavaScript', 'Weather API', 'HTML', 'CSS'],
+//             category: 'Javascript',
+//             githubLink: 'https://github.com/dev-rfgul/weather-app',
+//             liveDemoLink: 'https://weather785.netlify.app/',
+//         },
+//         {
+//             title: 'Password Generator',
+//             description: 'Generate secure passwords with customizable options',
+//             features: ['Custom Length', 'Character Sets', 'Strength Meter', 'Copy to Clipboard'],
+//             tags: ['React', 'Vite', 'Tailwind CSS', 'Security'],
+//             category: 'React',
+//             githubLink: 'https://github.com/dev-rfgul/6-password-generator',
+//             liveDemoLink: 'https://6-password-generator.vercel.app/',
+//         },
+//         {
+//             title: 'Currency Converter',
+//             description: 'Real-time currency conversion with live exchange rates',
+//             features: ['Live Exchange Rates', 'Multiple Currencies', 'Historical Data', 'Conversion History'],
+//             tags: ['React', 'Vite', 'API', 'Live Conversion'],
+//             category: 'React',
+//             githubLink: 'https://github.com/dev-rfgul/7-currency-converter',
+//             liveDemoLink: 'https://7-currency-converter-ten.vercel.app/',
+//         },
+//         {
+//             title: 'Todo List',
+//             description: 'Feature-rich todo app with Context API state management',
+//             features: ['Add/Edit/Delete Tasks', 'Mark Complete', 'Local Storage', 'Filter Options'],
+//             tags: ['React', 'Context API', 'State Management', 'Local Storage'],
+//             category: 'React',
+//             githubLink: 'https://github.com/dev-rfgul/todolist-context-api-',
+//             liveDemoLink: 'https://todolist-fawn-xi.vercel.app/',
+//         },
+//         {
+//             title: 'Invoice Generator',
+//             description: 'Professional invoice generator with download and print features',
+//             features: ['PDF Generation', 'Print Support', 'Custom Templates', 'Tax Calculations'],
+//             tags: ['React', 'Vite', 'PDF', 'Print'],
+//             category: 'React',
+//             githubLink: 'https://github.com/dev-rfgul/invoice-generaator',
+//             liveDemoLink: 'https://invoice-generaator.vercel.app/',
+//         },
+//         {
+//             title: 'Dice Game',
+//             description: 'Interactive dice game with beautiful animations and scoring',
+//             features: ['Animated Dice', 'Score System', 'Multiple Players', 'Game Statistics'],
+//             tags: ['React', 'Tailwind CSS', 'Game Logic', 'Animations'],
+//             category: ['React', 'Featured'],
+//             githubLink: 'https://github.com/dev-rfgul/dice-game',
+//             liveDemoLink: 'https://dice-game-lime-five.vercel.app/',
+//         },
+//         {
+//             title: 'AI Vs Human Game',
+//             description: 'Number guessing game where you compete against AI',
+//             features: ['AI Opponent', 'Difficulty Levels', 'Score Tracking', 'Game Analytics'],
+//             tags: ['React', 'Vite', 'Tailwind CSS', 'AI Logic'],
+//             category: ['React', 'Featured'],
+//             githubLink: 'https://github.com/dev-rfgul/ai-vs-human-vite-',
+//             liveDemoLink: 'https://ai-vs-human-game.vercel.app/',
+//         },
+//         {
+//             title: 'Bin Mukhtar Tax Consultants',
+//             description: 'Professional website for tax consultation services',
+//             features: ['SEO Optimized', 'Contact Forms', 'Service Pages', 'Mobile Responsive'],
+//             tags: ['Next.js', 'React', 'Company Website', 'SEO'],
+//             category: ['React', 'Featured'],
+//             githubLink: 'https://github.com/dev-rfgul/bin-mukhtar',
+//             liveDemoLink: 'https://binmukhtar.vercel.app/',
+//         },
+//         {
+//             title: 'Bit x Coin',
+//             description: 'Modern cryptocurrency landing page with animations',
+//             features: ['Modern Design', 'Smooth Animations', 'Responsive Layout', 'Performance Optimized'],
+//             tags: ['React', 'Vite', 'Tailwind CSS', 'Crypto'],
+//             category: ['React', 'Featured'],
+//             githubLink: 'https://github.com/dev-rfgul/bitxcoin',
+//             liveDemoLink: 'https://bitxcoin.vercel.app/',
+//         },
+//         {
+//             title: 'Currently Learning Backend',
+//             description: 'Exploring server-side development and API creation',
+//             features: ['RESTful APIs', 'Database Design', 'Authentication', 'Server Architecture'],
+//             tags: ['Node.js', 'Express', 'MongoDB', 'API'],
+//             category: 'Backend',
+//             githubLink: '',
+//             liveDemoLink: '',
+//         },
+//     ];
+
+//     const btns = [
+//         { label: 'Featured', value: 'Featured' },
+//         { label: 'Semester', value: 'semester' },
+//         { label: 'Javascript', value: 'Javascript' },
+//         { label: 'React JS', value: 'React' },
+//         { label: 'Backend', value: 'Backend' },
+//         { label: 'Show All', value: 'All' },
+//     ];
+
+//     const filterProjects = (category) => {
+//         setFilter(category);
+//     };
+
+//     const filteredProjects = filter === 'All'
+//         ? projectData
+//         : projectData.filter(project => project.category.includes(filter));
+
+//     return (
+//         <div id='projects' className="p-4 bg-gray-50 min-h-screen">
+//             <Heading
+//                 heading="Projects"
+//                 subHeading={`Total Projects I made: ${projectData.length}`}
+//             />
+
+//             {/* Filter Buttons */}
+//             <div className="flex flex-wrap justify-center mb-8">
+//                 {btns.map((btn) => (
+//                     <button
+//                         key={btn.value}
+//                         className={`m-2 py-2 px-4 focus:outline-none focus:ring-2 border border-black border-opacity-60 rounded h-11 w-50 text-black ${filter === btn.value
+//                             ? 'bg-gray-500 text-white'  // Active button styles
+//                             : 'hover:bg-gray-800 hover:text-white'  // Inactive button styles
+//                             }`}
+//                         onClick={() => filterProjects(btn.value)}
+//                     >
+//                         {btn.label}
+//                     </button>
+//                 ))}
+//             </div>
+
+//             {/* Projects Grid */}
+//             <div className="flex flex-wrap justify-center gap-6 max-w-7xl mx-auto">
+//                 {filteredProjects.map((project, index) => (
+//                     <Card
+//                         key={index}
+//                         title={project.title}
+//                         description={project.description}
+//                         features={project.features}
+//                         tags={project.tags}
+//                         btnText="GitHub"
+//                         btn2Text="Live Demo"
+//                         btn1Url={project.githubLink}
+//                         btn2Url={project.liveDemoLink}
+//                     />
+//                 ))}
+//             </div>
+//         </div>
+//     );
+// };
+
+// export default Projects;
+
 import React, { useState } from 'react';
-import Card from './Card';
-import Heading from './Heading'
+
+// Enhanced Minimalist Card Component
+const Card = ({ title, description, features, tags, btn1Url, btn2Url, btnText, btn2Text }) => {
+    const [isHovered, setIsHovered] = useState(false);
+
+    return (
+        <div
+            className="group w-full max-w-sm bg-white rounded-2xl border border-gray-800 p-6 transition-all duration-700 hover:border-gray-200 hover:shadow-2xl hover:shadow-gray-100/50 cursor-pointer relative overflow-hidden"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+        >
+            {/* Subtle background gradient on hover */}
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 to-purple-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-2xl"></div>
+            
+            {/* Header */}
+            <div className="relative mb-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3 tracking-tight">{title}</h3>
+                {description && (
+                    <p className="text-gray-600 text-sm leading-relaxed line-clamp-2">{description}</p>
+                )}
+            </div>
+
+            {/* Dynamic content area */}
+            <div className="relative min-h-24 mb-6">
+                <div className={`absolute inset-0 transition-all duration-500 ${!isHovered ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2'}`}>
+                    {/* Default state - Tags */}
+                    <div className="flex flex-wrap gap-2">
+                        {tags.map((tag, index) => (
+                            <span
+                                key={index}
+                                className="px-3 py-1.5 bg-gray-50 text-gray-700 text-xs rounded-full font-medium border border-gray-100 hover:bg-gray-100 transition-colors duration-200"
+                            >
+                                {tag}
+                            </span>
+                        ))}
+                    </div>
+                </div>
+
+                <div className={`absolute inset-0 transition-all duration-500 ${isHovered ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}>
+                    {/* Hover state - Features */}
+                    <div className="space-y-3">
+                        <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Features</h4>
+                        <div className="space-y-2">
+                            {features && features.slice(0, 3).map((feature, index) => (
+                                <div
+                                    key={index}
+                                    className="flex items-start gap-3 text-sm text-gray-700"
+                                    style={{ 
+                                        animation: isHovered ? `slideIn 0.5s ease-out ${index * 0.1}s both` : 'none' 
+                                    }}
+                                >
+                                    <div className="w-1 h-1 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                                    <span className="leading-relaxed">{feature}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Action buttons */}
+            <div className="relative flex gap-3 pt-2">
+                {btn1Url && (
+                    <a
+                        href={btn1Url}
+                        className="flex-1 py-2.5 px-4 text-center text-sm font-medium text-gray-700 bg-gray-50 border border-gray-200 rounded-xl hover:bg-gray-900 hover:text-white hover:border-gray-900 transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98]"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        {btnText}
+                    </a>
+                )}
+                {btn2Text && btn2Url && (
+                    <a
+                        href={btn2Url}
+                        className="flex-1 py-2.5 px-4 text-center text-sm font-medium text-white bg-gray-900 border border-gray-900 rounded-xl hover:bg-gray-800 transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98]"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        {btn2Text}
+                    </a>
+                )}
+            </div>
+
+            <style jsx>{`
+                @keyframes slideIn {
+                    from {
+                        opacity: 0;
+                        transform: translateY(10px);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+                
+                .line-clamp-2 {
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                }
+            `}</style>
+        </div>
+    );
+};
+
+// Enhanced Heading Component
+const Heading = ({ heading, subHeading }) => (
+    <div className="text-center mb-12">
+        <h2 className="text-4xl font-bold text-gray-900 mb-4 tracking-tight">{heading}</h2>
+        <p className="text-gray-500 text-lg max-w-2xl mx-auto">{subHeading}</p>
+    </div>
+);
 
 const Projects = () => {
     const [filter, setFilter] = useState('Featured');
 
     const projectData = [
         {
-            image: 'images/projects/course/oop.png',
             title: 'Shopping Cart',
-            tags: ['Semester Project of OOP in 2nd Semester','Java', 'OOP', 'CLI', 'File Handling'],
+            description: 'OOP-based shopping cart system with file handling capabilities',
+            features: ['Object-Oriented Design', 'File I/O Operations', 'CLI Interface', 'Data Persistence'],
+            tags: ['Java', 'OOP', 'CLI', 'File Handling'],
             category: 'semester',
             githubLink: 'https://github.com/dev-rfgul/shopping-cart-OOP',
             liveDemoLink: 'https://github.com/dev-rfgul/shopping-cart-OOP',
         },
         {
-            image: 'images/projects/course/se.png',
             title: 'Bus Management System',
-            tags: ['Semester Project of Software Engineering in 3rd Semester','Software Engineering', 'Documentation'],
+            description: 'Complete documentation and system design for bus operations',
+            features: ['System Architecture', 'Requirements Analysis', 'UML Diagrams', 'Documentation'],
+            tags: ['Software Engineering', 'Documentation', 'UML'],
             category: 'semester',
             githubLink: 'https://github.com/dev-rfgul/bus-management-system',
             liveDemoLink: 'https://github.com/dev-rfgul/bus-management-system',
         },
         {
-            image: 'images/projects/course/eda.jpg',
             title: 'EDA on Telecom Data',
-            tags: ['Semester Project of Data Science in 5th Semester','EDA', 'Python', 'Pandas', 'Numpy'],
+            description: 'Comprehensive exploratory data analysis on customer churn',
+            features: ['Data Visualization', 'Statistical Analysis', 'Pattern Recognition', 'Insights Generation'],
+            tags: ['Python', 'Pandas', 'Numpy', 'EDA'],
             category: 'semester',
             githubLink: 'https://github.com/dev-rfgul/EDA-churn-analysis',
-            liveDemoLink:'https://github.com/dev-rfgul/EDA-churn-analysis/blob/main/customer-churn-analysis.ipynb'
+            liveDemoLink: 'https://github.com/dev-rfgul/EDA-churn-analysis/blob/main/customer-churn-analysis.ipynb'
         },
         {
-            image: 'images/projects/course/web.png',
             title: 'Study Group Finder',
-            tags: ['Semester project of Web Systems in 5th semester','React JS', 'Node JS', 'MongoDB', 'Express', 'Tailwind CSS'],
+            description: 'Full-stack web app to connect students for collaborative learning',
+            features: ['User Authentication', 'Real-time Matching', 'Group Management', 'Responsive Design'],
+            tags: ['React', 'Node.js', 'MongoDB', 'Express', 'Tailwind'],
             category: 'semester',
             githubLink: 'https://github.com/dev-rfgul/study-group-finder',
             liveDemoLink: 'https://study-group-finder-cyan.vercel.app/',
         },
         {
-            image: 'images/projects/js/crypto-price-cheker.png',
             title: 'Crypto Price Checker',
-            tags: ['HTML', 'CSS', 'JavaScript', 'API'],
+            description: 'Real-time cryptocurrency price tracking application',
+            features: ['Live Price Updates', 'Multiple Currencies', 'Price Charts', 'API Integration'],
+            tags: ['JavaScript', 'API', 'HTML', 'CSS'],
             category: 'Javascript',
             githubLink: 'https://github.com/dev-rfgul/crypto-price-checker',
             liveDemoLink: 'https://cryptoprices785.netlify.app/',
         },
         {
-            image: 'images/projects/js/music-player.png',
             title: 'Music Player',
-            tags: ['HTML', 'CSS', 'JavaScript'],
+            description: 'Spotify-inspired music player with modern interface',
+            features: ['Audio Controls', 'Playlist Management', 'Responsive UI', 'Track Progress'],
+            tags: ['JavaScript', 'HTML', 'CSS', 'Audio API'],
             category: 'Javascript',
             githubLink: 'https://github.com/dev-rfgul/spotify',
             liveDemoLink: 'https://spotify785.netlify.app/',
         },
         {
-            image: 'images/projects/js/qr-code-generator.png',
             title: 'QR Code Generator',
-            tags: ['HTML', 'CSS', 'JavaScript', 'API'],
+            description: 'Generate QR codes for any text or URL instantly',
+            features: ['Instant Generation', 'Custom Sizes', 'Download Options', 'URL Validation'],
+            tags: ['JavaScript', 'API', 'HTML', 'CSS'],
             category: ['Javascript', 'Featured'],
             githubLink: 'https://github.com/dev-rfgul/qr-code-generater',
             liveDemoLink: 'https://qrcode785.netlify.app/',
         },
         {
-            image: 'images/projects/js/tic-tac-toe.png',
             title: 'Tic Tac Toe Game',
-            tags: ['HTML', 'CSS', 'JavaScript', 'Game Logic'],
+            description: 'Classic game with smart AI opponent and score tracking',
+            features: ['AI Opponent', 'Score Tracking', 'Game History', 'Responsive Design'],
+            tags: ['JavaScript', 'Game Logic', 'HTML', 'CSS'],
             category: 'Javascript',
             githubLink: 'https://github.com/dev-rfgul/ticTacToe',
             liveDemoLink: 'https://tictactoe785.netlify.app/',
         },
         {
-            image: 'images/projects/js/text-to-speech.png',
             title: 'Text to Speech',
-            tags: ['HTML', 'CSS', 'JavaScript'],
+            description: 'Convert any text to natural-sounding speech',
+            features: ['Multiple Voices', 'Speed Control', 'Voice Selection', 'Browser Compatible'],
+            tags: ['JavaScript', 'Web Speech API', 'HTML', 'CSS'],
             category: ['Javascript', 'Featured'],
             githubLink: 'https://github.com/dev-rfgul/text-to-speech',
             liveDemoLink: 'https://tts785.netlify.app/',
         },
         {
-            image: 'images/projects/js/hashtag-gen.png',
             title: 'Hashtags & Keywords Generator',
-            tags: ['HTML', 'CSS', 'JavaScript', 'API'],
+            description: 'AI-powered hashtag and keyword generation for social media',
+            features: ['AI Generation', 'Social Media Optimization', 'Keyword Research', 'Copy to Clipboard'],
+            tags: ['JavaScript', 'API', 'HTML', 'CSS'],
             category: ['Javascript', 'Featured'],
             githubLink: 'https://github.com/dev-rfgul/hashtag-generator',
             liveDemoLink: 'https://hashtags785.netlify.app/',
         },
         {
-            image: 'images/projects/js/weather.png',
             title: 'Weather App',
-            tags: ['HTML', 'CSS', 'JavaScript', 'API'],
+            description: 'Get real-time weather updates for any location worldwide',
+            features: ['Live Weather Data', 'Location Search', 'Weather Forecasts', 'Temperature Units'],
+            tags: ['JavaScript', 'Weather API', 'HTML', 'CSS'],
             category: 'Javascript',
             githubLink: 'https://github.com/dev-rfgul/weather-app',
             liveDemoLink: 'https://weather785.netlify.app/',
         },
         {
-            image: 'https://images.pexels.com/photos/2882630/pexels-photo-2882630.jpeg?auto=compress&cs=tinysrgb&w=600',
             title: 'Password Generator',
-            tags: ['Vite', 'React JS', 'Tailwind CSS'],
+            description: 'Generate secure passwords with customizable options',
+            features: ['Custom Length', 'Character Sets', 'Strength Meter', 'Copy to Clipboard'],
+            tags: ['React', 'Vite', 'Tailwind CSS', 'Security'],
             category: 'React',
             githubLink: 'https://github.com/dev-rfgul/6-password-generator',
             liveDemoLink: 'https://6-password-generator.vercel.app/',
         },
         {
-            image: 'images/projects/react/currencytesting.png',
             title: 'Currency Converter',
-            tags: ['Vite', 'React', 'API', 'Live Conversion'],
+            description: 'Real-time currency conversion with live exchange rates',
+            features: ['Live Exchange Rates', 'Multiple Currencies', 'Historical Data', 'Conversion History'],
+            tags: ['React', 'Vite', 'API', 'Live Conversion'],
             category: 'React',
             githubLink: 'https://github.com/dev-rfgul/7-currency-converter',
             liveDemoLink: 'https://7-currency-converter-ten.vercel.app/',
         },
         {
-            image: 'images/projects/react/todo.jpg',
             title: 'Todo List',
-            tags: ['React', 'Context API', 'State Management'],
+            description: 'Feature-rich todo app with Context API state management',
+            features: ['Add/Edit/Delete Tasks', 'Mark Complete', 'Local Storage', 'Filter Options'],
+            tags: ['React', 'Context API', 'State Management', 'Local Storage'],
             category: 'React',
             githubLink: 'https://github.com/dev-rfgul/todolist-context-api-',
             liveDemoLink: 'https://todolist-fawn-xi.vercel.app/',
         },
         {
-            image: 'images/projects/react/invoice.jpg',
             title: 'Invoice Generator',
-            tags: ['Vite', 'React JS', 'Download', 'Print'],
+            description: 'Professional invoice generator with download and print features',
+            features: ['PDF Generation', 'Print Support', 'Custom Templates', 'Tax Calculations'],
+            tags: ['React', 'Vite', 'PDF', 'Print'],
             category: 'React',
             githubLink: 'https://github.com/dev-rfgul/invoice-generaator',
             liveDemoLink: 'https://invoice-generaator.vercel.app/',
         },
         {
-            image: 'images/projects/react/dice.jpg',
             title: 'Dice Game',
-            tags: ['React JS', 'Tailwind CSS', 'Game Logic'],
+            description: 'Interactive dice game with beautiful animations and scoring',
+            features: ['Animated Dice', 'Score System', 'Multiple Players', 'Game Statistics'],
+            tags: ['React', 'Tailwind CSS', 'Game Logic', 'Animations'],
             category: ['React', 'Featured'],
             githubLink: 'https://github.com/dev-rfgul/dice-game',
             liveDemoLink: 'https://dice-game-lime-five.vercel.app/',
         },
         {
-            image: 'images/projects/react/img.jpg',
             title: 'AI Vs Human Game',
-            tags: ['Vite', 'React', 'Tailwind CSS', 'Number Guessing'],
+            description: 'Number guessing game where you compete against AI',
+            features: ['AI Opponent', 'Difficulty Levels', 'Score Tracking', 'Game Analytics'],
+            tags: ['React', 'Vite', 'Tailwind CSS', 'AI Logic'],
             category: ['React', 'Featured'],
             githubLink: 'https://github.com/dev-rfgul/ai-vs-human-vite-',
             liveDemoLink: 'https://ai-vs-human-game.vercel.app/',
         },
         {
-            image: 'images/projects/react/binmukhtar.png',
             title: 'Bin Mukhtar Tax Consultants',
-            tags: ['Next.js', 'React', 'Company Website', 'Tax Consultant'],
+            description: 'Professional website for tax consultation services',
+            features: ['SEO Optimized', 'Contact Forms', 'Service Pages', 'Mobile Responsive'],
+            tags: ['Next.js', 'React', 'Company Website', 'SEO'],
             category: ['React', 'Featured'],
             githubLink: 'https://github.com/dev-rfgul/bin-mukhtar',
             liveDemoLink: 'https://binmukhtar.vercel.app/',
         },
         {
-            image: 'images/projects/react/bitxcoin.png',
             title: 'Bit x Coin',
-            tags: ['Vite', 'React', 'Tailwind CSS'],
+            description: 'Modern cryptocurrency landing page with animations',
+            features: ['Modern Design', 'Smooth Animations', 'Responsive Layout', 'Performance Optimized'],
+            tags: ['React', 'Vite', 'Tailwind CSS', 'Crypto'],
             category: ['React', 'Featured'],
             githubLink: 'https://github.com/dev-rfgul/bitxcoin',
             liveDemoLink: 'https://bitxcoin.vercel.app/',
         },
         {
-            image: 'images/projects/backend/backend.jpeg',
-            title: 'Currently Learning',
+            title: 'Currently Learning Backend',
+            description: 'Exploring server-side development and API creation',
+            features: ['RESTful APIs', 'Database Design', 'Authentication', 'Server Architecture'],
             tags: ['Node.js', 'Express', 'MongoDB', 'API'],
             category: 'Backend',
             githubLink: '',
             liveDemoLink: '',
         },
     ];
-    
 
     const btns = [
         { label: 'Featured', value: 'Featured' },
         { label: 'Semester', value: 'semester' },
         { label: 'Javascript', value: 'Javascript' },
         { label: 'React JS', value: 'React' },
-        { label: 'Backend ', value: 'Backend' },
+        { label: 'Backend', value: 'Backend' },
         { label: 'Show All', value: 'All' },
     ];
 
@@ -187,41 +653,76 @@ const Projects = () => {
         : projectData.filter(project => project.category.includes(filter));
 
     return (
-        <div id='projects' className="p-4">
-            <Heading heading={"Projects"} subHeading={`Total Projects I made: ${projectData.length} `} />
-            <div className="flex flex-wrap justify-center mb-8">
-                {btns.map((btn) => (
-                    <button
-                        key={btn.value}
-                        className={`m-2 py-2 px-4 focus:outline-none focus:ring-2 border border-black border-opacity-60 rounded h-11 w-50 text-black ${filter === btn.value
-                            ? 'bg-gray-500 text-white'  // Active button styles
-                            : 'hover:bg-gray-800 hover:text-white'  // Inactive button styles
+        <div id='projects' className="py-20 px-4 bg-gradient-to-br from-gray-50 to-white min-h-screen">
+            <div className="max-w-7xl mx-auto">
+                <Heading
+                    heading="Projects"
+                    subHeading={`Showcasing ${projectData.length} projects across different technologies`}
+                />
+
+                {/* Enhanced Filter Buttons */}
+                <div className="flex flex-wrap justify-center gap-3 mb-12">
+                    {btns.map((btn) => (
+                        <button
+                            key={btn.value}
+                            className={`px-6 py-3 rounded-xl text-sm font-medium transition-all duration-300 transform hover:scale-105 active:scale-95 ${
+                                filter === btn.value
+                                    ? 'bg-gray-900 text-white shadow-lg shadow-gray-200'
+                                    : 'bg-white text-gray-700 border border-gray-200 hover:border-gray-300 hover:shadow-md'
                             }`}
-                        onClick={() => filterProjects(btn.value)}
-                    >
-                        {btn.label}
-                    </button>
-                ))}
+                            onClick={() => filterProjects(btn.value)}
+                        >
+                            {btn.label}
+                        </button>
+                    ))}
+                </div>
+
+                {/* Projects Grid with enhanced layout */}
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 justify-items-center">
+                    {filteredProjects.map((project, index) => (
+                        <div
+                            key={index}
+                            className="w-full"
+                            style={{
+                                animation: `fadeInUp 0.6s ease-out ${index * 0.1}s both`
+                            }}
+                        >
+                            <Card
+                                title={project.title}
+                                description={project.description}
+                                features={project.features}
+                                tags={project.tags}
+                                btnText="GitHub"
+                                btn2Text="Live Demo"
+                                btn1Url={project.githubLink}
+                                btn2Url={project.liveDemoLink}
+                            />
+                        </div>
+                    ))}
+                </div>
+
+                {/* No projects message */}
+                {filteredProjects.length === 0 && (
+                    <div className="text-center py-16">
+                        <p className="text-gray-500 text-lg">No projects found in this category.</p>
+                    </div>
+                )}
             </div>
 
-            <div className="flex flex-wrap justify-center gap-6">
-                {filteredProjects.map((project, index) => (
-                    <Card
-                        className="border border-black border-opacity-60"
-                        key={index}
-                        image={project.image}
-                        title={project.title}
-                        tags={project.tags}
-                        btnText='GitHub'
-                        btn2Text='Live Demo'
-                        btn1Url={project.githubLink}
-                        btn2Url={project.liveDemoLink}
-                    />
-                ))}
-            </div>
-            {/* <hr className="" /> */}
+            <style jsx>{`
+                @keyframes fadeInUp {
+                    from {
+                        opacity: 0;
+                        transform: translateY(30px);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+            `}</style>
         </div>
     );
-};  
+};
 
 export default Projects;

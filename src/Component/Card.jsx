@@ -52,3 +52,4 @@ const Card = ({ image, title, tags, btn1Url, btn2Url, btnText, btn2Text }) => {
 };
 
 export default Card;
+
