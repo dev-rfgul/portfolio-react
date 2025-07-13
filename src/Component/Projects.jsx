@@ -590,7 +590,7 @@ const Projects = () => {
         {
             title: 'Bus Management System',
             description: 'Complete documentation and system design for bus operations',
-            features: ['System Architecture', 'Requirements Analysis', 'UML Diagrams', 'Documentation'],
+            features: [ 'Requirements Analysis', 'UML Diagrams', 'Documentation'],
             tags: ['Software Engineering', 'Documentation', 'UML'],
             category: 'semester',
             githubLink: 'https://github.com/dev-rfgul/bus-management-system',
@@ -609,7 +609,7 @@ const Projects = () => {
         {
             title: 'Crypto Price Checker',
             description: 'Real-time cryptocurrency price tracking application',
-            features: ['Live Price Updates', 'Multiple Currencies', 'Price Charts', 'API Integration'],
+            features: ['Live Price Updates', 'Multiple Currencies', ],
             tags: ['JavaScript', 'API', 'HTML', 'CSS'],
             category: 'Javascript',
             githubLink: 'https://github.com/dev-rfgul/crypto-price-checker',
@@ -618,7 +618,7 @@ const Projects = () => {
         {
             title: 'Music Player',
             description: 'Spotify-inspired music player with modern interface',
-            features: ['Audio Controls', 'Playlist Management', 'Responsive UI', 'Track Progress'],
+            features: ['Audio Controls', 'Playlist Management', 'Responsive UI'],
             tags: ['JavaScript', 'HTML', 'CSS', 'Audio API'],
             category: 'Javascript',
             githubLink: 'https://github.com/dev-rfgul/spotify',
@@ -627,7 +627,7 @@ const Projects = () => {
         {
             title: 'QR Code Generator',
             description: 'Generate QR codes for any text or URL instantly',
-            features: ['Instant Generation', 'Custom Sizes', 'Download Options', 'URL Validation'],
+            features: ['Instant Generation', 'URL to QR code','Text to QR code'],
             tags: ['JavaScript', 'API', 'HTML', 'CSS'],
             category: ['Javascript', ],
             githubLink: 'https://github.com/dev-rfgul/qr-code-generater',
@@ -636,7 +636,7 @@ const Projects = () => {
         {
             title: 'Tic Tac Toe Game',
             description: 'Classic game with smart AI opponent and score tracking',
-            features: ['AI Opponent', 'Score Tracking', 'Game History', 'Responsive Design'],
+            features: [ 'Score Tracking', 'Responsive Design'],
             tags: ['JavaScript', 'Game Logic', 'HTML', 'CSS'],
             category: 'Javascript',
             githubLink: 'https://github.com/dev-rfgul/ticTacToe',
@@ -708,7 +708,7 @@ const Projects = () => {
         {
             title: 'Dice Game',
             description: 'Interactive dice game with beautiful animations and scoring',
-            features: ['Animated Dice', 'Score System', 'Multiple Players', 'Game Statistics'],
+            features: ['AI Opponent', 'Score System', 'Multiple Players', 'Game Statistics'],
             tags: ['React', 'Tailwind CSS', 'Game Logic', 'Animations'],
             category: ['React', ],
             githubLink: 'https://github.com/dev-rfgul/dice-game',
@@ -744,11 +744,11 @@ const Projects = () => {
         {
             title: 'Task Ai Studio',
             description: 'A tool for people with short term memory loss to help them remember their tasks',
-            features: ['Productivity Tool','Designed for short term memory issues','AI Task Management', 'Task Reminders','Whatsapp Alert System', ],
+            features: ['Productivity Tool','Designed for short term memory issues','AI Task Management', 'Task Reminders','Whatsapp Alert System','Productivity Report' ],
             tags: ["Fullstack",'React', 'Mongo', 'NodeJS', 'Express', 'Whatsapp Bot', 'Tailwind CSS', 'Gemeni API',],
             category: ['Full Stack', 'Featured'],
             githubLink: 'https://github.com/dev-rfgul/task-manager',
-            liveDemoLink: 'https://task-ai-tau.vercel.app/',
+            liveDemoLink: 'https://taskai.studio',
         },
         {
             title: 'Smart University Transport System',
