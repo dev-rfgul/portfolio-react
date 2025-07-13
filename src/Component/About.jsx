@@ -121,16 +121,16 @@
 
 // export default AboutMe;
 
-import React from 'react';
+// import React from 'react';
 import Heading from './Heading';
 import { motion } from 'framer-motion';
 
 const AboutMe = () => {
     const stats = [
         { icon: "👥", title: "Education", detail: "B.Sc. Computer Science", institution: "Islamia University Bahawalpur" },
-        { icon: "🏅", title: "Experience", detail: "1 Year", institution: "Frontend Development" },
+        { icon: "🏅", title: "Trainee Software Engineer", detail: "6 Months", institution: "Aitch Tech " },
         { icon: "🚀", title: "Projects", detail: "30+", institution: "Practice Projects" },
-        { icon: "📚", title: "Learning", detail: "Backend Development", institution: "Beginner" }
+        { icon: "📚", title: "Learning", detail: "Angular + DSA", institution: "Beginner" }
     ];
 
     return (
@@ -162,7 +162,7 @@ const AboutMe = () => {
                             transition={{ duration: 0.3, delay: 0.1 * index }}
                             viewport={{ once: true }}
                         >
-                            <div className="text-4xl mb-4 text-blue-600">{stat.icon}</div>
+                            {/* <div className="text-4xl mb-4 text-blue-600">{stat.icon}</div> */}
                             <h2 className="text-2xl font-bold text-gray-800">{stat.title}</h2>
                             <p className="text-gray-700 text-lg mt-2">{stat.detail}</p>
                             <p className="text-gray-500 font-bold">{stat.institution}</p>
@@ -179,10 +179,10 @@ const AboutMe = () => {
                 >
                     <h3 className="text-2xl font-bold text-gray-900 mb-4">My Journey</h3>
                     <p className="text-lg leading-relaxed text-gray-700">
-                        I am a <span className='font-bold text-black'>Frontend Developer</span> with <span className='font-bold text-black'>6+ Months</span> of experience in Front End Development. I have worked on <span className='font-bold text-black'>30+ practice projects</span> and have a good understanding of frontend development, currently <span className='font-bold text-black'>learning backend development</span> to become a full-stack developer.
+                        I am a <span className='font-bold text-black'>Trainee Software Engineer</span> - Full Stack with <span className='font-bold text-black'>6+ Months</span> of experience in Full Stack Web  Development <span className='font-bold text-black'>MERN & Django</span> I have worked on <span className='font-bold text-black'>30+ practice projects</span> which included <span className='font-bold text-blue-800'><a target='_blank' href='https://www.taskai.studio'>Task AI Studio</a></span> and <span className='font-bold text-blue-800'><a href='https://www.glowzlifestyle.shop' target='_blank'>Glowz Lifestyle </a></span>(Ecom Website) have a good understanding of Full Stack development.
                     </p>
                     <div className="mt-6 flex flex-wrap gap-2">
-                        {['React', 'JavaScript', 'HTML', 'CSS', 'Tailwind', 'Git', 'Responsive Design'].map((skill, index) => (
+                        {[ 'JavaScript','React', 'Node JS', 'Express JS', 'MongoDB','Django', 'Git', 'GitHub', 'Deployment','Responsive Design'].map((skill, index) => (
                             <span key={index} className="px-3 py-1 bg-gray-200 text-black rounded-full text-sm font-medium">
                                 {skill}
                             </span>

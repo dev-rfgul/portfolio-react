@@ -1,4 +1,4 @@
-import React from 'react';
+// import {React} from 'react';
 import { useState,useEffect } from 'react';
 import Navbar from './Component/Navbar';
 import Banner from './Component/Banner';
@@ -9,7 +9,7 @@ import Contact from './Component/Contact';
 import Skills from "./Component/Skills";
 import Reviews from './Component/Reviews';
 import Loader from './Component/Loader'
-import VisitorCounter from './Component/Visitor';
+// import VisitorCounter from './Component/Visitor';
 import Chatbot from './Component/Chatbot';
 const App = () => {
 

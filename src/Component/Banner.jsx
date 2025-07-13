@@ -1,7 +1,7 @@
 
 
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import React from "react";
+// import React from "react";
 import ShinyButton from '@/components/magicui/shiny-button';
 
 const Banner = () => {
@@ -11,7 +11,7 @@ const Banner = () => {
                 <div className="md:w-1/2 text-black mb-3 md:mb-0 md:pr-8 flex flex-col items-center justify-center">
                     <div className="text-center md:text-left lg:mb-8 md:mb-4 flex flex-col items-center">
                         <h1 className="text-lg text-gray-700 mb-2 transition-transform duration-500 ease-in-out transform hover:scale-105 hover:text-black">
-                            Hello, I'm
+                            Hello, I am
                         </h1>
                         <h1 className="text-4xl md:text-5xl font-semibold mb-2 transition-transform duration-500 ease-in-out transform hover:scale-105 hover:text-gray-700">
                             Muhammad Fahad
