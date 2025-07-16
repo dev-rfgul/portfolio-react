@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 const AboutMe = () => {
     const stats = [
         { icon: "👥", title: "Education", detail: "B.Sc. Computer Science", institution: "Islamia University Bahawalpur" },
-        { icon: "🏅", title: "Trainee Software Engineer", detail: "6 Months", institution: "Aitch Technologies Bahawalpur " },
+        { icon: "🏅", title: "Trainee Software Engineer", detail: "6 Months", institution: "Aitch Tech Bahawalpur " },
         { icon: "🚀", title: "Projects", detail: "30+", institution: "Practice Projects" },
         { icon: "📚", title: "Learning", detail: "Angular + DSA", institution: "Beginner" }
     ];
@@ -42,7 +42,7 @@ const AboutMe = () => {
                             {/* <div className="text-4xl mb-4 text-blue-600">{stat.icon}</div> */}
                             <h2 className="text-2xl font-bold text-gray-800 text-center">{stat.title}</h2>
                             <p className="text-gray-700 text-lg mt-2">{stat.detail}</p>
-                            <p className="text-gray-500 font-bold">{stat.institution}</p>
+                            <p className="text-gray-500 font-bold text-center">{stat.institution}</p>
                         </motion.div>
                     ))}
                 </div>
@@ -56,7 +56,7 @@ const AboutMe = () => {
                 >
                     <h3 className="text-2xl font-bold text-gray-900 mb-4">My Journey</h3>
                     <p className="text-lg leading-relaxed text-gray-700">
-                        I am a <span className='font-bold text-black'>Trainee Software Engineer</span> - Full Stack with <span className='font-bold text-black'>6+ Months</span> of experience in Full Stack Web  Development <span className='font-bold text-black'>MERN & Django</span> I have worked on <span className='font-bold text-black'>30+ practice projects</span> which included <span className='font-bold text-blue-800'><a target='_blank' href='https://www.taskai.studio'>Task AI Studio</a></span> and <span className='font-bold text-blue-800'><a href='https://www.glowzlifestyle.shop' target='_blank'>Glowz Lifestyle </a></span>(Ecom Website) and <span className='font-bold text-blue-800'>Smart Univ Bus Management System</span> which gave me  a good understanding of Full Stack development.
+                        I am a <span className='font-bold text-black'>Trainee Software Engineer</span> - Full Stack with <span className='font-bold text-black'>6+ Months</span> of experience in Full Stack Web  Development <span className='font-bold text-black'>MERN & Django</span> I have worked on <span className='font-bold text-black'>30+ practice projects</span> which included <span className='font-bold text-blue-800'><a target='_blank' href='https://www.taskai.studio'>Task AI Studio</a></span> and <span className='font-bold text-blue-800'><a href='https://www.glowzlifestyle.shop' target='_blank'>Glowz Lifestyle </a></span>(Ecom Website) and <span className='font-bold text-blue-800'> <a href='https://busconnect.pythonanywhere.com/'> Smart Univ Bus Management System</a></span> which gave me  a good understanding of Full Stack development.
                     </p>
                     <div className="mt-6 flex flex-wrap gap-2">
                         {[ 'JavaScript','React', 'Node JS', 'Express JS', 'MongoDB','Django', 'Git', 'GitHub', 'Deployment','Responsive Design'].map((skill, index) => (
