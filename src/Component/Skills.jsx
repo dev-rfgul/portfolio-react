@@ -9,7 +9,6 @@ import { motion } from 'framer-motion';
 const skillsData = {
     frontend: [
         { name: "JavaScript", level: 4, slug: "javascript", experience: "1+ years" },   
-        { name: "CSS3", level: 5, slug: "css3", experience: "2+ years" },
         { name: "TypeScript", level: 3, slug: "typescript", experience: "1 year" },
         { name: "React JS", level: 4, slug: "react", experience: "1 year" },
         { name: "Tailwind CSS", level: 5, slug: "tailwindcss", experience: "" },
