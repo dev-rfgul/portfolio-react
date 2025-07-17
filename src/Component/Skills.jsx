@@ -9,7 +9,6 @@ import { motion } from 'framer-motion';
 const skillsData = {
     frontend: [
         { name: "JavaScript", level: 4, slug: "javascript", experience: "1+ years" },   
-        { name: "HTML5", level: 5, slug: "html5", experience: "2+ years" },
         { name: "CSS3", level: 5, slug: "css3", experience: "2+ years" },
         { name: "TypeScript", level: 3, slug: "typescript", experience: "1 year" },
         { name: "React JS", level: 4, slug: "react", experience: "1 year" },
@@ -23,10 +22,11 @@ const skillsData = {
         { name: "Firebase", level: 4, slug: "firebase", experience: "6 months" },
     ],
     languages: [
-        { name: "JavaScript", level: 4, slug: "javascript", experience: "1+ years" },
+        { name: "JavaScript", level: 4, slug: "javascript", experience: "2 year" },
         { name: "TypeScript", level: 3, slug: "typescript", experience: "1 year" },
-        { name: "Java", level: 3, slug: "openjdk", experience: "" },
-        { name: "C++", level: 3, slug: "cplusplus", experience: "" },
+        { name: "Java", level: 3, slug: "openjdk", experience: "beginner" },
+        { name: "C++", level: 3, slug: "cplusplus", experience: "beginner" },
+        { name: "Python", level: 3, slug: "python", experience: "beginner" },
     ],
     tools: [
         { name: "Git", level: 4, slug: "git", experience: "2+ years" },
