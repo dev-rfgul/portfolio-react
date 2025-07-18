@@ -15,9 +15,10 @@ const skillsData = {
         { name: "Bootstrap", level: 4, slug: "bootstrap", experience: "" },
     ],
     backend: [
-        { name: "Node.js", level: 3, slug: "nodedotjs", experience: "6 months" },
-        { name: "Express", level: 3, slug: "express", experience: "6 months" },
-        { name: "MongoDB", level: 3, slug: "mongodb", experience: "6 months" },
+        { name: "Node.js", level: 4, slug: "nodedotjs", experience: "6 months" },
+        { name: "Express", level: 4, slug: "express", experience: "6 months" },
+        { name: "MongoDB", level: 4, slug: "mongodb", experience: "6 months" },
+        { name: "Django", level: 3, slug: "django", experience: "3 months" },
         { name: "Firebase", level: 4, slug: "firebase", experience: "6 months" },
     ],
     languages: [
@@ -30,6 +31,7 @@ const skillsData = {
     tools: [
         { name: "Git", level: 4, slug: "git", experience: "2+ years" },
         { name: "GitHub", level: 4, slug: "github", experience: "2+ years" },
+        { name: "GitLab", level: 3, slug: "gitlab", experience: "6 months" },
         { name: "VS Code", level: 5, slug: "visualstudiocode", experience: "2+ years" },
         { name: "GitHub Copilot", level: 4, slug: "githubcopilot", experience: "2+ year" },
         { name: "NPM", level: 4, slug: "npm", experience: "2+ years" },
@@ -37,6 +39,7 @@ const skillsData = {
     platforms: [
         { name: "Vercel", level: 3, slug: "vercel", experience: "1+ years" },
         { name: "Netlify", level: 3, slug: "netlify", experience: "1+ years" },
+        { name: "DigitalOcean", level: 3, slug: "digitalocean", experience: "6 months" },
         { name: "Linux", level: 3, slug: "linux", experience: "2+ years" },
         { name: "Ubuntu", level: 3, slug: "ubuntu", experience: "2+ years" },
     ]
