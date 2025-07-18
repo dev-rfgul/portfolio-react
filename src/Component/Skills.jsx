@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 // Organized skills by category with additional metadata
 const skillsData = {
     frontend: [
-        { name: "JavaScript", level: 4, slug: "javascript", experience: "1+ years" },   
+        { name: "JavaScript", level: 4, slug: "javascript", experience: "1+ years" },
         { name: "TypeScript", level: 3, slug: "typescript", experience: "1 year" },
         { name: "React JS", level: 4, slug: "react", experience: "1 year" },
         { name: "Tailwind CSS", level: 5, slug: "tailwindcss", experience: "" },
@@ -28,20 +28,30 @@ const skillsData = {
         { name: "C++", level: 3, slug: "cplusplus", experience: "beginner" },
         { name: "Python", level: 3, slug: "python", experience: "beginner" },
     ],
-    tools: [
+    eda: [
+        { name: "NumPy", level: 3, slug: "numpy", experience: "1 year" },
+        { name: "Pandas", level: 3, slug: "pandas", experience: "1 year" },
+        { name: "Matplotlib", level: 3, slug: "matplotlib", experience: "1 year" },
+        { name: "Seaborn", level: 2, slug: "seaborn", experience: "6 months" },
+    ],
+    deployment: [
+        { name: "Vercel", level: 3, slug: "vercel", experience: "1+ years" },
+        { name: "Netlify", level: 3, slug: "netlify", experience: "1+ years" },
+        { name: "DigitalOcean", level: 3, slug: "digitalocean", experience: "6 months" },
+    ],
+    versioncontrol: [
         { name: "Git", level: 4, slug: "git", experience: "2+ years" },
         { name: "GitHub", level: 4, slug: "github", experience: "2+ years" },
         { name: "GitLab", level: 3, slug: "gitlab", experience: "6 months" },
         { name: "GitHub Copilot", level: 4, slug: "githubcopilot", experience: "2+ year" },
-        { name: "NPM", level: 4, slug: "npm", experience: "2+ years" },
     ],
-    platforms: [
-        { name: "Vercel", level: 3, slug: "vercel", experience: "1+ years" },
-        { name: "Netlify", level: 3, slug: "netlify", experience: "1+ years" },
-        { name: "DigitalOcean", level: 3, slug: "digitalocean", experience: "6 months" },
+    operatingsystem: [
         { name: "Linux", level: 3, slug: "linux", experience: "2+ years" },
         { name: "Ubuntu", level: 3, slug: "ubuntu", experience: "2+ years" },
-    ]
+        { name: "Pop OS", level: 3, slug: "popos", experience: "2+ years" },
+        { name: "Windows", level: 2, slug: "windows", experience: "1 year " },
+    ],
+
 };
 
 // Extract all slugs for the icon cloud
@@ -160,8 +170,10 @@ const Skills = () => {
         { id: "frontend", label: "Frontend" },
         { id: "backend", label: "Backend" },
         { id: "languages", label: "Languages" },
-        { id: "tools", label: "Tools" },
-        { id: "platforms", label: "Platforms" }
+        { id: "eda", label: "EDA" },
+        { id: "deployment", label: "Deployment" },
+        { id: "versioncontrol", label: "Version Control" },
+        { id: "operatingsystem", label: "OS" },
     ];
 
     const container = {
@@ -227,7 +239,7 @@ const Skills = () => {
                                 <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-white">Top Skills</h3>
                                 <div className="space-y-4">
                                     {skillsData[activeTab]
-                                        .sort((a, b) =>  a.level-b.level)
+                                        .sort((a, b) => a.level - b.level)
                                         .slice(0, 3)
                                         .map((skill, index) => (
                                             <SkillProgress
