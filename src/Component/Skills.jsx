@@ -32,7 +32,6 @@ const skillsData = {
         { name: "Git", level: 4, slug: "git", experience: "2+ years" },
         { name: "GitHub", level: 4, slug: "github", experience: "2+ years" },
         { name: "GitLab", level: 3, slug: "gitlab", experience: "6 months" },
-        { name: "VS Code", level: 5, slug: "visualstudiocode", experience: "2+ years" },
         { name: "GitHub Copilot", level: 4, slug: "githubcopilot", experience: "2+ year" },
         { name: "NPM", level: 4, slug: "npm", experience: "2+ years" },
     ],
@@ -199,13 +198,13 @@ const Skills = () => {
                     {/* Right Side: Skills Details */}
                     <div className="w-full lg:w-3/5">
                         <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 transition-all duration-500">
-                            <div className="mb-8">
+                            {/* <div className="mb-8">
 
                                 <p className="text-gray-600 dark:text-gray-300">
                                     I specialize in building modern, responsive web applications using the latest technologies.
                                     My strengths lie in frontend development with React and Next.js, backed by solid programming fundamentals.
                                 </p>
-                            </div>
+                            </div> */}
 
                             {/* Tabs Navigation */}
                             <div className="flex overflow-x-auto space-x-2 mb-6 pb-2 scrollbar-thin scrollbar-thumb-gray-300 dark:scrollbar-thumb-gray-600">
@@ -264,7 +263,7 @@ const Skills = () => {
                         </div>
 
                         {/* Learning Next */}
-                        <div className="mt-6 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 p-4 rounded-lg border border-blue-100 dark:border-gray-800">
+                        {/* <div className="mt-6 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 p-4 rounded-lg border border-blue-100 dark:border-gray-800">
                             <h3 className="text-lg font-medium text-gray-600 dark:text-gray-300 mb-2">Currently Learning</h3>
                             <div className="flex flex-wrap gap-2">
                                 {[ "DSA", "LeetCode", "Django", "Full Stack Projects"].map((skill) => (
@@ -276,7 +275,7 @@ const Skills = () => {
                                     </span>
                                 ))}
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
