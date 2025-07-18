@@ -59,7 +59,7 @@ const AboutMe = () => {
                         I am a <span className='font-bold text-black'>Trainee Software Engineer</span> - Full Stack with <span className='font-bold text-black'>6+ Months</span> of experience in Full Stack Web  Development <span className='font-bold text-black'>MERN & Django</span> I have worked on <span className='font-bold text-black'>30+ practice projects</span> which included <span className=' text-blue-800'><a target='_blank' href='https://www.taskai.studio'>Task AI Studio</a></span> and <span className=' text-blue-800'><a href='https://www.glowzlifestyle.shop' target='_blank'>Glowz Lifestyle </a></span>(Ecom Website) and <span className=' text-blue-800'> <a href='https://busconnect.pythonanywhere.com/'> Smart Univ Bus Management System</a></span> which gave me  a good understanding of Full Stack development.
                     </p>
                     <div className="mt-6 flex flex-wrap gap-2">
-                        {[ 'JavaScript','React', 'Node JS', 'Express JS', 'MongoDB','Django', 'Git', 'GitHub', 'Gitlab','Deployment','EDA','Numpy','Pandas','Matplotlib'].map((skill, index) => (
+                        {[ 'JavaScript','React', 'Node JS', 'Express JS', 'MongoDB','Django', 'Deployment','Python','EDA','Numpy','Pandas','Matplotlib'].map((skill, index) => (
                             <span key={index} className="px-3 py-1 bg-gray-200 text-black rounded-full text-sm font-medium">
                                 {skill}
                             </span>
