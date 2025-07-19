@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import Marquee from "@/components/magicui/marquee";
 import Heading from "../Component/Heading";
 import { useState, useEffect, useMemo, useCallback } from "react";
-import { ThumbsUp, Quote } from "lucide-react";
+import {Quote } from "lucide-react";
 
 // Moved outside component to avoid re-creation on each render
 const reviews = [
@@ -201,8 +201,7 @@ const Reviews = () => {
                         )}
                     </>
                 )}
-                <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white dark:from-background"></div>
-                <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white dark:from-background"></div>
+                
             </div>
 
 
