@@ -9,30 +9,30 @@ import { Star, ThumbsUp, Quote } from "lucide-react";
 const reviews = [
     {
         img: "https://www.upwork.com/profile-portraits/c17y8y2X8X3FRrM4RdA7uXR6-ewmfWFS8mCxezR8abLQRYLzZtVCGNmdMRrPz0EzX0",
-        name: "Hassan Raza",
-        title: "CEO Bytelogist",
+        title: "Hassan Raza",
+        name: "CEO Bytelogist",
         body: "Fahad is a true professional. Their attention to detail and commitment to quality are unmatched. They were always responsive and willing to go the extra mile to ensure our satisfaction. We highly recommend their services.",
         rating: 5
     },
     {
         img: "https://avatar.vercel.sh/jill",
-        name: "Ayesha Shoaib",
-        title: "HR at Evionics",
+        title: "Ayesha Shoaib",
+        name: "HR @Evionics",
         body: "Fahad demonstrates a deep understanding of modern web development frameworks and tools. His sites are responsive, user-friendly, and aesthetically pleasing. Whether custom-built or integrating third-party services, his versatility shines through. What stands out most is the smooth performance across devices, showcasing his attention to detail in both frontend and backend development.",
         rating: 5
     },
 
     {
         img: "https://dribrar.netlify.app/images/ibrar's%20img.png",
-        name: "Dr Ibrar",
-        title: "Animal Nutritionist",
+        title: "Dr Ibrar",
+        name: "Animal Nutritionist",
         body: "Fahad's work on my portfolio exceeded all exceptions. Not only did he meet my requirements, but he also went above and beyond to create a stunning and effective presentation of my skills and experience. His attention to detail and creative approach resulted in a portfolio that is both visually appealing and professionally polished. I highly recommend Fahad to anyone seeking a top-notch web developer.",
         rating: 5
     },
     {
         img: "https://media.licdn.com/dms/image/v2/D4D35AQHbox-yprareA/profile-framedphoto-shrink_200_200/B4DZgST2HTHYAY-/0/1752653849405?e=1753509600&v=beta&t=Mvp0hzJ9Utxd3N-xcFAUIQ3wyRNWWEi9igZvyj8dMZ4",
         name: "Sr Project Manager",
-        title: "Animal Nutritionist",
+        title: "Khubaib Ahmed",
         body: `Fahad interned with us for a short time but made a strong impression. He quickly learned HTML, CSS, JavaScript, and responsive design. He’s eager to learn and has good potential in the field. I’m confident he’ll continue to sharpen his skills and bring value to any team he joins.
 Best wishes!`,
         rating: 5
