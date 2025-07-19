@@ -2,7 +2,7 @@
 import { cn } from "@/lib/utils";
 import Marquee from "@/components/magicui/marquee";
 import Heading from "../Component/Heading";
-import  { useState, useEffect, useMemo, useCallback } from "react";
+import { useState, useEffect, useMemo, useCallback } from "react";
 import { Star, ThumbsUp, Quote } from "lucide-react";
 
 // Moved outside component to avoid re-creation on each render
@@ -21,41 +21,7 @@ const reviews = [
         body: "Fahad demonstrates a deep understanding of modern web development frameworks and tools. His sites are responsive, user-friendly, and aesthetically pleasing. Whether custom-built or integrating third-party services, his versatility shines through. What stands out most is the smooth performance across devices, showcasing his attention to detail in both frontend and backend development.",
         rating: 5
     },
-    {
-        img: "https://randomuser.me/api/portraits/men/2.jpg",
-        name: "Sam Patel",
-        title: "Content Strategist",
-        body: "Fahad consistently delivers exceptional results. His insights and creative ideas transformed our content strategy, leading to increased engagement. Working with him was a pleasure!",
-        rating: 4
-    },
-    {
-        img: "https://randomuser.me/api/portraits/women/2.jpg",
-        name: "Linda Johnson",
-        title: "Project Manager",
-        body: "Fahad is an invaluable asset to our team. His ability to understand project requirements and deliver high-quality work on time is remarkable. I highly recommend him for any web development needs.",
-        rating: 5
-    },
-    {
-        img: "https://randomuser.me/api/portraits/men/4.jpg",
-        name: "Andre Lee",
-        title: "Business Consultant",
-        body: "Fahad exceeded my expectations with his attention to detail and expertise. His solutions are always innovative and tailored to our needs. I cannot recommend him highly enough!",
-        rating: 5
-    },
-    {
-        img: "https://randomuser.me/api/portraits/women/3.jpg",
-        name: "Kate Roberts",
-        title: "SEO Specialist",
-        body: "Fahad has a keen eye for optimizing websites. His knowledge of SEO best practices greatly improved our site's visibility. A true professional with impressive skills!",
-        rating: 4
-    },
-    {
-        img: "https://randomuser.me/api/portraits/men/5.jpg",
-        name: "Michael Smith",
-        title: "Tech Lead",
-        body: "Working with Fahad has been a transformative experience for our tech team. His technical skills and collaborative spirit greatly enhanced our project outcomes. I look forward to collaborating again!",
-        rating: 5
-    },
+
     {
         img: "https://dribrar.netlify.app/images/ibrar's%20img.png",
         name: "Dr Ibrar",
@@ -64,19 +30,14 @@ const reviews = [
         rating: 5
     },
     {
-        img: "https://randomuser.me/api/portraits/women/5.jpg",
-        name: "Sarah Brown",
-        title: "UX Designer",
-        body: "Fahad's understanding of user experience is exceptional. He transformed our app's interface, making it more intuitive and user-friendly. A true visionary in the tech space!",
+        img: "https://media.licdn.com/dms/image/v2/D4D35AQHbox-yprareA/profile-framedphoto-shrink_200_200/B4DZgST2HTHYAY-/0/1752653849405?e=1753509600&v=beta&t=Mvp0hzJ9Utxd3N-xcFAUIQ3wyRNWWEi9igZvyj8dMZ4",
+        name: "Sr Project Manager",
+        title: "Animal Nutritionist",
+        body: `Fahad interned with us for a short time but made a strong impression. He quickly learned HTML, CSS, JavaScript, and responsive design. He’s eager to learn and has good potential in the field. I’m confident he’ll continue to sharpen his skills and bring value to any team he joins.
+Best wishes!`,
         rating: 5
     },
-    {
-        img: "https://randomuser.me/api/portraits/men/6.jpg",
-        name: "David Wilson",
-        title: "Business Analyst",
-        body: "Fahad's insights into our business processes were invaluable. His recommendations led to significant efficiency improvements. I highly value his expertise!",
-        rating: 4
-    }
+
 ];
 
 // Keywords as a constant outside component to avoid recreation
