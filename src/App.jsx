@@ -1,5 +1,5 @@
 // import {React} from 'react';
-import { useState,useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Navbar from './Component/Navbar';
 import Banner from './Component/Banner';
 import AboutMe from './Component/About';
@@ -12,7 +12,6 @@ import Loader from './Component/Loader'
 // import VisitorCounter from './Component/Visitor';
 import Chatbot from './Component/Chatbot';
 const App = () => {
-
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -23,7 +22,7 @@ const App = () => {
   return (
     <>
       {loading ? (
-        <Loader/> // Show the loader when loading
+        <Loader /> // Show the loader when loading
       ) : (
 
         <div className="font-poppins ">
@@ -35,7 +34,7 @@ const App = () => {
           <Projects />
           <Certificates />
           <Contact />
-          <Chatbot/>
+          <Chatbot />
         </div>// Show the page content when loading is done
       )}
 
