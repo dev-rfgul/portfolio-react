@@ -31,8 +31,9 @@ const App = () => {
           <ScrollTimeline
             title='Experience'
             subtitle='Here are some of my professional experiences and journey'
-            animationOrder='sequential'
+            animationOrder='slide'
             cardAlignment='alternating'
+            // connectorStyle='dots'
             events={[
               {
                 year: "2024",
