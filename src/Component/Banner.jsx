@@ -6,7 +6,7 @@ import ShinyButton from '@/components/magicui/shiny-button';
 
 const Banner = () => {
     return (
-        <div id='home' className="p-5 md:p-10 lg:mt-20  md:mt-18 mt-4  rounded-lg shadow-xl bg-white">
+        <div id='home' className="p-5 md:p-10 lg:mt-20  md:mt-18 mt-4  rounded-lg  bg-white">
             <div className="flex flex-col md:flex-row items-center">
                 <div className="md:w-1/2 text-black mb-3 md:mb-0 md:pr-8 flex flex-col items-center justify-center">
                     <div className="text-center md:text-left lg:mb-8 md:mb-4 flex flex-col items-center">
