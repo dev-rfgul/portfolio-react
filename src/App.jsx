@@ -33,25 +33,30 @@ const App = () => {
             subtitle='Here are some of my professional experiences and journey'
             animationOrder='slide'
             cardAlignment='alternating'
-            // connectorStyle='dots'
             events={[
               {
-                year: "2024",
-                title: "Software Engineering Intern",
-                subtitle: "Bytelogist",
-                description: "Worked on full-stack web development projects using modern technologies. Gained experience in React, Node.js, and database management. Contributed to multiple client projects and learned industry best practices."
+                year: "Jul 2025 - Present",
+                title: "Trainee Software Engineer",
+                subtitle: "Aitch Tech ",
+                description: "Supported the development team in building and maintaining web applications. Assisted in debugging and troubleshooting issues. Gained hands-on experience in software development processes and methodologies. Participated in code reviews and contributed to improving code quality."
               },
               {
-                year: "2023",
-                title: "Web Development Intern", 
-                subtitle: "Code with Harry",
-                description: "Focused on frontend development and responsive design. Built interactive user interfaces using HTML, CSS, JavaScript, and React. Participated in code reviews and collaborative development workflows."
+                year: "Nov 2024 - Feb 2025",
+                title: "Frontend Developer",
+                subtitle: "Project Based",
+                description: "Collaborated with a group of freelancers, on a social media type project. Contributed to a social media web app by designing User Profile, Edit Profile, and Category components. Integrated real API endpoints and replaced dummy data with dynamic content, enhancing UX with loading animations during data fetches. Participated in QA testing and issue tracking to ensure functional stability."
               },
               {
-                year: "2023",
-                title: "Junior Developer Intern",
+                year: "Mar 2024 - May 2024",
+                title: "Internship", 
+                subtitle: "ByteLogist",
+                description: "Developed multiple Chrome extensions using JavaScript and Manifest v3. Youtube Automation Extension which would automatically play the 1st video on the youtube. Gained experience in browser APIs, content scripts, and background scripting."
+              },
+              {
+                year: " Fev 2024 - Mar 2024",
+                title: "Internship",
                 subtitle: "Codes Fix",
-                description: "Started my journey in software development. Learned fundamental programming concepts, version control with Git, and basic web development principles. Worked on small projects and bug fixes."
+                description: "Built an AI-powered web tool to extract keywords from user-input text and generate hashtag-enhanced content. Implemented AI prompt handling and text regeneration features using GORQ API."
               }
             ]}
             cardVariant='elevated'
