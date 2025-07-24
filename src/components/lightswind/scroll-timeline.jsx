@@ -4,46 +4,23 @@ import {
   useScroll,
   useTransform,
   useSpring,
-  MotionValue,
 } from "framer-motion";
 import { cn } from "../lib/utils";
 import { Card, CardContent } from "./card";
 import { Calendar } from "lucide-react";
 
-export interface TimelineEvent {
-  id?: string;
-  year: string;
-  title: string;
-  subtitle?: string;
-  description: string;
-  icon?: React.ReactNode;
-  color?: string;
-}
+// TimelineEvent shape:
+// {
+//   id?: string;
+//   year: string;
+//   title: string;
+//   subtitle?: string;
+//   description: string;
+//   icon?: React.ReactNode;
+//   color?: string;
+// }
 
-export interface ScrollTimelineProps {
-  events: TimelineEvent[];
-  title?: string;
-  subtitle?: string;
-  animationOrder?: "sequential" | "staggered" | "simultaneous";
-  cardAlignment?: "alternating" | "left" | "right";
-  lineColor?: string;
-  activeColor?: string;
-  progressIndicator?: boolean;
-  cardVariant?: "default" | "elevated" | "outlined" | "filled";
-  cardEffect?: "none" | "glow" | "shadow" | "bounce";
-  parallaxIntensity?: number;
-  progressLineWidth?: number;
-  progressLineCap?: "round" | "square";
-  dateFormat?: "text" | "badge";
-  className?: string;
-  revealAnimation?: "fade" | "slide" | "scale" | "flip" | "none";
-  connectorStyle?: "dots" | "line" | "dashed";
-  perspective?: boolean;
-  darkMode?: boolean;
-  smoothScroll?: boolean;
-}
-
-const DEFAULT_EVENTS: TimelineEvent[] = [
+const DEFAULT_EVENTS = [
   {
     year: "2023",
     title: "Major Achievement",
@@ -86,10 +63,10 @@ export const ScrollTimeline = ({
   perspective = false,
   darkMode = false,
   smoothScroll = true,
-}: ScrollTimelineProps) => {
-  const scrollRef = useRef<HTMLDivElement>(null);
+}) => {
+  const scrollRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(-1);
-  const timelineRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const timelineRefs = useRef([]);
 
   const { scrollYProgress } = useScroll({
     target: scrollRef,
@@ -103,6 +80,13 @@ export const ScrollTimeline = ({
   });
 
   const progressHeight = useTransform(smoothProgress, [0, 1], ["0%", "100%"]);
+  
+  // Pre-calculate parallax offset outside the map function
+  const yOffset = useTransform(
+    smoothProgress,
+    [0, 1],
+    [parallaxIntensity * 100, -parallaxIntensity * 100]
+  );
 
   useEffect(() => {
     const unsubscribe = scrollYProgress.onChange((v) => {
@@ -118,7 +102,7 @@ export const ScrollTimeline = ({
     return () => unsubscribe();
   }, [scrollYProgress, events.length, activeIndex]);
 
-  const getCardVariants = (index: number) => {
+  const getCardVariants = (index) => {
     const baseDelay =
       animationOrder === "simultaneous"
         ? 0
@@ -155,7 +139,7 @@ export const ScrollTimeline = ({
         transition: {
           duration: 0.7,
           delay: baseDelay,
-          ease: [0.25, 0.1, 0.25, 1.0] as [number, number, number, number],
+          ease: [0.25, 0.1, 0.25, 1.0],
         },
       },
       viewport: { once: false, margin: "-100px" },
@@ -183,7 +167,7 @@ export const ScrollTimeline = ({
     }
   };
 
-  const getCardClasses = (index: number) => {
+  const getCardClasses = (index) => {
     const baseClasses = "relative z-30 rounded-lg transition-all duration-300";
     const variantClasses = {
       default: "bg-card border shadow-sm",
@@ -300,11 +284,6 @@ export const ScrollTimeline = ({
 
           <div className="relative z-20">
             {events.map((event, index) => {
-              const yOffset = useTransform(
-                smoothProgress,
-                [0, 1],
-                [parallaxIntensity * 100, -parallaxIntensity * 100]
-              );
               return (
                 <div
                   key={event.id || index}
