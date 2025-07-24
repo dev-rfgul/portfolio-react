@@ -3,7 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  <style>
+    #splash-screen {
+      position: fixed;
+      inset: 0;
+      background-color: #0f172a; /* dark background */
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Poppins', sans-serif;
+      font-size: 2rem;
+      z-index: 9999;
+      opacity: 1;
+      transition: opacity 0.5s ease;
+    }
+    #splash-screen.fade-out {
+      opacity: 0;
+    }
+  </style>
     <!-- Google Verification -->
     <meta
       name="google-site-verification"
@@ -79,6 +97,10 @@
     <h2 style="display: none">Explore MERN Stack Projects by Muhammad Fahad</h2>
 
     <!-- Root div for React application -->
+       <div>
+    <span>Hello, I'm</span><br />
+    <strong style="font-size: 2.5rem; color: #3b82f6;">dev-rfgul</strong>
+  </div>
     <div id="root"></div>
 
     <!-- React Script -->

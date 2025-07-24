@@ -25,7 +25,7 @@ const App = () => {
         <Loader /> // Show the loader when loading
       ) : (
 
-        <div className="font-poppins ">
+        <div className="font-poppins">
           <Navbar />
           <Banner />
           <ScrollTimeline
