@@ -53,7 +53,7 @@ const App = () => {
                 description: "Developed multiple Chrome extensions using JavaScript and Manifest v3. Youtube Automation Extension which would automatically play the 1st video on the youtube. Gained experience in browser APIs, content scripts, and background scripting."
               },
               {
-                year: " Fev 2024 - Mar 2024",
+                year: " Feb 2024 - Mar 2024",
                 title: "Internship",
                 subtitle: "Codes Fix",
                 description: "Built an AI-powered web tool to extract keywords from user-input text and generate hashtag-enhanced content. Implemented AI prompt handling and text regeneration features using GORQ API."
