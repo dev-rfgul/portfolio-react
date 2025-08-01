@@ -28,13 +28,7 @@ const App = () => {
         <div className="font-poppins">
           <Navbar />
           <Banner />
-          <ScrollTimeline
-            cardVariant='elevated'
-            cardEffect='shadow'
-            progressIndicator={true}
-            revealAnimation='slide'
-            parallaxIntensity={0.1}
-          />
+          <ScrollTimeline/>
           <AboutMe />
           <Reviews />
           <Skills />
