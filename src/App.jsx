@@ -29,7 +29,6 @@ const App = () => {
           <Navbar />
           <Banner />
           <ScrollTimeline
-         
             cardVariant='elevated'
             cardEffect='shadow'
             progressIndicator={true}

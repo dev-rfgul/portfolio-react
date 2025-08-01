@@ -1,43 +1,39 @@
 import React, { useState, useEffect, useRef } from "react";
-import {
-  motion,
-  useScroll,
-  useTransform,
-  useSpring,
-} from "framer-motion";
+import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { cn } from "../lib/utils";
 import { Card, CardContent } from "./card";
 import { Calendar } from "lucide-react";
 
 const DEFAULT_EVENTS = [
-              {
-                year: "Jul 2025 - Present",
-                title: "Trainee Software Engineer",
-                subtitle: "Aitch Tech ",
-                description: "Supported the development team in building and maintaining web applications. Assisted in debugging and troubleshooting issues. Gained hands-on experience in software development processes and methodologies. Participated in code reviews and contributed to improving code quality."
-              },
-              {
-                year: "Nov 2024 - Feb 2025",
-                title: "Frontend Developer",
-                subtitle: "Project Based",
-                description: "Collaborated with a group of freelancers, on a social media type project. Contributed to a social media web app by designing User Profile, Edit Profile, and Category components. Integrated real API endpoints and replaced dummy data with dynamic content, enhancing UX with loading animations during data fetches. Participated in QA testing and issue tracking to ensure functional stability."
-              },
-              {
-                year: "Mar 2024 - May 2024",
-                title: "Internship", 
-                subtitle: "ByteLogist",
-                description: "Developed multiple Chrome extensions using JavaScript and Manifest v3. Youtube Automation Extension which would automatically play the 1st video on the youtube. Gained experience in browser APIs, content scripts, and background scripting."
-              },
-              {
-                year: " Feb 2024 - Mar 2024",
-                title: "Internship",
-                subtitle: "Codes Fix",
-                description: "Built an AI-powered web tool to extract keywords from user-input text and generate hashtag-enhanced content. Implemented AI prompt handling and text regeneration features using GORQ API."
-              }
-            
-]
-
-
+  {
+    year: "Jul 2025 - Present",
+    title: "Trainee Software Engineer",
+    subtitle: "Aitch Tech ",
+    description:
+      "Supported the development team in building and maintaining web applications. Assisted in debugging and troubleshooting issues. Gained hands-on experience in software development processes and methodologies. Participated in code reviews and contributed to improving code quality.",
+  },
+  {
+    year: "Nov 2024 - Feb 2025",
+    title: "Frontend Developer",
+    subtitle: "Project Based",
+    description:
+      "Collaborated with a group of freelancers, on a social media type project. Contributed to a social media web app by designing User Profile, Edit Profile, and Category components. Integrated real API endpoints and replaced dummy data with dynamic content, enhancing UX with loading animations during data fetches. Participated in QA testing and issue tracking to ensure functional stability.",
+  },
+  {
+    year: "Mar 2024 - May 2024",
+    title: "Internship",
+    subtitle: "ByteLogist",
+    description:
+      "Developed multiple Chrome extensions using JavaScript and Manifest v3. Youtube Automation Extension which would automatically play the 1st video on the youtube. Gained experience in browser APIs, content scripts, and background scripting.",
+  },
+  {
+    year: " Feb 2024 - Mar 2024",
+    title: "Internship",
+    subtitle: "Codes Fix",
+    description:
+      "Built an AI-powered web tool to extract keywords from user-input text and generate hashtag-enhanced content. Implemented AI prompt handling and text regeneration features using GORQ API.",
+  },
+];
 
 export const ScrollTimeline = ({
   events = DEFAULT_EVENTS,
@@ -59,7 +55,6 @@ export const ScrollTimeline = ({
   connectorStyle = "line",
   perspective = false,
   darkMode = false,
-  smoothScroll = true,
 }) => {
   const scrollRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(-1);
@@ -104,8 +99,8 @@ export const ScrollTimeline = ({
       animationOrder === "simultaneous"
         ? 0
         : animationOrder === "staggered"
-          ? index * 0.2
-          : index * 0.3;
+        ? index * 0.2
+        : index * 0.3;
 
     const initialStates = {
       fade: { opacity: 0, y: 20 },
@@ -114,10 +109,10 @@ export const ScrollTimeline = ({
           cardAlignment === "left"
             ? -100
             : cardAlignment === "right"
-              ? 100
-              : index % 2 === 0
-                ? -100
-                : 100,
+            ? 100
+            : index % 2 === 0
+            ? -100
+            : 100,
         opacity: 0,
       },
       scale: { scale: 0.8, opacity: 0 },
@@ -184,8 +179,8 @@ export const ScrollTimeline = ({
           ? "lg:mr-[calc(50%+20px)]"
           : "lg:ml-[calc(50%+20px)]"
         : cardAlignment === "left"
-          ? "lg:mr-auto lg:ml-0"
-          : "lg:ml-auto lg:mr-0";
+        ? "lg:mr-auto lg:ml-0"
+        : "lg:ml-auto lg:mr-0";
     const perspectiveClass = perspective
       ? "transform transition-transform hover:rotate-y-1 hover:rotate-x-1"
       : "";
@@ -233,8 +228,7 @@ export const ScrollTimeline = ({
                   width: progressLineWidth,
                   left: "50%",
                   transform: "translateX(-50%)",
-                  borderRadius:
-                    progressLineCap === "round" ? "9999px" : "0px",
+                  borderRadius: progressLineCap === "round" ? "9999px" : "0px",
                   background: `linear-gradient(to bottom, #22d3ee, #6366f1, #a855f7)`,
                   // Enhanced shadow for a constant glow effect along the path
                   boxShadow: `
@@ -295,8 +289,8 @@ export const ScrollTimeline = ({
                         ? "lg:justify-start"
                         : "lg:flex-row-reverse lg:justify-start"
                       : cardAlignment === "left"
-                        ? "lg:justify-start"
-                        : "lg:flex-row-reverse lg:justify-start"
+                      ? "lg:justify-start"
+                      : "lg:flex-row-reverse lg:justify-start"
                   )}
                 >
                   <div
@@ -315,13 +309,13 @@ export const ScrollTimeline = ({
                       animate={
                         index <= activeIndex
                           ? {
-                            scale: [1, 1.3, 1],
-                            boxShadow: [
-                              "0 0 0px rgba(99,102,241,0)",
-                              "0 0 12px rgba(99,102,241,0.6)",
-                              "0 0 0px rgba(99,102,241,0)",
-                            ],
-                          }
+                              scale: [1, 1.3, 1],
+                              boxShadow: [
+                                "0 0 0px rgba(99,102,241,0)",
+                                "0 0 12px rgba(99,102,241,0.6)",
+                                "0 0 0px rgba(99,102,241,0)",
+                              ],
+                            }
                           : {}
                       }
                       transition={{
@@ -333,18 +327,17 @@ export const ScrollTimeline = ({
                     />
                   </div>
                   <motion.div
-                    className={cn(
-                      getCardClasses(index),
-                      "mt-12 lg:mt-0"
-                    )}
+                    className={cn(getCardClasses(index), "mt-12 lg:mt-0")}
                     variants={getCardVariants(index)}
                     initial="initial"
                     whileInView="whileInView"
                     viewport={{ once: false, margin: "-100px" }}
                     style={parallaxIntensity > 0 ? { y: yOffset } : undefined}
                   >
-                    <Card className=" border-[0.5px] border-black bg-background
-">
+                    <Card
+                      className=" border-[0.5px] border-black bg-background
+"
+                    >
                       <CardContent className="p-6">
                         {dateFormat === "badge" ? (
                           <div className="flex items-center mb-2">
