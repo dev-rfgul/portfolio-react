@@ -9,16 +9,6 @@ import { cn } from "../lib/utils";
 import { Card, CardContent } from "./card";
 import { Calendar } from "lucide-react";
 
-// TimelineEvent shape:
-// {
-//   id?: string;
-//   year: string;
-//   title: string;
-//   subtitle?: string;
-//   description: string;
-//   icon?: React.ReactNode;
-//   color?: string;
-// }
 
 
 
