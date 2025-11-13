@@ -1,7 +1,8 @@
-import { useRef, useState,useEffect } from "react";
+import { useRef, useState, useEffect, useMemo } from "react";
 import { FiSend, FiX } from "react-icons/fi";
 import { FaRobot, FaUser } from "react-icons/fa";
 import PropTypes from 'prop-types';
+import SuggestionChips from "./SuggestionChips";
 
 const ChatBot = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -11,13 +12,15 @@ const ChatBot = () => {
     const inputRef = useRef(null);
     const bottomRef = useRef(null);
 
-const handleSend = async () => {
-    if (!userQuery.trim()) return;
+const handleSend = async (presetQuery) => {
+    const sourceText = typeof presetQuery === "string" ? presetQuery : userQuery;
+    const messageText = sourceText.trim();
+    if (!messageText) return;
 
     const userMsg = {
         id: Date.now(),
         sender: "user",
-        text: userQuery.trim(),
+        text: messageText,
     };
 
     setMessages((prev) => [...prev, userMsg]);
@@ -28,7 +31,7 @@ const handleSend = async () => {
         const response = await fetch('https://chatbot-backend-virid-ten.vercel.app/api/pattern-match', {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ query: userMsg.text }),
+            body: JSON.stringify({ query: messageText }),
         });
 
         const data = await response.json();
@@ -41,7 +44,7 @@ const handleSend = async () => {
             };
             setMessages((prev) => [...prev, botMsg]);
             setIsTyping(false);
-        }, 1000 + Math.random() * 1000); // Delay between 1–2 seconds
+        }, 1000 + Math.random() * 1000);
 
     } catch (error) {
         console.error('Error:', error);
@@ -61,8 +64,22 @@ useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
 }, [messages, isTyping]);
 
+const suggestionFlow = useMemo(() => (
+    [
+        { id: "about", label: "Who are you?", prompt: "Who are you?" },
+        { id: "skills", label: "What skills do you have?", prompt: "What skills do you have?" },
+        { id: "experience", label: "Tell me about your experience", prompt: "Tell me about your experience" },
+        { id: "projects", label: "What projects have you built?", prompt: "What projects have you built?" },
+        { id: "contact", label: "How can I contact you?", prompt: "How can I contact you?" },
+    ]
+), []);
+
     const handleKeyPress = (e) => {
         if (e.key === "Enter") handleSend();
+    };
+
+    const handleSuggestionSelect = (prompt) => {
+        handleSend(prompt);
     };
 
     const MessageBubble = ({ message }) => (
@@ -210,6 +227,13 @@ useEffect(() => {
                             {isTyping && <TypingIndicator />}
                             <div ref={bottomRef} />
                         </div>
+
+                        <SuggestionChips
+                            suggestions={suggestionFlow}
+                            onSelect={handleSuggestionSelect}
+                            disabled={isTyping}
+                            resetTrigger={messages.length}
+                        />
 
                         {/* Input Field */}
                         <div className="border-t border-gray-200 p-3 sm:p-4 bg-white rounded-none sm:rounded-b-2xl safe-area-inset-bottom">
