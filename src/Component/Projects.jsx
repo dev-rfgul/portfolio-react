@@ -363,7 +363,7 @@ const Projects = () => {
         : projectData.filter(project => project.category.includes(filter));
 
     return (
-        <div id='projects' className="py-20 px-4 bg-gradient-to-br from-gray-50 to-white min-h-screen">
+        <div id='projects' className="py-20 px-4 min-h-screen">
             <div className="max-w-7xl mx-auto">
                 <Heading
                     heading="Projects"
