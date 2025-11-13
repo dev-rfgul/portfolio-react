@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Card from './Card';
 import Heading from './Heading'
 
@@ -18,7 +18,7 @@ const Certificates = () => {
         {
             image: 'images/certificates/github.png',
             title: 'Git & Github',
-            tags: ['Git', 'Version Control', 'Repository Management'],
+            tags: ['Git', 'Version Control',],
             category: ['featured', 'web'],
             githubLink: 'https://coursera.org/share/af886bcafcf5b066b0391cf4f4e19672',
             liveDemoLink: '#',
@@ -181,36 +181,64 @@ const Certificates = () => {
         : certificateData.filter(certificate => certificate.category.includes(filter));
 
     return (
-        <div id='certificates' className="p-6">
-        <Heading heading={"Certifications"} subHeading={`Certifications I Have ${certificateData.length}`}/>
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
-                {btns.map((btn) => (
-                    <button
-                        key={btn.value}
-                        className={`m-2 py-2 px-4 focus:outline-none focus:ring-2 border border-black border-opacity-60 rounded h-11 w-50 text-black ${filter === btn.value
-                            ? 'bg-gray-500 text-white'  // Active button styles
-                            : 'hover:bg-gray-800 hover:text-white'  // Inactive button styles
-                            }`}
-                        onClick={() => filterCertificates(btn.value)}
-                    >
-                        {btn.label}
-                    </button>
-                ))}
+        <div id='certificates' className="py-20 px-4 min-h-screen">
+            <div className="max-w-7xl mx-auto">
+                <Heading heading={"Certifications"} subHeading={`Certifications I Have ${certificateData.length}`}/>
+                <div className="flex flex-wrap justify-center gap-3 mb-12">
+                    {btns.map((btn) => (
+                        <button
+                            key={btn.value}
+                            className={`m-2 py-2 px-4 focus:outline-none focus:ring-2 border border-black border-opacity-60 rounded h-11 w-50 text-black ${filter === btn.value
+                                ? 'bg-gray-500 text-white'
+                                : 'hover:bg-gray-800 hover:text-white'
+                                }`}
+                            onClick={() => filterCertificates(btn.value)}
+                        >
+                            {btn.label}
+                        </button>
+                    ))}
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 justify-items-center">
+                    {filteredCertificates.map((certificate, index) => (
+                        <div
+                            key={`${certificate.title}-${index}`}
+                            className="w-full"
+                            style={{
+                                animation: `fadeInUp 0.6s ease-out ${index * 0.1}s both`
+                            }}
+                        >
+                            <Card
+                                image={certificate.image}
+                                title={certificate.title}
+                                tags={certificate.tags}
+                                btnText={'View Certificate'}
+                                btn2Text={false}
+                                btn1Url={certificate.githubLink}
+                            />
+                        </div>
+                    ))}
+                </div>
+
+                {filteredCertificates.length === 0 && (
+                    <div className="text-center py-16">
+                        <p className="text-gray-500 text-lg">No certifications found in this category.</p>
+                    </div>
+                )}
             </div>
 
-            <div className="flex flex-wrap  justify-center gap-6">
-                {filteredCertificates.map((certificate, index) => (
-                    <Card
-                        key={index}
-                        image={certificate.image}
-                        title={certificate.title}
-                        tags={certificate.tags}
-                        btnText={'View Certificate'}
-                        btn2Text={false}
-                        btn1Url={certificate.githubLink}
-                    />
-                ))}
-            </div>
+            <style>{`
+                @keyframes fadeInUp {
+                    from {
+                        opacity: 0;
+                        transform: translateY(30px);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+            `}</style>
         </div>
     );
 };
