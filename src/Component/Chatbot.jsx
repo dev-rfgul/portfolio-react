@@ -78,7 +78,12 @@ useEffect(() => {
         <div className={`flex items-start mb-3 ${message.sender === "user" ? "justify-end" : "justify-start"}`}>
             {message.sender === "bot" && (
                 <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center mr-2 shrink-0">
-                    <FaRobot className="text-white text-xs sm:text-base" />
+                    {/* <FaRobot className="text-white text-xs sm:text-base" /> */}
+                            <img
+                            src="/images/banner-img.png"
+                            alt="rf gul "
+                            className="object-cover w-full h-full object-top rounded-full"
+                        />
                 </div>
             )}
             <div
@@ -93,6 +98,12 @@ useEffect(() => {
             {message.sender === "user" && (
                 <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-blue-600 flex items-center justify-center ml-2 shrink-0">
                     <FaUser className="text-white text-xs sm:text-base" />
+                    {/* <img src="images/avatar/user-avatar.png" alt="User Avatar" className="w-full h-full rounded-full" /> */}
+                            <img
+                            src="/images/banner-img.png"
+                            alt="rf gul "
+                            className="object-cover w-full h-full object-top rounded-full"
+                        />
                 </div>
             )}
         </div>
