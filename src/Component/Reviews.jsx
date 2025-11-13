@@ -30,7 +30,7 @@ const reviews = [
         
     },
     {
-        img: "https://media.licdn.com/dms/image/v2/D4D35AQHbox-yprareA/profile-framedphoto-shrink_200_200/B4DZgST2HTHYAY-/0/1752653849405?e=1753509600&v=beta&t=Mvp0hzJ9Utxd3N-xcFAUIQ3wyRNWWEi9igZvyj8dMZ4",
+        img: "https://www.gravatar.com/avatar/?d=mp",
         name: "Sr Project Manager",
         title: "Khubaib Ahmed",
         body: `Fahad interned with us for a short time but made a strong impression. He quickly learned HTML, CSS, JavaScript, and responsive design. He’s eager to learn and has good potential in the field. I’m confident he’ll continue to sharpen his skills and bring value to any team he joins.
