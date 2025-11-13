@@ -1,7 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import PropTypes from "prop-types";
-import { FiArrowRight } from "react-icons/fi";
-import { FiX } from "react-icons/fi";
+import { FiArrowRight, FiX } from "react-icons/fi";
 
 const SuggestionChips = ({ suggestions = [], disabled = false, onSelect, resetTrigger, onClose }) => {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -43,7 +42,7 @@ const SuggestionChips = ({ suggestions = [], disabled = false, onSelect, resetTr
     };
 
     return (
-        <div className="px-3 sm:px-4 py-2 bg-white/90 border-t border-gray-200">
+    <div className="px-3 sm:px-4 py-2 bg-white/90 border-t border-gray-200">
             <div className="flex items-center justify-between mb-1.5">
                 <p className="text-[11px] sm:text-xs text-gray-500">Suggested questions</p>
                 <button
@@ -66,23 +65,23 @@ const SuggestionChips = ({ suggestions = [], disabled = false, onSelect, resetTr
                             key={item.id}
                             type="button"
                             disabled={disabled}
-                            className={`group flex items-center justify-between gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1.5 sm:py-1.5 rounded-full border text-xs sm:text-sm transition-all duration-200 ${
+                className={`group flex items-center justify-between gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1.5 sm:py-1.5 rounded-full border text-xs sm:text-sm transition-all duration-200 ${
                                 isRecommended
-                                    ? "border-blue-500 bg-blue-50 text-blue-700 hover:bg-blue-100"
+                    ? "border-gray-600 bg-gray-600 text-white hover:bg-gray-500"
                                     : isCompleted
-                                    ? "border-green-400 bg-green-50 text-green-700 hover:bg-green-100"
-                                    : "border-gray-300 text-gray-700 bg-white hover:bg-blue-50 hover:border-blue-400"
-                            } disabled:opacity-50 disabled:bg-gray-100 disabled:border-gray-200 disabled:text-gray-400 w-full sm:w-auto text-left`}
+                    ? "border-gray-400 bg-gray-200 text-gray-700 hover:bg-gray-300"
+                    : "border-gray-300 text-gray-700 bg-white hover:bg-gray-100 hover:border-gray-400"
+                } disabled:opacity-50 disabled:bg-gray-100 disabled:border-gray-200 disabled:text-gray-400 w-full sm:w-auto text-left`}
                             onClick={() => handleChipClick(absoluteIndex)}
                         >
                             <span className="font-medium pr-1">{item.label}</span>
-                            <FiArrowRight className={`transition-colors duration-200 ${
-                                isRecommended
-                                    ? "text-blue-500 group-hover:text-blue-600"
-                                    : isCompleted
-                                    ? "text-green-500 group-hover:text-green-600"
-                                    : "text-gray-400 group-hover:text-blue-500"
-                            }`} />
+        <FiArrowRight className={`transition-colors duration-200 ${
+                isRecommended
+            ? "text-white group-hover:text-gray-100"
+                    : isCompleted
+            ? "text-gray-600 group-hover:text-gray-700"
+            : "text-gray-400 group-hover:text-gray-600"
+                }`} />
                         </button>
                     );
                 })}

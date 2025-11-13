@@ -77,7 +77,7 @@ useEffect(() => {
     const MessageBubble = ({ message }) => (
         <div className={`flex items-start mb-3 ${message.sender === "user" ? "justify-end" : "justify-start"}`}>
             {message.sender === "bot" && (
-                <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center mr-2 shrink-0">
+                <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-gradient-to-br from-gray-700 to-gray-500 flex items-center justify-center mr-2 shrink-0">
                     {/* <FaRobot className="text-white text-xs sm:text-base" /> */}
                             <img
                             src="/images/banner-img.png"
@@ -87,23 +87,17 @@ useEffect(() => {
                 </div>
             )}
             <div
-                className={`px-3 py-2 sm:px-4 sm:py-2 rounded-xl max-w-[75%] sm:max-w-[70%] text-xs sm:text-sm break-words ${
-                    message.sender === "user"
-                        ? "bg-blue-600 text-white rounded-br-none"
+        className={`px-3 py-2 sm:px-4 sm:py-2 rounded-xl max-w-[75%] sm:max-w-[70%] text-xs sm:text-sm break-words ${
+            message.sender === "user"
+        ? "bg-gray-700 text-white rounded-br-none"
                         : "bg-gray-200 text-gray-800 rounded-bl-none"
                 }`}
             >
                 {message.text}
             </div>
             {message.sender === "user" && (
-                <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-blue-600 flex items-center justify-center ml-2 shrink-0">
+                <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-gray-700 flex items-center justify-center ml-2 shrink-0">
                     <FaUser className="text-white text-xs sm:text-base" />
-                    {/* <img src="images/avatar/user-avatar.png" alt="User Avatar" className="w-full h-full rounded-full" /> */}
-                            <img
-                            src="/images/banner-img.png"
-                            alt="rf gul "
-                            className="object-cover w-full h-full object-top rounded-full"
-                        />
                 </div>
             )}
         </div>
@@ -119,7 +113,7 @@ useEffect(() => {
 
     const TypingIndicator = () => (
         <div className="flex items-start mb-3 justify-start text-xs sm:text-sm animate-fadeIn">
-            <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center mr-3 shrink-0">
+            <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-gradient-to-br from-gray-700 to-gray-500 flex items-center justify-center mr-3 shrink-0">
                 <FaRobot className="text-white text-xs sm:text-base" />
             </div>
 
@@ -189,7 +183,7 @@ useEffect(() => {
                         z-50
                     ">
                         {/* Header */}
-                        <div className="flex items-center justify-between bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 sm:px-6 py-4 sm:py-4 rounded-none sm:rounded-t-2xl">
+                        <div className="flex items-center justify-between bg-gradient-to-r from-gray-700 to-gray-500 text-white px-4 sm:px-6 py-4 sm:py-4 rounded-none sm:rounded-t-2xl">
                             <div className="flex items-center space-x-2 sm:space-x-3">
                                 <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
                                 <div>
@@ -208,9 +202,9 @@ useEffect(() => {
 
                         {/* Welcome Message */}
                         {messages.length === 0 && (
-                            <div className="px-4 sm:px-6 py-3 sm:py-4 bg-gradient-to-r from-blue-50 to-purple-50 border-b border-gray-100">
+                            <div className="px-4 sm:px-6 py-3 sm:py-4 bg-gradient-to-r from-gray-50 to-gray-100 border-b border-gray-100">
                                 <div className="flex items-center space-x-2 mb-2">
-                                    <div className="w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
+                                    <div className="w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-br from-gray-600 to-gray-400 rounded-full flex items-center justify-center">
                                         <FaRobot className="text-white text-xs sm:text-base" />
                                     </div>
                                     <span className="font-semibold text-sm sm:text-base text-gray-800">Welcome!</span>
@@ -223,7 +217,7 @@ useEffect(() => {
                         )}
 
                         {/* Chat Messages */}
-                        <div className="flex-1 overflow-y-auto px-3 sm:px-4 py-3 sm:py-4 bg-gradient-to-br from-gray-50 to-blue-50/30 scrollbar-hide">
+                        <div className="flex-1 overflow-y-auto px-3 sm:px-4 py-3 sm:py-4 bg-gradient-to-br from-gray-50 to-gray-100/40 scrollbar-hide">
                             {messages.map((message) => (
                                 <MessageBubble key={message.id} message={message} />
                             ))}
@@ -252,12 +246,12 @@ useEffect(() => {
                                     onKeyPress={handleKeyPress}
                                     placeholder="Type your message here..."
                                     disabled={isTyping}
-                                    className="flex-1 px-3 py-2 sm:px-4 sm:py-3 text-xs sm:text-sm border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed min-h-[40px] sm:min-h-[48px]"
+                                    className="flex-1 px-3 py-2 sm:px-4 sm:py-3 text-xs sm:text-sm border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed min-h-[40px] sm:min-h-[48px]"
                                 />
                                 <button
                                     onClick={handleSend}
                                     disabled={!userQuery.trim() || isTyping}
-                                    className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 disabled:from-gray-300 disabled:to-gray-400 text-white p-2 sm:p-3 rounded-full shadow-lg transition-all duration-200 disabled:cursor-not-allowed disabled:pointer-events-none disabled:opacity-60 transform hover:scale-105 active:scale-95 disabled:hover:scale-100 disabled:active:scale-100 disabled:shadow-none min-w-[40px] min-h-[40px] sm:min-w-[48px] sm:min-h-[48px] flex items-center justify-center"
+                                    className="bg-gradient-to-r from-gray-700 to-gray-500 hover:from-gray-800 hover:to-gray-600 disabled:from-gray-300 disabled:to-gray-400 text-white p-2 sm:p-3 rounded-full shadow-lg transition-all duration-200 disabled:cursor-not-allowed disabled:pointer-events-none disabled:opacity-60 transform hover:scale-105 active:scale-95 disabled:hover:scale-100 disabled:active:scale-100 disabled:shadow-none min-w-[40px] min-h-[40px] sm:min-w-[48px] sm:min-h-[48px] flex items-center justify-center"
                                 >
                                     <FiSend className="text-base sm:text-xl" />
                                 </button>
@@ -267,7 +261,7 @@ useEffect(() => {
                                     <button
                                         type="button"
                                         onClick={() => setShowSuggestions(true)}
-                                        className="w-full sm:w-auto px-3 sm:px-4 py-2 sm:py-2.5 border border-dashed border-blue-400 text-blue-500 text-xs sm:text-sm rounded-full hover:bg-blue-50 transition-colors duration-200"
+                                        className="w-full sm:w-auto px-3 sm:px-4 py-2 sm:py-2.5 border border-dashed border-gray-400 text-gray-600 text-xs sm:text-sm rounded-full hover:bg-gray-100 transition-colors duration-200"
                                     >
                                         Show suggested questions
                                     </button>
@@ -278,7 +272,7 @@ useEffect(() => {
                 ) : (
                     <button
                         onClick={() => setIsOpen(true)}
-                        className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white p-3 sm:p-4 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-110 active:scale-95 min-w-[56px] min-h-[56px] sm:min-w-[64px] sm:min-h-[64px] flex items-center justify-center"
+                        className="bg-gradient-to-r from-gray-700 to-gray-500 hover:from-gray-800 hover:to-gray-600 text-white p-3 sm:p-4 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-110 active:scale-95 min-w-[56px] min-h-[56px] sm:min-w-[64px] sm:min-h-[64px] flex items-center justify-center"
                         aria-label="Open chatbot"
                     >
                         <FaRobot className="text-xl sm:text-2xl" />
