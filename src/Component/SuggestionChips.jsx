@@ -1,8 +1,9 @@
 import { useEffect, useMemo, useState } from "react";
 import PropTypes from "prop-types";
 import { FiArrowRight } from "react-icons/fi";
+import { FiX } from "react-icons/fi";
 
-const SuggestionChips = ({ suggestions = [], disabled = false, onSelect, resetTrigger }) => {
+const SuggestionChips = ({ suggestions = [], disabled = false, onSelect, resetTrigger, onClose }) => {
     const [activeIndex, setActiveIndex] = useState(0);
 
     useEffect(() => {
@@ -12,14 +13,20 @@ const SuggestionChips = ({ suggestions = [], disabled = false, onSelect, resetTr
     }, [resetTrigger]);
 
     const visibleSuggestions = useMemo(() => {
-        if (!suggestions.length || activeIndex >= suggestions.length) {
-            return [];
+        if (!suggestions.length) {
+            return { items: [], startIndex: 0 };
         }
-        const upperBound = Math.min(activeIndex + 3, suggestions.length);
-        return suggestions.slice(activeIndex, upperBound);
+        const windowSize = 4;
+        const maxStart = Math.max(suggestions.length - windowSize, 0);
+        const startIndex = Math.max(0, Math.min(activeIndex, maxStart));
+        const endIndex = startIndex + windowSize;
+        return {
+            items: suggestions.slice(startIndex, endIndex),
+            startIndex,
+        };
     }, [activeIndex, suggestions]);
 
-    if (!visibleSuggestions.length) {
+    if (!visibleSuggestions.items.length) {
         return null;
     }
 
@@ -36,21 +43,46 @@ const SuggestionChips = ({ suggestions = [], disabled = false, onSelect, resetTr
     };
 
     return (
-        <div className="px-3 sm:px-4 py-3 bg-white/80 border-t border-gray-200">
-            <p className="text-xs sm:text-sm text-gray-500 mb-2">Suggested questions</p>
-            <div className="flex flex-wrap gap-2">
-                {visibleSuggestions.map((item, idx) => {
-                    const absoluteIndex = activeIndex + idx;
+        <div className="px-3 sm:px-4 py-2 bg-white/90 border-t border-gray-200">
+            <div className="flex items-center justify-between mb-1.5">
+                <p className="text-[11px] sm:text-xs text-gray-500">Suggested questions</p>
+                <button
+                    type="button"
+                    className="p-1 rounded-full text-gray-400 hover:text-gray-600 transition-colors duration-200"
+                    aria-label="Hide suggestions"
+                    onClick={onClose}
+                    disabled={disabled}
+                >
+                    <FiX className="text-sm" />
+                </button>
+            </div>
+            <div className="flex flex-col sm:flex-row sm:flex-wrap gap-1.5 pb-1">
+                {visibleSuggestions.items.map((item, idx) => {
+                    const absoluteIndex = visibleSuggestions.startIndex + idx;
+                    const isRecommended = absoluteIndex === activeIndex;
+                    const isCompleted = absoluteIndex < activeIndex;
                     return (
                         <button
                             key={item.id}
                             type="button"
                             disabled={disabled}
-                            className="group flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-gray-300 text-xs sm:text-sm text-gray-700 bg-white hover:bg-blue-50 hover:border-blue-400 transition-all duration-200 disabled:opacity-50 disabled:bg-gray-100 disabled:border-gray-200 disabled:text-gray-400"
+                            className={`group flex items-center justify-between gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1.5 sm:py-1.5 rounded-full border text-xs sm:text-sm transition-all duration-200 ${
+                                isRecommended
+                                    ? "border-blue-500 bg-blue-50 text-blue-700 hover:bg-blue-100"
+                                    : isCompleted
+                                    ? "border-green-400 bg-green-50 text-green-700 hover:bg-green-100"
+                                    : "border-gray-300 text-gray-700 bg-white hover:bg-blue-50 hover:border-blue-400"
+                            } disabled:opacity-50 disabled:bg-gray-100 disabled:border-gray-200 disabled:text-gray-400 w-full sm:w-auto text-left`}
                             onClick={() => handleChipClick(absoluteIndex)}
                         >
-                            <span className="font-medium whitespace-nowrap">{item.label}</span>
-                            <FiArrowRight className="text-gray-400 group-hover:text-blue-500 transition-colors duration-200" />
+                            <span className="font-medium pr-1">{item.label}</span>
+                            <FiArrowRight className={`transition-colors duration-200 ${
+                                isRecommended
+                                    ? "text-blue-500 group-hover:text-blue-600"
+                                    : isCompleted
+                                    ? "text-green-500 group-hover:text-green-600"
+                                    : "text-gray-400 group-hover:text-blue-500"
+                            }`} />
                         </button>
                     );
                 })}
@@ -70,6 +102,7 @@ SuggestionChips.propTypes = {
     disabled: PropTypes.bool,
     onSelect: PropTypes.func.isRequired,
     resetTrigger: PropTypes.number.isRequired,
+    onClose: PropTypes.func.isRequired,
 };
 
 export default SuggestionChips;

@@ -1,14 +1,16 @@
-import { useRef, useState, useEffect, useMemo } from "react";
+import { useRef, useState, useEffect } from "react";
 import { FiSend, FiX } from "react-icons/fi";
 import { FaRobot, FaUser } from "react-icons/fa";
 import PropTypes from 'prop-types';
 import SuggestionChips from "./SuggestionChips";
+import chatbotSuggestions from "./chatbotSuggestions";
 
 const ChatBot = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [userQuery, setUserQuery] = useState("");
     const [messages, setMessages] = useState([]);
     const [isTyping, setIsTyping] = useState(false);
+    const [showSuggestions, setShowSuggestions] = useState(true);
     const inputRef = useRef(null);
     const bottomRef = useRef(null);
 
@@ -63,16 +65,6 @@ const handleSend = async (presetQuery) => {
 useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
 }, [messages, isTyping]);
-
-const suggestionFlow = useMemo(() => (
-    [
-        { id: "about", label: "Who are you?", prompt: "Who are you?" },
-        { id: "skills", label: "What skills do you have?", prompt: "What skills do you have?" },
-        { id: "experience", label: "Tell me about your experience", prompt: "Tell me about your experience" },
-        { id: "projects", label: "What projects have you built?", prompt: "What projects have you built?" },
-        { id: "contact", label: "How can I contact you?", prompt: "How can I contact you?" },
-    ]
-), []);
 
     const handleKeyPress = (e) => {
         if (e.key === "Enter") handleSend();
@@ -176,7 +168,7 @@ const suggestionFlow = useMemo(() => (
                 
                 {isOpen ? (
                     <div className="
-                        w-full h-screen sm:w-80 md:w-96 sm:h-[32rem] lg:h-[28rem]
+                        w-full h-screen sm:w-80 md:w-96 sm:h-[36rem] md:h-[40rem] lg:h-[38rem]
                         fixed sm:relative
                         top-0 left-0 sm:top-auto sm:left-auto
                         bg-white shadow-2xl 
@@ -228,12 +220,15 @@ const suggestionFlow = useMemo(() => (
                             <div ref={bottomRef} />
                         </div>
 
-                        <SuggestionChips
-                            suggestions={suggestionFlow}
-                            onSelect={handleSuggestionSelect}
-                            disabled={isTyping}
-                            resetTrigger={messages.length}
-                        />
+                        {showSuggestions && (
+                            <SuggestionChips
+                                suggestions={chatbotSuggestions}
+                                onSelect={handleSuggestionSelect}
+                                disabled={isTyping}
+                                resetTrigger={messages.length}
+                                onClose={() => setShowSuggestions(false)}
+                            />
+                        )}
 
                         {/* Input Field */}
                         <div className="border-t border-gray-200 p-3 sm:p-4 bg-white rounded-none sm:rounded-b-2xl safe-area-inset-bottom">
@@ -256,6 +251,17 @@ const suggestionFlow = useMemo(() => (
                                     <FiSend className="text-base sm:text-xl" />
                                 </button>
                             </div>
+                            {!showSuggestions && (
+                                <div className="mt-3">
+                                    <button
+                                        type="button"
+                                        onClick={() => setShowSuggestions(true)}
+                                        className="w-full sm:w-auto px-3 sm:px-4 py-2 sm:py-2.5 border border-dashed border-blue-400 text-blue-500 text-xs sm:text-sm rounded-full hover:bg-blue-50 transition-colors duration-200"
+                                    >
+                                        Show suggested questions
+                                    </button>
+                                </div>
+                            )}
                         </div>
                     </div>
                 ) : (
