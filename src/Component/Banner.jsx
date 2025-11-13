@@ -17,7 +17,7 @@ const Banner = () => {
                             Muhammad Fahad
                         </h1>
                         <h1 className="text-xl md:text-2xl text-gray-600 mb-4 transition-transform duration-500 ease-in-out transform hover:scale-105 hover:text-black">
-                            Junior Software Engineer | MERN & Django Developer
+                            Junior Software Engineer 
                         </h1>
                     </div>
                     <div className="flex justify-center md:justify-start mb-4">
