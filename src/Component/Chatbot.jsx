@@ -1,5 +1,3 @@
-
-
 import { useRef, useState,useEffect } from "react";
 import { FiSend, FiX } from "react-icons/fi";
 import { FaRobot, FaUser } from "react-icons/fa";
@@ -39,7 +37,7 @@ const handleSend = async () => {
             const botMsg = {
                 id: Date.now() + 1,
                 sender: "bot",
-                text: data.answer || "I&apos;m sorry, I couldn&apos;t process your request. Please try again.",
+                text: data.answer || "I am sorry, I could not process your request. Please try again.",
             };
             setMessages((prev) => [...prev, botMsg]);
             setIsTyping(false);
@@ -51,7 +49,7 @@ const handleSend = async () => {
             const errorMsg = {
                 id: Date.now() + 1,
                 sender: "bot",
-                text: "Sorry, I&apos;m having trouble connecting right now. Please try again later.",
+                text: "Sorry, I am having trouble connecting right now. Please try again later.",
             };
             setMessages((prev) => [...prev, errorMsg]);
             setIsTyping(false);
@@ -100,14 +98,22 @@ useEffect(() => {
     };
 
     const TypingIndicator = () => (
-        <div className="flex items-center text-xs sm:text-sm text-gray-500 italic ml-8 sm:ml-10">
-            <div className="flex space-x-1">
-                <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
-                <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+        <div className="flex items-start mb-3 justify-start text-xs sm:text-sm animate-fadeIn">
+            <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center mr-3 shrink-0">
+                <FaRobot className="text-white text-xs sm:text-base" />
             </div>
-            <span className="ml-2">Typing...</span>
-        </div>
+
+            <div className="px-3 py-2 sm:px-4 sm:py-2 rounded-xl max-w-[70%] bg-gray-200 text-gray-800 text-xs sm:text-sm break-words rounded-bl-none flex items-center">
+                <div className="flex items-center"></div>
+                    <div className="flex space-x-1 mr-3">
+                        <span className="w-2 h-2 bg-gray-500 rounded-full animate-bounce" />
+                        <span className="w-2 h-2 bg-gray-500 rounded-full animate-bounce" style={{ animationDelay: '0.12s' }} />
+                        <span className="w-2 h-2 bg-gray-500 rounded-full animate-bounce" style={{ animationDelay: '0.24s' }} />
+                    </div>
+                    <span className="italic text-gray-600">Typing...</span>
+                </div>
+            </div>
+        
     );
 
     return (
@@ -153,7 +159,7 @@ useEffect(() => {
                 
                 {isOpen ? (
                     <div className="
-                        w-screen h-screen sm:w-80 md:w-96 sm:h-[32rem] lg:h-[28rem]
+                        w-full h-screen sm:w-80 md:w-96 sm:h-[32rem] lg:h-[28rem]
                         fixed sm:relative
                         top-0 left-0 sm:top-auto sm:left-auto
                         bg-white shadow-2xl 
@@ -190,7 +196,7 @@ useEffect(() => {
                                     <span className="font-semibold text-sm sm:text-base text-gray-800">Welcome!</span>
                                 </div>
                                 <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-                                    I&apos;m here to help you with information about our services, courses, location, office
+                                    I am here to help you with information about our services, courses, location, office
                                     hours, and more. How can I assist you today?
                                 </p>
                             </div>
@@ -221,7 +227,7 @@ useEffect(() => {
                                 <button
                                     onClick={handleSend}
                                     disabled={!userQuery.trim() || isTyping}
-                                    className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 disabled:from-gray-400 disabled:to-gray-500 text-white p-2 sm:p-3 rounded-full shadow-lg transition-all duration-200 disabled:cursor-not-allowed transform hover:scale-105 active:scale-95 min-w-[40px] min-h-[40px] sm:min-w-[48px] sm:min-h-[48px] flex items-center justify-center"
+                                    className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 disabled:from-gray-300 disabled:to-gray-400 text-white p-2 sm:p-3 rounded-full shadow-lg transition-all duration-200 disabled:cursor-not-allowed disabled:pointer-events-none disabled:opacity-60 transform hover:scale-105 active:scale-95 disabled:hover:scale-100 disabled:active:scale-100 disabled:shadow-none min-w-[40px] min-h-[40px] sm:min-w-[48px] sm:min-h-[48px] flex items-center justify-center"
                                 >
                                     <FiSend className="text-base sm:text-xl" />
                                 </button>
@@ -231,7 +237,7 @@ useEffect(() => {
                 ) : (
                     <button
                         onClick={() => setIsOpen(true)}
-                        className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white p-3 sm:p-4 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-110 active:scale-95 animate-pulse min-w-[56px] min-h-[56px] sm:min-w-[64px] sm:min-h-[64px] flex items-center justify-center"
+                        className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white p-3 sm:p-4 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-110 active:scale-95 min-w-[56px] min-h-[56px] sm:min-w-[64px] sm:min-h-[64px] flex items-center justify-center"
                         aria-label="Open chatbot"
                     >
                         <FaRobot className="text-xl sm:text-2xl" />
