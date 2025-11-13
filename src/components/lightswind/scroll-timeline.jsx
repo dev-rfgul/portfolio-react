@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
+import PropTypes from "prop-types";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { cn } from "../lib/utils";
 import { Card, CardContent } from "./card";
@@ -6,11 +7,18 @@ import { Calendar } from "lucide-react";
 
 const DEFAULT_EVENTS = [
   {
-    year: "Jul 2025 - Present",
-    title: "Trainee Software Engineer",
-    subtitle: "Aitch Tech ",
+    year: "Oct 2025 - Present",
+    title: "Junior Software Engineer",
+    subtitle: "Aitch Tech",
     description:
-      "Supported the development team in building and maintaining web applications. Assisted in debugging and troubleshooting issues. Gained hands-on experience in software development processes and methodologies. Participated in code reviews and contributed to improving code quality.",
+      "Promoted from trainee after three months to take ownership of core frontend features. Lead UI sprint grooming, mentor incoming trainees, and collaborate with backend engineers and QA to deliver production-ready updates with solid test coverage.",
+  },
+  {
+    year: "Jul 2025 - Sep 2025",
+    title: "Trainee Software Engineer",
+    subtitle: "Aitch Tech",
+    description:
+      "Supported the development team in building and maintaining web applications. Assisted in debugging and troubleshooting issues, gaining hands-on experience with team processes, code reviews, and quality improvements that paved the way for promotion.",
   },
   {
     year: "Nov 2024 - Feb 2025",
@@ -42,7 +50,7 @@ export const ScrollTimeline = ({
   animationOrder = "sequential",
   cardAlignment = "alternating",
   lineColor = "bg-primary/30",
-  activeColor = "bg-primary",
+  activeColor = "border-primary",
   progressIndicator = true,
   cardVariant = "default",
   cardEffect = "none",
@@ -190,6 +198,7 @@ export const ScrollTimeline = ({
       variantClasses[cardVariant],
       effectClasses[cardEffect],
       alignmentClassesDesktop,
+      perspectiveClass,
       "w-full lg:w-[calc(50%-40px)]"
     );
   };
@@ -303,8 +312,8 @@ export const ScrollTimeline = ({
                       className={cn(
                         "w-6 h-6 rounded-full border-4 bg-background flex items-center justify-center",
                         index <= activeIndex
-                          ? "border-primary"
-                          : "border bg-card"
+                          ? activeColor
+                          : "border-border bg-card"
                       )}
                       animate={
                         index <= activeIndex
@@ -382,4 +391,36 @@ export const ScrollTimeline = ({
       </div>
     </div>
   );
+};
+
+ScrollTimeline.propTypes = {
+  events: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+      year: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      subtitle: PropTypes.string,
+      description: PropTypes.string,
+      icon: PropTypes.node,
+      color: PropTypes.string,
+    })
+  ),
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
+  animationOrder: PropTypes.oneOf(["sequential", "staggered", "simultaneous"]),
+  cardAlignment: PropTypes.oneOf(["alternating", "left", "right"]),
+  lineColor: PropTypes.string,
+  activeColor: PropTypes.string,
+  progressIndicator: PropTypes.bool,
+  cardVariant: PropTypes.oneOf(["default", "elevated", "outlined", "filled"]),
+  cardEffect: PropTypes.oneOf(["none", "glow", "shadow", "bounce"]),
+  parallaxIntensity: PropTypes.number,
+  progressLineWidth: PropTypes.number,
+  progressLineCap: PropTypes.oneOf(["round", "square", "butt"]),
+  dateFormat: PropTypes.oneOf(["badge", "heading"]),
+  revealAnimation: PropTypes.oneOf(["fade", "slide", "scale", "flip", "none"]),
+  className: PropTypes.string,
+  connectorStyle: PropTypes.oneOf(["line", "dots", "dashed"]),
+  perspective: PropTypes.bool,
+  darkMode: PropTypes.bool,
 };
