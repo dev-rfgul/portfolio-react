@@ -38,9 +38,9 @@ const Banner = () => {
                 <div className="md:w-1/2 flex justify-center items-center">
                     <div className="flex-shrink-0 w-64 h-64  md:w-64 md:h-64 lg:w-80 lg:h-80 border border-black border-opacity-30 rounded-full overflow-hidden">
                         <img
-                            src="/images/banner-img.png"
+                            src="/images/me-1.jpg"
                             alt="rf gul "
-                            className="object-cover w-full h-full object-top rounded-full"
+                            className="object-cover w-full h-full  rounded-full"
                         />
                     </div>
                 </div>
