@@ -80,9 +80,9 @@ useEffect(() => {
                 <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-gradient-to-br from-gray-700 to-gray-500 flex items-center justify-center mr-2 shrink-0">
                     {/* <FaRobot className="text-white text-xs sm:text-base" /> */}
                             <img
-                            src="/images/banner-img.png"
+                            src="/images/me-1.jpg"
                             alt="rf gul "
-                            className="object-cover w-full h-full object-top rounded-full"
+                            className="object-cover w-full h-full  rounded-full"
                         />
                 </div>
             )}
@@ -114,7 +114,12 @@ useEffect(() => {
     const TypingIndicator = () => (
         <div className="flex items-start mb-3 justify-start text-xs sm:text-sm animate-fadeIn">
             <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-gradient-to-br from-gray-700 to-gray-500 flex items-center justify-center mr-3 shrink-0">
-                <FaRobot className="text-white text-xs sm:text-base" />
+                {/* <FaRobot className="text-white text-xs sm:text-base" /> */}
+                                            <img
+                            src="/images/me-1.jpg"
+                            alt="rf gul "
+                            className="object-cover w-full h-full  rounded-full"
+                        />
             </div>
 
             <div className="px-3 py-2 sm:px-4 sm:py-2 rounded-xl max-w-[70%] bg-gray-200 text-gray-800 text-xs sm:text-sm break-words rounded-bl-none flex items-center">
