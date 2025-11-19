@@ -95,7 +95,18 @@ useEffect(() => {
                 }`}
             >
                 {message.sender === 'bot' ? (
-                    <ReactMarkdown>{message.text}</ReactMarkdown>
+                    <ReactMarkdown
+                        components={{
+                            a: ({ ...props }) => (
+                                <a {...props} className="font-semibold text-blue-600 underline" />
+                            ),
+                            strong: ({ ...props }) => (
+                                <strong {...props} className="font-semibold" />
+                            ),
+                        }}
+                    >
+                        {message.text}
+                    </ReactMarkdown>
                 ) : (
                     message.text
                 )}
