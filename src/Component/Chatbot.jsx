@@ -1,4 +1,5 @@
 import { useRef, useState, useEffect } from "react";
+import ReactMarkdown from 'react-markdown';
 import { FiSend, FiX } from "react-icons/fi";
 import { FaRobot, FaUser } from "react-icons/fa";
 import PropTypes from 'prop-types';
@@ -93,7 +94,11 @@ useEffect(() => {
                         : "bg-gray-200 text-gray-800 rounded-bl-none"
                 }`}
             >
-                {message.text}
+                {message.sender === 'bot' ? (
+                    <ReactMarkdown>{message.text}</ReactMarkdown>
+                ) : (
+                    message.text
+                )}
             </div>
             {message.sender === "user" && (
                 <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-gray-700 flex items-center justify-center ml-2 shrink-0">
