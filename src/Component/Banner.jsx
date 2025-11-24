@@ -36,11 +36,11 @@ const Banner = () => {
                 </div>
 
                 <div className="md:w-1/2 flex justify-center items-center">
-                    <div className="flex-shrink-0 w-64 h-64  md:w-64 md:h-64 lg:w-80 lg:h-80 border border-black border-opacity-30 rounded-full overflow-hidden">
+                    <div className="flex-shrink-0 w-64 h-64 mt-12 md:w-80 md:h-80 lg:w-96 lg:h-96 border border-black border-opacity-30 rounded-full overflow-hidden">
                         <img
                             src="/images/me-1.jpg"
                             alt="rf gul "
-                            className="object-cover w-full h-full  rounded-full"
+                            className="object-cover w-full h-full object-top  rounded-full"
                         />
                     </div>
                 </div>
